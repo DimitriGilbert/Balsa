@@ -14,7 +14,7 @@ if($logged)
 	switch($get['page'])
 	{
 		case '':
-			inclure_ajax('');
+			inclure_ajax('ajax');
 			break;
 	}
 	traite_fin_de_page();

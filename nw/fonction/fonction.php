@@ -128,6 +128,22 @@ function inclure_ajax($fonction)
 	}
 }
 
+function inclure_page($fonction)
+{
+	global $basep;
+	if(is_file($basep.'page/'.$fonction.'.php'))
+	{
+		include_once $basep.'page/'.$fonction.'.php';
+		return true;
+	}
+	else
+	{
+		$fonction=str_replace('_','-',$fonction);
+		report_erreur('systeme','la page '.$fonction.' n\'existe pas.');
+		return false;
+	}
+}
+
 function traite_fin_de_page()
 {
 	global $get;
