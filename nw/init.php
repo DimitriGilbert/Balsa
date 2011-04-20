@@ -14,9 +14,9 @@ if(!isset($_SESSION['erreurs']))
 
 $_SESSION['in_time']=microtime();
 //base systeme de fichier
-$basep='/home/didi/Documents/web_serveur/facturation/commercial/dev/nw/';
+$basep='/nw folder path';
 //base url
-$base_url='http://127.0.0.1/facturation/commercial/dev/www/';
+$base_url='url_to_your_site';
 
 //inclusion de fonction de base
 include_once $basep.'fonction/fonction.php';
