@@ -1,4 +1,17 @@
 <?php
+
+function print_pre($var)
+{
+	echo'<pre>';
+	print_r($var);
+	echo'</pre>';
+}
+
+function plop($s="")
+{
+	echo '<div class="plop">'.$s.'</div>';
+}
+
 function is_logged()
 {
 	if(isset($_SESSION['user_id']) and $_SESSION['user_id']!='')
@@ -96,54 +109,6 @@ function traite_erreur($erreurs)
 	return $display;
 }
 
-function inclure_fonction($fonction)
-{
-	global $basep;
-	if(is_file($basep.'fonction/'.$fonction.'.php'))
-	{
-		include_once $basep.'fonction/'.$fonction.'.php';
-		return true;
-	}
-	else
-	{
-		$fonction=str_replace('_','-',$fonction);
-		report_erreur('systeme','la page de fonction '.$fonction.' n\'existe pas.');
-		return false;
-	}
-}
-
-function inclure_ajax($fonction)
-{
-	global $basep;
-	if(is_file($basep.'ajax/'.$fonction.'.php'))
-	{
-		include_once $basep.'ajax/'.$fonction.'.php';
-		return true;
-	}
-	else
-	{
-		$fonction=str_replace('_','-',$fonction);
-		report_erreur('systeme','la page ajax '.$fonction.' n\'existe pas.');
-		return false;
-	}
-}
-
-function inclure_page($fonction)
-{
-	global $basep;
-	if(is_file($basep.'page/'.$fonction.'.php'))
-	{
-		include_once $basep.'page/'.$fonction.'.php';
-		return true;
-	}
-	else
-	{
-		$fonction=str_replace('_','-',$fonction);
-		report_erreur('systeme','la page '.$fonction.' n\'existe pas.');
-		return false;
-	}
-}
-
 function traite_fin_de_page()
 {
 	global $get;
@@ -204,75 +169,168 @@ function traite_fin_de_page()
 	return true;
 }
 
-function load_log($fichier='')
+function compresse_text($str)//will remove blank, \t, \n ,... to compress js and css file
 {
-	global $basep;
-	if($fichier=='')
-	{
-		$fichier=date('Y_m_d');
-	}
-	if(is_file($basep.'/data/log/'.$fichier))
-	{
-		$log=
-		'
-		<log>
-			'.file_gets_content($basep.'/data/log/'.$fichier).'
-		</log>
-		';
-		return $log;
-	}
-	else
-	{
-		return traite_erreur(array(report_erreur('systeme','le fichier de log '.$fichier.' est introuvable.',true)));
-	}
+	return $str;
 }
 
-function merge_log($debut='',$fin='')
+class Inclure
 {
-	global $basep;
-	if($fin=='')
+	private $path;
+	
+	function Inclure($path)
 	{
-		$fin=date('Y_m_d');
+		$this->path=$path;
 	}
-	if($debut=='')
+	
+	private function inc($page,$php=true)
 	{
-		$t=time();
-		$t-=604800;
-		$debut=date('Y_m_d',$t);
+		if(is_file($page))
+		{
+			if($php)
+			{
+				include_once $page;
+				return true;
+			}
+			else
+			{
+				return file_get_contents($page);
+			}
+		}
+		else
+		{
+			report_erreur('systeme','la page '.$page.' n\'existe pas.');
+			return false;
+		}
 	}
-	$dir=scandir($basep.'/data/log/');
-	$merged='';
-	foreach($dir as $d)
+	
+	function fonction($page)
 	{
-		if($d==$debut)
+		return $this->inc($this->path.'/fonction/'.$page.'.php');
+	}
+	
+	function page($page)
+	{
+		return $this->inc($this->path.'/page/'.$page.'.php');
+	}
+	
+	function ajax($page,$ext='php')
+	{
+		if($ext!='php')
+		{
+			$b=false;
+		}
+		else
 		{
 			$b=true;
 		}
-		if($b===true)
+		$ajax=$this->inc($this->path.'/ajax/'.$page.'.'.$ext,$b);
+		return $ajax;
+	}
+	
+	function text_pages($pages,$sep='',$dir='')
+	{
+		$str='';
+		foreach($pages as $p)
 		{
-			$merged.=file_gets_content($basep.'/data/log/'.$d);
-			unlink($basep.'/data/log/'.$d);
+			if($p!='.' or $p!='..')
+			{
+				$str.=$sep.$this->inc($dir.$p,false);		
+			}
 		}
-		if($d==$fin)
+		return $str;
+	}
+	
+	function js($min=false,$php=false)
+	{
+		$pages=scandir($this->path.'media/js/');
+
+		$js_str=$this->text_pages($pages,'/*js_page_*/', $this->path.'media/js/');
+
+		if($min)
+		{
+			$js_str=compresse_text($js_str);
+		}
+		return $js_str;
+	}
+	
+	function stat($page,$ext='php')
+	{
+		if($ext!='php')
 		{
 			$b=false;
-			break;
 		}
+		else
+		{
+			$b=true;
+		}
+		$ajax=$this->inc($this->path.'/ajax/'.$page.'.'.$ext,$b);
+		return $ajax;
 	}
-	$log=fopen($basep.'/data/log/'.$debut.'_'.$fin);
-	fput($merged,$log);
-	fclose($log);
 }
 
-function print_pre($var)
+class activity_logger
 {
-	echo'<pre>';
-	print_r($var);
-	echo'</pre>';
+	function load($fichier='')
+	{
+		global $inclure,$basep;
+		if($fichier=='')
+		{
+			$fichier=date('Y_m_d');
+		}
+		$log=$inclure->text_pages(array($basep.'data/log/'.$fichier));
+		$log=
+		'
+		<log>
+			'.$log.'
+		</log>
+		';
+		return $log;
+		
+	}
+
+	function merge_log($debut='',$fin='')
+	{
+		global $inclure,$basep;
+		if($fin=='')
+		{
+			$fin=date('Y_m_d');
+		}
+		if($debut=='')
+		{
+			$t=time();
+			$t-=604800;
+			$debut=date('Y_m_d',$t);
+		}
+		$dir=scandir($basep.'/data/log/');
+		$merged=array();
+		foreach($dir as $d)
+		{
+			if($d==$debut)
+			{
+				$b=true;
+			}
+			if($b===true)
+			{
+				array_push($merged,$basep.'/data/log/'.$d);
+			}
+			if($d==$fin)
+			{
+				$b=false;
+				break;
+			}
+		}
+		$logged=$inclure->text_pages($merged,'<!-- new day -->');
+		$log=fopen($basep.'/data/log/'.$debut.'__'.$fin);
+		fput($logged,$log);
+		fclose($log);
+		
+		foreach($merged as $m)
+		{
+			unlink($m);
+		}		
+	}
 }
 
-function plop($s="")
-{
-	echo '<div class="plop">'.$s.'</div>';
-}
+
 ?>

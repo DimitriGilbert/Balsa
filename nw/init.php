@@ -14,15 +14,16 @@ if(!isset($_SESSION['erreurs']))
 
 $_SESSION['in_time']=microtime();
 //base systeme de fichier
-$basep='/nw folder path';
+$basep='/home/didi/Documents/web_serveur/Balsa/nw/';
 //base url
 $base_url='url_to_your_site';
 
 //inclusion de fonction de base
 include_once $basep.'fonction/fonction.php';
 
+$inclure=new Inclure($basep);
 //connexion Bdd
-inclure_fonction('bdd.class');
+$inclure->fonction('bdd.class');
 $bdd=new Bdd;
 if($bdd->connect()!==true)
 {

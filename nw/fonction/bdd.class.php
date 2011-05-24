@@ -28,10 +28,10 @@ class Bdd
 		 */
 	function Bdd()
 	{
-		$this->bdUser = "";
-		$this->bdPassWord = "";
-		$this->bdDataBase = "";
-		$this->bdServer = "";
+		$this->bdUser = "plop";
+		$this->bdPassWord = "azerty";
+		$this->bdDataBase = "plop";
+		$this->bdServer = "localhost";
 		$this->estConnecte = false;
 		$this->nbreq=0;
 		$this->reqtime=0;

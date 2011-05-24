@@ -7,10 +7,13 @@ include_once '../nw/init.php';
 <html>
 	<head>
 		<link rel="stylesheet" href="media/css/main.css" type="text/css" media="all" />
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />		
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>Mon projet avec Balsa</title>
 	</head>
 	<body>
-		<div class="site" id="site"></div>
+		<div class="site" id="site">
+			<h1>Bienvenue sur Balsa !</h1>
+		</div>
 		<div style="clear:both"></div>
 		<div class="lightbox_filtre" id="lightbox_filtre"></div>
 		<div class="lightbox" id="lightbox">
@@ -18,7 +21,7 @@ include_once '../nw/init.php';
 			<div class="lightbox_close" onclick="lightbox_close();"></div>
 			<div class="lightbox_content" id="lightbox_content"></div>
 		</div>
-		<script type="text/javascript" src="media/js/main.js"></script>
+		<script type="text/javascript"><?php echo $inclure->js(); ?></script>
 
 	</body>
 </html>
