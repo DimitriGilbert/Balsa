@@ -155,13 +155,13 @@ function traite_fin_de_page()
 			<client id="'.$_SESSION['user_id'].'">
 				<navigateur>
 	';
-	/*foreach($_SESSION['client']['navigateur'] as $info=>$val)
+	foreach($_SESSION['client']['navigateur'] as $info=>$val)
 	{
 		$rapport.=
 		'
 			<'.$info.'>'.$val.'</'.$info.'>
 		';
-	}*/
+	}
 	$rapport.=
 	'
 		</navigateur>
@@ -264,6 +264,12 @@ function merge_log($debut='',$fin='')
 	fclose($log);
 }
 
+function print_pre($var)
+{
+	echo'<pre>';
+	print_r($var);
+	echo'</pre>';
+}
 
 function plop($s="")
 {

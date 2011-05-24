@@ -28,11 +28,10 @@ class Bdd
 		 */
 	function Bdd()
 	{
-		$this->bdUser = "root";
-		$this->bdPassWord = "yesweCAN666";
-		//$this->bdPassWord = "fractale87";
-		$this->bdDataBase = "arena";
-		$this->bdServer = "94.23.227.138";
+		$this->bdUser = "";
+		$this->bdPassWord = "";
+		$this->bdDataBase = "";
+		$this->bdServer = "";
 		$this->estConnecte = false;
 		$this->nbreq=0;
 		$this->reqtime=0;
