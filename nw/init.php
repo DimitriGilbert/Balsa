@@ -2,6 +2,9 @@
 //demarrage de la session
 session_start();
 
+//base systeme de fichier
+$path='/home/didi/Documents/web_serveur/Balsa/nw/';
+$path_w='/home/didi/Documents/web_serveur/Balsa/www/';
 
 //fake log
 $_SESSION['user_id']='123';
@@ -13,17 +16,13 @@ if(!isset($_SESSION['erreurs']))
 }
 
 $_SESSION['in_time']=microtime();
-//base systeme de fichier
-$basep='/home/didi/Documents/web_serveur/Balsa/nw/';
 //base url
-$base_url='url_to_your_site';
+$base_url='http://127.0.0.1/Balsa/www/';
 
 //inclusion de fonction de base
 include_once $basep.'fonction/fonction.php';
-
-$inclure=new Inclure($basep);
 //connexion Bdd
-$inclure->fonction('bdd.class');
+inclure_fonction('bdd.class');
 $bdd=new Bdd;
 if($bdd->connect()!==true)
 {

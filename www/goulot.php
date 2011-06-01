@@ -14,7 +14,7 @@ foreach($_GET as $gettemp=>$key)
 switch($get['page'])
 {
 	case '':
-		$inclure->ajax('ajax');
+		inclure_ajax('ajax');
 		break;
 }
 
@@ -24,7 +24,7 @@ if($logged)
 	switch($get['page'])
 	{
 		case '':
-			$inclure->ajax('ajax');
+			inclure_ajax('ajax');
 			break;
 	}
 }

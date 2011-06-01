@@ -1,10 +1,17 @@
 <?php
 
-function print_pre($var)
+function print_pre($var,$r=false)
 {
-	echo'<pre>';
-	print_r($var);
-	echo'</pre>';
+	if($r!=false)
+	{
+		return '<pre>'.print_r($var,true).'</pre>';
+	}
+	else
+	{
+		echo'<pre>';
+		print_r($var);
+		echo'</pre>';
+	}	
 }
 
 function plop($s="")
@@ -112,7 +119,7 @@ function traite_erreur($erreurs)
 function traite_fin_de_page()
 {
 	global $get;
-	global $basep;
+	global $path;
 	$gen_time=microtime()-$_SESSION['in_time'];
 	$rapport=
 	'
@@ -163,7 +170,7 @@ function traite_fin_de_page()
 	
 	
 	$log_file=date('Y_m_d');
-	$log=fopen($basep.'data/log/'.$log_file,'a+');
+	$log=fopen($path.'data/log/'.$log_file,'a+');
 	fputs($log,$rapport);
 	fclose($log);
 	return true;
@@ -171,114 +178,164 @@ function traite_fin_de_page()
 
 function compresse_text($str)//will remove blank, \t, \n ,... to compress js and css file
 {
+#	http://castlesblog.com/2010/august/14/php-javascript-css-minification
+	$str = preg_replace("/((?:\/\*(?:[^*]|(?:\*+[^*\/]))*\*+\/)|(?:\/\/.*))/", "", $str);
+    /* remove tabs, spaces, newlines, etc. */
+    $str = str_replace(array("\r\n","\r","\t","\n",'  ','    ','     '), '', $str);
+    /* remove other spaces before/after ) */
+    $str = preg_replace(array('(( )+\))','(\)( )+)'), ')', $str);
 	return $str;
 }
 
-class Inclure
+function compress_dir($dir,$d_path,$dest_file='',$dest_path='')
 {
-	private $path;
-	
-	function Inclure($path)
+	if($dest_file=='')
 	{
-		$this->path=$path;
+		$dest_file=str_replace('/','_',$dir);
+	}
+	if($dest_path=='')
+	{
+		$dest_file=$path;
 	}
 	
-	private function inc($page,$php=true)
-	{
-		if(is_file($page))
-		{
-			if($php)
-			{
-				include_once $page;
-				return true;
-			}
-			else
-			{
-				return file_get_contents($page);
-			}
-		}
-		else
-		{
-			report_erreur('systeme','la page '.$page.' n\'existe pas.');
-			return false;
-		}
-	}
-	
-	function fonction($page)
-	{
-		return $this->inc($this->path.'/fonction/'.$page.'.php');
-	}
-	
-	function page($page)
-	{
-		return $this->inc($this->path.'/page/'.$page.'.php');
-	}
-	
-	function ajax($page,$ext='php')
-	{
-		if($ext!='php')
-		{
-			$b=false;
-		}
-		else
-		{
-			$b=true;
-		}
-		$ajax=$this->inc($this->path.'/ajax/'.$page.'.'.$ext,$b);
-		return $ajax;
-	}
-	
-	function text_pages($pages,$sep='',$dir='')
-	{
-		$str='';
-		foreach($pages as $p)
-		{
-			if($p!='.' or $p!='..')
-			{
-				$str.=$sep.$this->inc($dir.$p,false);		
-			}
-		}
-		return $str;
-	}
-	
-	function js($min=false,$php=false)
-	{
-		$pages=scandir($this->path.'media/js/');
+	$c='cd '.$d_path.' && tar cvzf '.$dest_path.$dest_file.'.tar.gz '.$dir;
+#	echo $c;
+	echo exec($c);
+}
 
-		$js_str=$this->text_pages($pages,'/*js_page_*/', $this->path.'media/js/');
+
+function inc($page,$php=true)
+{
+	if(is_file($page))
+	{
+		if($php)
+		{
+			include_once $page;
+			return true;
+		}
+		else
+		{
+			return file_get_contents($page);
+		}
+	}
+	else
+	{
+		report_erreur('systeme','la page '.$page.' n\'existe pas.');
+		return false;
+	}
+}
+
+function inclure_fonction($page)
+{
+	global $path;
+	return inc($path.'/fonction/'.$page.'.php');
+}
+
+function inclure_page($page)
+{
+	global $path;
+	return inc($path.'/page/'.$page.'.php');
+}
+
+function inclure_ajax($page,$ext='php')
+{
+	global $path;
+	if($ext!='php')
+	{
+		$b=false;
+	}
+	else
+	{
+		$b=true;
+	}
+	$ajax=inc($path.'/ajax/'.$page.'.'.$ext,$b);
+	return $ajax;
+}
+
+function inclure_text_pages($pages,$sep='',$dir='')
+{
+	$str='';
+	foreach($pages as $p)
+	{
+		if($p!='.' or $p!='..')
+		{
+			$str.=$sep.inc($dir.$p,false);		
+		}
+	}
+	return $str;
+}
+
+function inclure_js($min=false,$php=false)
+{
+	global $path,$base_url;
+	if(!is_file($path.'media/js/balsa_comp_js.php'))
+	{
+		$pages=scandir($path.'media/js/');
+
+		$js_str=inclure_text_pages($pages,'', $path.'media/js/');
 
 		if($min)
 		{
 			$js_str=compresse_text($js_str);
 		}
-		return $js_str;
+		if(!file_put_contents($path.'media/js/balsa_comp_js.php',$js_str))
+		{
+			return false;//$js_str;
+		}
 	}
 	
-	function stat($page,$ext='php')
+	return '<script type="text/javascript" src="'.$base_url.'/media/js/js.php"></script>';
+	
+}
+
+function inclure_css($min=true,$php=false)
+{
+	global $path,$path_w,$base_url;
+	if(!is_file($path_w.'media/css/css.css'))
 	{
-		if($ext!='php')
+		$pages=scandir($path.'media/css/');
+
+		$css_str=inclure_text_pages($pages,'', $path.'media/css/');
+
+		if($min)
 		{
-			$b=false;
+			$css_str=compresse_text($css_str);
 		}
-		else
+		if(!file_put_contents($path_w.'media/css/css.css',$css_str))
 		{
-			$b=true;
+			return false;//$js_str;
 		}
-		$ajax=$this->inc($this->path.'/ajax/'.$page.'.'.$ext,$b);
-		return $ajax;
 	}
+	
+	return '<link rel="stylesheet" href="'.$base_url.'media/css/css.css" type="text/css" media="all" />';
+	
+}
+
+function inclure_stat($page,$ext='php')
+{
+	global $path;
+	if($ext!='php')
+	{
+		$b=false;
+	}
+	else
+	{
+		$b=true;
+	}
+	$ajax=inc($path.'/ajax/'.$page.'.'.$ext,$b);
+	return $ajax;
 }
 
 class activity_logger
 {
 	function load($fichier='')
 	{
-		global $inclure,$basep;
+		global $inclure,$path;
 		if($fichier=='')
 		{
 			$fichier=date('Y_m_d');
 		}
-		$log=$inclure->text_pages(array($basep.'data/log/'.$fichier));
+		$log=$inclure->text_pages(array($path.'data/log/'.$fichier));
 		$log=
 		'
 		<log>
@@ -291,7 +348,7 @@ class activity_logger
 
 	function merge_log($debut='',$fin='')
 	{
-		global $inclure,$basep;
+		global $inclure,$path;
 		if($fin=='')
 		{
 			$fin=date('Y_m_d');
@@ -302,7 +359,7 @@ class activity_logger
 			$t-=604800;
 			$debut=date('Y_m_d',$t);
 		}
-		$dir=scandir($basep.'/data/log/');
+		$dir=scandir($path.'/data/log/');
 		$merged=array();
 		foreach($dir as $d)
 		{
@@ -312,7 +369,7 @@ class activity_logger
 			}
 			if($b===true)
 			{
-				array_push($merged,$basep.'/data/log/'.$d);
+				array_push($merged,$path.'/data/log/'.$d);
 			}
 			if($d==$fin)
 			{
@@ -321,7 +378,7 @@ class activity_logger
 			}
 		}
 		$logged=$inclure->text_pages($merged,'<!-- new day -->');
-		$log=fopen($basep.'/data/log/'.$debut.'__'.$fin);
+		$log=fopen($path.'/data/log/'.$debut.'__'.$fin);
 		fput($logged,$log);
 		fclose($log);
 		
