@@ -53,7 +53,7 @@ function loadXmlFs(url)
 {
 	if(!url)
 	{
-		var url='http://127.0.0.1/Balsa/www/admin.php?ajax_admin=1&module=explorer&action=load_xml'
+		var url=base_url+'admin.php?ajax_admin=1&module=explorer&action=load_xml'
 	}
 	var Doc;
 	try
@@ -177,7 +177,7 @@ function xmlFSReady()
 
 function compress_dir(uri)
 {
-//	xmlFS=serv_req('http://127.0.0.1/Balsa/www/admin.php?ajax_admin=1&module=explorer&action=compress&uri='+uri,'text','GET');
+//	xmlFS=serv_req(base_url+'admin.php?ajax_admin=1&module=explorer&action=compress&uri='+uri,'text','GET');
 //	document.getElementById('explorer').innerHTML="";
 //	explorerInit();
 }

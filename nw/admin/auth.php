@@ -35,21 +35,25 @@ if(is_admin())
 	}
 	elseif(isset($_GET['ajax_admin']))
 	{
-		switch($_GET['module'])
+		if(is_file($path.'admin/plugin/'.$_GET['module'].'/index.php'))
 		{
-			case'':
-			
-				break;
-			case'explorer':
-				inclure_plugin('explorer');
-				break;
-			case'editor':
-				inclure_plugin('editor');
-				break;
-			case'terminal':
-				inclure_plugin('terminal');
-				break;
+			inclure_plugin($_GET['module']);
 		}
+#		switch($_GET['module'])
+#		{
+#			case'':
+#			
+#				break;
+#			case'explorer':
+#				inclure_plugin('explorer');
+#				break;
+#			case'editor':
+#				inclure_plugin('editor');
+#				break;
+#			case'terminal':
+#				inclure_plugin('terminal');
+#				break;
+#		}
 	}
 	else
 	{

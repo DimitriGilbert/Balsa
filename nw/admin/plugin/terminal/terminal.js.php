@@ -1,14 +1,14 @@
 function shell(str)
 {
 	str=Base64.encode(str);
-	var s=serv_req('http://127.0.0.1/Balsa/www/admin.php?ajax_admin=1&module=terminal&action=shell','text','POST','command='+str);
+	var s=serv_req(base_url+'admin.php?ajax_admin=1&module=terminal&action=shell','text','POST','command='+str);
 	if(s!='0')
 	{
 		document.getElementById('terminal_prompt').innerHTML+='<p>'+s+'</p>';
 		document.getElementById('terminal_input').value="";
 	}	
 }
-
+/*
 function valid_terminal_input(e)
 {
 	if(e.keyCode==13)
@@ -33,3 +33,4 @@ if(!jsi)
 }
 
 terminal_init();
+*/

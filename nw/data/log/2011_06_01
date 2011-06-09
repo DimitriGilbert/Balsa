@@ -1,0 +1,21 @@
+
+		<requete time="2011-06-01 19:30:03" gen="0.0041600000000001">
+			<client id="123">
+				<navigateur>
+	
+			<nom>Mozilla Firefox</nom>
+		
+			<version>4.0.1</version>
+		
+			<type>desktop</type>
+		
+			<os>linux</os>
+		
+		</navigateur>
+		<url>
+			/Balsa/www/
+		</url>
+	
+			</client>
+		</requete>
+	

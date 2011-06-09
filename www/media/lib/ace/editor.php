@@ -36,7 +36,7 @@ echo 'var f_ext="'.$ext.'"';
 <script src="src/theme-twilight.js" type="text/javascript" charset="utf-8"></script>
 <script src="src/mode-php.js" type="text/javascript" charset="utf-8"></script>
 <?php echo inclure_js(); ?>
-<script src="http://127.0.0.1/Balsa/www/media/js/jsiEdit.js" type="text/javascript" charset="utf-8"></script>
+<script src="<?php echo $base_url; ?>media/js/jsiEdit.js" type="text/javascript" charset="utf-8"></script>
 <script>
 window.onload = function() {
     load_file('<?php echo $_GET['file']?>');

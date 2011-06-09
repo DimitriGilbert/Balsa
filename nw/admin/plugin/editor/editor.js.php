@@ -51,7 +51,7 @@ function activate_editor(uri)
 
 function editFile(uri)
 {
-	document.getElementById('editors').appendChild(jsi.iframe(['id','class'],['editor_frame_'+uri,'editor_frame'],'http://127.0.0.1/Balsa/www/media/lib/ace/editor.php?file='+uri));
+	document.getElementById('editors').appendChild(jsi.iframe(['id','class'],['editor_frame_'+uri,'editor_frame'],base_url+'media/lib/ace/editor.php?file='+uri));
 	add_editor_tab(uri);
 	edited_file[uri]=1;
 }

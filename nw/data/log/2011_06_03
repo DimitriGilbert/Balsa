@@ -1,5 +1,5 @@
 
-		<requete time="2011-05-30 17:57:21" gen="0.012793">
+		<requete time="2011-06-03 16:56:34" gen="0.011053">
 			<client id="123">
 				<navigateur>
 	
@@ -16,14 +16,10 @@
 			/Balsa/www/
 		</url>
 	
-			<erreurs>
-		
-			</erreurs>
-		
 			</client>
 		</requete>
 	
-		<requete time="2011-05-30 17:57:38" gen="0.003898">
+		<requete time="2011-06-03 16:57:30" gen="0.004197">
 			<client id="123">
 				<navigateur>
 	
@@ -40,14 +36,10 @@
 			/Balsa/www/
 		</url>
 	
-			<erreurs>
-		
-			</erreurs>
-		
 			</client>
 		</requete>
 	
-		<requete time="2011-05-30 17:57:45" gen="0.0019830000000001">
+		<requete time="2011-06-03 17:00:34" gen="0.004069">
 			<client id="123">
 				<navigateur>
 	
@@ -61,37 +53,9 @@
 		
 		</navigateur>
 		<url>
-			/Balsa/www/goulot.php
+			/Balsa/www/
 		</url>
 	
-			<erreurs>
-		
-			</erreurs>
-		
-			</client>
-		</requete>
-	
-		<requete time="2011-05-30 17:57:56" gen="0.0014299999999999">
-			<client id="123">
-				<navigateur>
-	
-			<nom>Mozilla Firefox</nom>
-		
-			<version>4.0.1</version>
-		
-			<type>desktop</type>
-		
-			<os>linux</os>
-		
-		</navigateur>
-		<url>
-			/Balsa/www/goulot.php?page=explorer
-		</url>
-	
-			<erreurs>
-		
-			</erreurs>
-		
 			</client>
 		</requete>
 	

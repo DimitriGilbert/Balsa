@@ -72,6 +72,18 @@ var JSI=function()
 		return t.element('input',att_name,att_value);
 	}
 	
+	this.password=function(att_name,att_value,value)
+	{
+		att_name.push('type');
+		att_value.push('password');
+		if(value)
+		{
+			att_name.push('value');
+			att_value.push(value);
+		}
+		return t.element('input',att_name,att_value);
+	}
+	
 	this.button=function(att_name,att_value,value)
 	{
 		att_name.push('type');
@@ -86,16 +98,36 @@ var JSI=function()
 	
 	this.label=function(i_id,content)
 	{
-		return t.element('label',['for'],[i_id],content);
+		return t.element('label',['for','id'],[i_id,i_id+'_label'],content);
 	}
 	
 	this.input4form=function(i_id,label_cont,att_name,att_value,value)
 	{
-		var div=t.div();
+		var div=t.div(['class'],['']);
 		div.appendChild(t.label(i_id,label_cont));
 		att_name.push('id');
-		att_val.push(i_id);
+		att_value.push(i_id);
 		div.appendChild(t.text(att_name,att_value,value));
+		return div;
+	}
+	
+	this.vInput4form=function(i_id,label_cont,att_name,att_value,value)
+	{
+		var div=t.div(['class'],['']);
+		div.appendChild(t.label(i_id,label_cont));
+		att_name.push('id');
+		att_value.push(i_id);
+		div.appendChild(t.not_empty(t.text(att_name,att_value,value)));
+		return div;
+	}
+	
+	this.pass4form=function(i_id,label_cont,att_name,att_value,value)
+	{
+		var div=t.div(['class'],['']);
+		div.appendChild(t.label(i_id,label_cont));
+		att_name.push('id');
+		att_value.push(i_id);
+		div.appendChild(t.password(att_name,att_value,value));
 		return div;
 	}
 	
@@ -154,6 +186,126 @@ var JSI=function()
 		t.display('none',elts);
 	}
 	
+	this.add2Attribute=function(elts,att,val)
+	{
+		if(elts.hasAttribute(att))
+		{
+			val=elts.getAttribute(att)+';'+val;
+		}
+		
+		elts.setAttribute(att,val);
+		return elts;
+	}
 	
+	/*
+	manipulation de input
+	*/
+	this.not_empty=function(input,def)
+	{
+		var fn='if(this.value==""';
+		if(!def)
+		{
+			fn+=')';
+		}
+		else
+		{
+			fn+=' || this.value=="'+def+'")';
+		}		
+		fn+='{this.style.background="#FAA0B6";}else{this.style.background="#FFF";}';
+		
+		return t.add2Attribute(input,'onblur',fn);
+	}
+	
+	this.same_value_as=function(input1,input2_id)
+	{
+		var fn='if(this.value!=document.getElementById("'+input2_id+'").value){this.style.background="#FAA0B6";}else{this.style.background="#5FFA5A";}';
+		
+		return t.add2Attribute(input1,'onkeyup',fn);
+	}
+	
+	this.is_strong=function(str)
+	{
+		var strength=0;
+		if(str.length>6)
+		{
+			strength++;
+		}
+		if((str.match(/[a-z]/)) && (str.match(/[A-Z]/)))
+		{
+			strength++;
+		}
+		if(str.match(/\d+/))
+		{
+			strength++;
+		}
+		if(str.match(/.[!,@,#,$,%,^,&,*,?,_,~,-,(,)]/))
+		{
+			strength++;
+		}
+		return strength
+	}
+	
+	this.strong_enough=function(pass)
+	{
+		var str=t.is_strong(new String(pass.value));
+		switch(str)
+		{
+			case 0:
+				pass.style.background="#FAA0B6";
+				break;			
+			case 1:
+				pass.style.background="#FAA0B6";
+				break;
+			case 2:
+				pass.style.background="#FACA5A";
+				break;
+			case 3:
+				pass.style.background="#B2FA5A";
+				break;
+			case 4:
+				pass.style.background="#5FFA5A";
+				break;
+		}
+		return pass;
+	}
+	
+	this.strength_checker=function(input)
+	{
+		var fn='jsi.strong_enough(this)';
+		return t.add2Attribute(input,'onkeyup',fn);
+	}
+	
+	this.is_mail=function(input)
+	{
+		var str=new String(input.value)
+		var e_reg = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i;
+		if(str.search(e_reg)==-1)
+		{
+			input.style.background="#FAA0B6";
+		}
+		else
+		{
+			input.style.background="#5FFA5A";
+		}
+		return input;
+	}
+	
+	this.mail_checker=function(input)
+	{
+		var fn='jsi.is_mail(this)';
+		return t.add2Attribute(input,'onblur',fn);
+	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
 

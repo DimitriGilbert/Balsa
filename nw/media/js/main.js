@@ -1,3 +1,4 @@
+var base_url="http://127.0.0.1/Balsa/www/"
 function file(url)
 {
 	if (window.XMLHttpRequest)
@@ -375,12 +376,12 @@ function connect_form(div_id)
 
 function connect_req()
 {
-	var conn_req=serv_req('http://127.0.0.1/facturation/commercial/dev/www/goulot.php?page=connect_req&login='+document.getElementById('login_input').value, '', 'POST', 'p='+Base64.encode(document.getElementById('pass_input').value));
+	var conn_req=serv_req(base_url+'goulot.php?page=connect_req&login='+document.getElementById('login_input').value, '', 'POST', 'p='+Base64.encode(document.getElementById('pass_input').value));
 	document.getElementById('conn').innerHTML='';
 	load_compte();
 }
 
 function deco()
 {
-	serv_req('http://127.0.0.1/facturation/commercial/dev/www/goulot.php?page=deco');
+	serv_req(base_url+'goulot.php?page=deco');
 }
