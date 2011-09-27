@@ -39,25 +39,10 @@ if(is_admin())
 		{
 			inclure_plugin($_GET['module']);
 		}
-#		switch($_GET['module'])
-#		{
-#			case'':
-#			
-#				break;
-#			case'explorer':
-#				inclure_plugin('explorer');
-#				break;
-#			case'editor':
-#				inclure_plugin('editor');
-#				break;
-#			case'terminal':
-#				inclure_plugin('terminal');
-#				break;
-#		}
 	}
 	else
 	{
-		plop('entre une url');
+		inclure_plugin('controll_panel');
 	}	
 }
 else

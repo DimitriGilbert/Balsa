@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<installer>
+<fonction file="all|list">
+<libs>
+<lib name="lib_folder_name"/>
+</libs>
+<file name="file_name" type="file_type"/>
+</fonction>
+<page file="">
+<file name="file_name" type="file_type"/>
+</page>
+<ajax file="">
+<file name="file_name" type="file_type"/>
+</ajax>
+<media>
+<css>
+<file name="file_name" type="file_type"/>
+</css>
+<js>
+<file name="file_name" type="file_type"/>
+</js>
+<img>
+<file name="file_name" type="file_type"/>
+</img>
+</media>
+<data>
+<folder name="data_folder_name" parent="path_of_the_parent(void if parent is nw/data/)" />
+</data>
+</installer>

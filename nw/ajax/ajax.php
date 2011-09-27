@@ -1,1 +1,1 @@
-this is an ajax page
+this is an ajax page taht says "hi" !

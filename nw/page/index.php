@@ -8,6 +8,12 @@
 	<body>
 		<div class="site" id="site">
 			<h1>Bienvenue sur Balsa !</h1>
+			<?php
+			if(isset($_GET['page']))
+			{
+				inclure_page($_GET['page']);
+			}
+			?>
 		</div>
 		<div style="clear:both"></div>
 		<div class="lightbox_filtre" id="lightbox_filtre"></div>

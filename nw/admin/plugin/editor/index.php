@@ -1,5 +1,5 @@
 <?php
-global $path,$path_w,$bdd;
+global $path,$path_w,$bdd,$base_url;
 include_once($path.'admin/plugin/editor/editor.php');
 $action=$_GET['action'];
 switch($action)
@@ -9,7 +9,7 @@ switch($action)
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
 	<head>
-		<link rel="stylesheet" href="<?php echo $base_url ?>admin.php?ajax_admin=1&module=editor&action=css" type="text/css" media="all" />
+		<link rel="stylesheet" href="<?php echo $base_url; ?>admin.php?ajax_admin=1&module=editor&action=css" type="text/css" media="all" />
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 		<title>Mon projet avec Balsa</title>
 	</head>
@@ -37,7 +37,15 @@ switch($action)
 		</div>
 		<div id="scipt_js">
 			<?php echo inclure_js() ?>
-			<script type="text/javascript" src="<?php echo $base_url ?>admin.php?ajax_admin=1&module=editor&action=js"></script>
+			<script type="text/javascript" src="<?php echo $base_url; ?>admin.php?ajax_admin=1&module=editor&action=js"></script>
+			<?php
+			if(isset($_GET['edit']))
+			{
+			?>
+				<script type="text/javascript">editFile("<?php echo $_GET['edit'] ?>")</script>
+			<?php
+			}
+			?>
 		</div>
 	</body>
 </html><?php

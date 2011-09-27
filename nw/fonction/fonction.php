@@ -1,5 +1,6 @@
 <?php
 
+//it dump a print_r result of the variable $var into pres tag, if $r=true , the result will be return
 function print_pre($var,$r=false)
 {
 	if($r!=false)
@@ -14,11 +15,13 @@ function print_pre($var,$r=false)
 	}	
 }
 
+//echo $s into a div with a "plop" class.....sorry ^^
 function plop($s="")
 {
 	echo '<div class="plop">'.$s.'</div>';
 }
 
+//check if the current request have a session open and logged
 function is_logged()
 {
 	if(isset($_SESSION['user_id']) and $_SESSION['user_id']!='')
@@ -31,6 +34,8 @@ function is_logged()
 	}
 }
 
+//check $input with several regular expression see the function below for the names of the different regex,
+//if you want to add regex send me a mail with yours and i will implement them :)
 function valid_input($input,$checker=array('default'))
 {
 	
@@ -59,7 +64,7 @@ function valid_input($input,$checker=array('default'))
 	return true;
 	
 }
-
+//return a regular expression correspondant to $type, these names are used in the function upper
 function pre_reg($type)
 {
 	switch($type)
@@ -79,6 +84,7 @@ function pre_reg($type)
 	}
 }
 
+//add error to the session error variable
 function report_erreur($type,$erreur,$return=false)
 {
 	//les erreurs sont stockée dans un tableau, chaque entrée se rentre de la maniere suivante
@@ -91,6 +97,7 @@ function report_erreur($type,$erreur,$return=false)
 	}
 }
 
+//return the different errors reported with report_erreur(), formated in html 
 function traite_erreur($erreurs)
 {
 	$display=
@@ -116,6 +123,7 @@ function traite_erreur($erreurs)
 	return $display;
 }
 
+//add logs and finish the page process :)
 function traite_fin_de_page()
 {
 	global $get;
@@ -176,6 +184,7 @@ function traite_fin_de_page()
 	return true;
 }
 
+//compress js and css script
 function compresse_text($str)//will remove blank, \t, \n ,... to compress js and css file
 {
 #	http://castlesblog.com/2010/august/14/php-javascript-css-minification
@@ -187,6 +196,7 @@ function compresse_text($str)//will remove blank, \t, \n ,... to compress js and
 	return $str;
 }
 
+//create a tar.gz file xith a specified directory
 function compress_dir($dir,$d_path,$dest_file='',$dest_path='')
 {
 	if($dest_file=='')
@@ -203,7 +213,8 @@ function compress_dir($dir,$d_path,$dest_file='',$dest_path='')
 	echo exec($c);
 }
 
-
+//include a php or a file text and treat the error if needed
+//$page contain the full path of the page
 function inc($page,$php=true)
 {
 	if(is_file($page))
@@ -225,18 +236,21 @@ function inc($page,$php=true)
 	}
 }
 
+//inculde the function page contained in nw/fonction/ with the name contained in $page
 function inclure_fonction($page)
 {
 	global $path;
 	return inc($path.'/fonction/'.$page.'.php');
 }
 
+//inculde the 'page' page contained in nw/page/ with the name contained in $page
 function inclure_page($page)
 {
 	global $path;
 	return inc($path.'/page/'.$page.'.php');
 }
 
+//inculde the ajx page contained in nw/ajax/ with the name contained in $page
 function inclure_ajax($page,$ext='php')
 {
 	global $path;
@@ -252,6 +266,7 @@ function inclure_ajax($page,$ext='php')
 	return $ajax;
 }
 
+//return a strng containing all the content concacted of the file in the $pages array 
 function inclure_text_pages($pages,$sep='',$dir='')
 {
 	$str='';
@@ -265,6 +280,7 @@ function inclure_text_pages($pages,$sep='',$dir='')
 	return $str;
 }
 
+//compress the js files if needed and return the script tag to get it
 function inclure_js($min=false,$php=false)
 {
 	global $path,$base_url;
@@ -288,6 +304,7 @@ function inclure_js($min=false,$php=false)
 	
 }
 
+//compress the css files if needed and return the script tag to get it
 function inclure_css($min=true,$php=false)
 {
 	global $path,$path_w,$base_url;
@@ -326,6 +343,25 @@ function inclure_stat($page,$ext='php')
 	return $ajax;
 }
 
+//put that function anywhere in an other function to include a hook file
+//$hook_name is the name of the file without the extension (.php)
+//$hook_var is an array with all the var you want to use in your hook, you'll caall them via $_HOOK in your hook file
+//if you want to return a html content you have to pass it through a $_HOOK variable and get it after the  hook execution
+function hook($hook_name,$hook_var)
+{
+	global $_HOOK,$path,$path_w,$base_url;
+	$_HOOK=$hook_var
+	if(is_file($path.'hook/'.$hook_name.'.php'))
+	{
+		return include_once $path.'hook/'.$hook_name.'.php';
+	}
+	else
+	{
+		//report_erreur
+	}
+}
+
+//dummy stuff, need to be coded and tsted :p
 class activity_logger
 {
 	function load($fichier='')

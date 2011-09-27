@@ -1,0 +1,11 @@
+<bif>
+<fonction name="html">
+var div=document.createElement('div');var id_html=prompt('id de votre div ?');div.id=id_html;document.getElementById('terminal_prompt').appendChild(div);eval(id_html+'=document.getElementById("'+id_html+'");');
+</fonction>
+<fonction name="iframe">
+var if=documet.createElement('iframe');var ifs=prompt('source de votre frame ?');if.setAttribute('src',ifs);document.getElementById('terminal_prompt.appendChild(if);
+</fonction>
+<fonction name="echo">
+document.getElemntById('terminal_prompt').innerHTML+='<p>trouver un moyen pour interpreter les parametre suivant le nom de la fonction :P</p>';
+</fonction>
+</bif>

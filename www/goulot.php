@@ -11,23 +11,8 @@ foreach($_GET as $gettemp=>$key)
 	}
 }
 
-switch($get['page'])
-{
-	case '':
-		inclure_ajax('ajax');
-		break;
-}
+inclure_ajax($_GET['page']);
 
-$logged=is_logged();
-if($logged)
-{
-	switch($get['page'])
-	{
-		case '':
-			inclure_ajax('ajax');
-			break;
-	}
-}
 
 traite_fin_de_page();
 ?>

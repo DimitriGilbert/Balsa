@@ -106,7 +106,9 @@ function move_nw($path,$path_w,$admin_name)
 	}
 }
 
-function bdd_admin($bdd_user,$bdd_host,$bdd_pass,$bdd_name)
+function bdd_create($bdd_user,$bdd_host,$bdd_pass,$bdd_name)
+{
+  if($_POST['bdd_']=='1')
 {
 	global $bdd,$path,$path_w;
 	$bdd_class_str=
@@ -156,6 +158,11 @@ class Bdd
 		echo $erreur;
 		return false;
 	}		
+}
+  else
+  {
+    return true;
+  }
 	
 }
 
@@ -167,11 +174,8 @@ function create_admin($login,$mail,$pass,$pass2)
 	{
 		$pass=hash('sha512',$pass);
 	}
-	$req=
-	'
-	INSERT INTO `Balsa`.`admin` (`id` ,`login` ,`mail` ,`pass`)VALUES(\''.$id.'\', \''.$login.'\', \''.$mail.'\', \''.$pass.'\');
-	';
-	if($bdd->query2($req))
+	$xml='<comptes><'.$login.' mail="'.$mail.'" id="'.$id.'">'.$pass.'</'.$login.'></comptes>';
+	if(file_put_contents($path.'/admin/admin.xml',$xml))
 	{
 		return true;
 	}
@@ -241,7 +245,25 @@ session_start();
 
 //base systeme de fichier
 $path=\''.$path.'\';
-$path_w=\''.$path_w.'\';';
+$path_w=\''.$path_w.'\';
+$base_url=\''.$_POST['url'].'\';
+
+//inclusion de fonction de base
+include_once $path.\'fonction/fonction.php\';
+//connexion Bdd
+';
+if($_POST['bdd_']=="oui")
+{
+  $int_str.='inclure_fonction(\'bdd.class\');
+  $bdd=new Bdd;
+  if($bdd->connect()!==true)
+  {
+    	$_SESSION[\'erreur\'][$_SESSION[\'count_erreurs\']]=\'sql_connexion bdd\';
+	  $_SESSION[\'count_erreurs\']++;
+  }
+
+';
+}
 
 	$init_str.=file_get_contents($path.'install/void_init.php');
 	if(file_put_contents($path.'init.php',$init_str))
@@ -256,24 +278,49 @@ $path_w=\''.$path_w.'\';';
 	}
 }
 
-function install_conposant()
+function create_js()
 {
+	$js_str='var base_url='.$_POST['url'];
+	$js_st.r=file_get_contents($path.'install/void_js.js');
+	if(file_put_contents($path.'media/js/js.js',$init_str))
+	{
+		return true;
+	}
+	else
+	{
+		$erreur.='<div>creation du fichier nw/media/js/js.js</div>';
+		echo $erreur;
+		return false;
+	}
+}
+
+function install_composant()
+{
+	echo 'Deplacement du dossier nw';
 	if(move_nw($_POST['admin_path_nw'],$_POST['admin_path_www'],$_POST['admin_path']))
 	{		
-			
-			if(bdd_admin($_POST['db_user'],$_POST['db_host'],$_POST['db_pass'],$_POST['db_name']))
+			echo ' ---> ok<br/>creation de la base de donnée';
+			if(bdd_create($_POST['db_user'],$_POST['db_host'],$_POST['db_pass'],$_POST['db_name']))
 			{
-						echo '1';
+				echo ' ---> ok <br/>creation du fichier admin';
 				if(create_admin($_POST['admin_login'],$_POST['admin_mail'],$_POST['admin_pass'],$_POST['admin_pass_c']))
 				{
-						echo '2';
+					echo ' ---> ok <br/>creation du fichier index';
 					if(create_index())
 					{
-						echo '3';
+						echo ' ---> ok <br/>creation du fichier goulot';
 						if(create_goulot())
 						{
-							echo '4';
-							creat_init_php();
+							echo ' ---> ok <br/>creation du fichier init';
+							if(creat_init_php())
+							{
+								echo' ---> ok <br/>creation du fichier js';
+								if(create_js())
+								{
+									echo' ---> ok <br/>suppression du fichier install.';
+									return unlink($_POST['admin_path_www'].'install.php');
+								}
+							}
 						}	
 					}					
 				}
@@ -295,22 +342,29 @@ switch($_GET['action'])
 <body>
 	<div class="site" id="site">
 		<h1>Bienvenue sur Balsa !</h1>
-		<h2>Configuration de la partie d'administration</h2>
+		<h2>Configuration de la partie d\'administration</h2>
 		<form method="post" action="install.php?action=admin">
 			<h3>configuration du système de fichier</h3>
 			<div>
 				<label for="admin_path_nw">Chemin du repertoire /nw</label><input type="text" id="admin_path_nw" name="admin_path_nw" />
+          <div style="">c\'est le repertoire de base, la ou se trouveront les fichiers de fonctions et les controlleurs</div>
 			</div>
 			<div>
 				<label for="admin_path_www">Chemin du repertoire /www</label><input type="text" id="admin_path_www" name="admin_path_www" />
+          <div style="">c\'est le repertoire web qui contiendrat les controlleurs maitre (index et goulot) ainsi ue les medias</div>
 			</div>
 			<div>
-				<label for="admin_path">Modification du chemin de l'admin</label><input type="text" id="admin_path" name="admin_path" />
+				<label for="admin_path">Modification du chemin de l\'admin</label><input type="text" id="admin_path" name="admin_path" />
+          <div style="">pour plus de securité, il faut modifie le chemin d\'accés a l\'interface d\'administration</div>
 			</div>				
 			<div>
 				<label for="url">URL du projet</label><input type="text" id="url" name="url" />
+          <div style="">l\'url qui permet l\'accé au repertoire www depuis internet</div>
 			</div>
 			<h3>Configuration de la base de donnée admin</h3>
+			<div>
+				<label for="db_">utilisé une base de donnée</label> oui : <input type="radio" id="db_" name="db_" value="oui" /> non : <input type="radio" id="db_" name="db_" value="non" checked />
+			</div>
 			<div>
 				<label for="db_host">Hote de la base de donnée</label><input type="text" value="localhost" id="db_host" name="db_host" />
 			</div>
@@ -323,7 +377,6 @@ switch($_GET['action'])
 			<div>
 				<label for="db_name">Nom de la base de donnée</label><input type="text" value="Balsa" id="db_name" name="db_name" />
 				<p>
-					/!\/!\/!\ ceci n'est pas la base de donnée de votre projet mais la base administrateur de Balsa /!\/!\/!\
 				</p>
 			</div>
 			<div>
@@ -342,14 +395,11 @@ switch($_GET['action'])
 				<label for="admin_pass_c">Confirmation password admin</label><input type="password" id="admin_pass_c" name="admin_pass_c" />
 			</div>
 			<div>
-				<label for="admin_mail">Mail de l'admin</label><input type="text" id="admin_mail" name="admin_mail" />
+				<label for="admin_mail">Mail de l\'admin</label><input type="text" id="admin_mail" name="admin_mail" />
 			</div>
-			<h3>Finalisation de l'instalation</h3>
+			<h3>Finalisation de l\'instalation</h3>
 			<div>
 				<label for="projet_nom">Nom du projet</label><input type="text" id="projet_nom" name="projet_nom" />
-			</div>
-			<div>
-				<label for="projet_bdd">Nom de la base de donnée du projet</label><input type="text" id="projet_bdd" name="admin_path" />
 			</div>
 			<input type="submit" value="suivant">
 		</form>
@@ -370,10 +420,10 @@ switch($_GET['action'])
 		$bdd;
 		$path=$_POST['admin_path_nw'];
 		$path_w=$_POST['admin_path_www'];
-		install_conposant();
-		echo'<pre>';
-		print_r($_POST);
-		echo'</pre>';
+		if(install_composant())
+		{
+			echo' ---> ok<br/><a href="'.$_POST['url'].'/admin.php">entrez dans la page d\'administration</a>';
+		}
 
 		break;
 }

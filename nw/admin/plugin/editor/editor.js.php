@@ -31,6 +31,7 @@ function add_editor_tab(uri)
 	tab.appendChild(jsi.span(['onclick'],['activate_editor(\''+uri+'\')'],uri));
 	tab.appendChild(jsi.span(['onclick'],['closeFile(\''+uri+'\')'],' X'));
 	document.getElementById('editor_tabs').appendChild(tab);
+   edited_file.push(uri);
 	activate_editor(uri);
 }
 
@@ -72,6 +73,63 @@ function saveFile(uri)
 	script.setAttribute('type','text/javascript');
 	script.innerHTML='save_file(file_uri);';
 	document.getElementById('editor_frame_'+uri).contentDocument.getElementById('script_temp').appendChild(script);
+}
+
+function save_all_file()
+{
+   for(u in edited_file)
+   {
+     saveFile(edited_file[u]);
+   }
+}
+
+function save_session(s_name)
+{
+   var xml='<session name='+s_name+'>';
+   for(u in edited_file)
+   {
+     xml+='<file>'+edited_file[u]+'</file>';
+   }
+   xml+='</session>';
+   xml=Base64.encode(xml);
+   var rep=serv_req('http://admin.php?module=editor&ajax_admin=1&action=session_save&name='+s_name,'POST','','session='+xml);
+   if(rep=='1')
+   {
+     return true;
+   }
+   else
+   {
+     return rep;
+   }
+}
+
+function load_session(s_name)
+{
+   var rep= serv_req('http://admin.php?module=editor&ajax_admin=1&action=session_get&name='+s_name,'GET','xml','');
+   var files=rep.getElementsByTagName('file');
+   for(f in files)
+   {
+     editFile(f.value);
+   }
+}
+
+function prompt_save_session()
+{
+   var p=prompt('nom de la session de developpement courante :');
+   if(save_session(p))
+   {
+     alert('sauvegarde de session reussie !');
+   }
+   else
+   {
+     alert('la sauvegarde a échoué...');
+   }
+}
+
+function prompt_load_session()
+{
+   var p=prompt('nom de la session de developpement courante :');
+   load_sesion(p);
 }
 
 if(!jsi)
