@@ -425,5 +425,57 @@ class activity_logger
 	}
 }
 
+function copy_r( $path, $dest )
+{
+    if( is_dir($path) )
+    {
+        @mkdir( $dest );
+        $objects = scandir($path);
+        if( sizeof($objects) > 0 )
+        {
+            foreach( $objects as $file )
+            {
+                if( $file == "." || $file == ".." )
+                    continue;
+                // go on
+                if( is_dir( $path.'/'.$file ) )
+                {
+                    copy_r( $path.'/'.$file, $dest.'/'.$file );
+                }
+                else
+                {
+                    copy( $path.'/'.$file, $dest.'/'.$file );
+                }
+            }
+        }
+        return true;
+    }
+    elseif( is_file($path) )
+    {
+        return copy($path, $dest);
+    }
+    else
+    {
+        return false;
+    }
+}
 
+#http://nashruddin.com/Remove_Directories_Recursively_with_PHP
+function rmdir_r($dir) 
+{
+    $files = scandir($dir);
+    array_shift($files);    // remove '.' from array
+    array_shift($files);    // remove '..' from array
+   
+    foreach ($files as $file) {
+        $file = $dir . '/' . $file;
+        if (is_dir($file)) {
+            rmdir_recursive($file);
+            rmdir($file);
+        } else {
+            unlink($file);
+        }
+    }
+    rmdir($dir);
+}
 ?>

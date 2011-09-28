@@ -1,5 +1,5 @@
 <?php
-
+global $path,$path_w;
 if(is_dir($path.'admin/plugin/'.$_GET['plugin']))
 {
   $p_path= $path.'admin/plugin/'.$_GET['plugin'].'/';
@@ -102,7 +102,7 @@ if(is_dir($path.'admin/plugin/'.$_GET['plugin']))
       copy_r($p_path.'media/img',$path_w.'media/img');
     }
 //creation des dossiers data
-    $fold=$xpath->xquery('//installer/data/folder');
+    $fold=$xpath->query('//installer/data/folder');
     foreach($fold as $f)
     {
       if($f->getAttribute('parent')=='')
@@ -117,16 +117,16 @@ if(is_dir($path.'admin/plugin/'.$_GET['plugin']))
 //flag d'installation
     $install_t=fopen($p_path.'installed','a');
     fclose($install_t);
-    return true;
+    echo 'l\'installation de '.$_GET['plugin'].' c\'est bien deroule<br/><a href="admin.php">retour a l\'admin</a>';
   }
   else
   {
-    return'Il n\'y a pas de ficher d\'installation pour ce plugin.';
+    echo'Il n\'y a pas de ficher d\'installation pour ce plugin.';
   }
 }
 else
 {
-  return 'Le plugin n\'existe pas';
+  echo 'Le plugin n\'existe pas';
 }
 
 ?>

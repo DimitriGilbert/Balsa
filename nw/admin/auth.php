@@ -42,7 +42,7 @@ if(is_admin())
 	}
 	elseif(isset($_GET['install']))
 	{
-		include_once$path.'nw/admin/plugin/installer.php';
+		include_once$path.'admin/plugin/installer.php';
 	}
 	else
 	{
