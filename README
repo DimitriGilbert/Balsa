@@ -49,7 +49,7 @@ it also contain a lib folder for all the lib you'll be using, for example you ca
 the fonction.php file contains all the basic functins of the system, please don't modify it, it will be one of the most updated files :)
 if you want to make modifications to this file please send them or fork on github :) like that i coud implement your work if it's useful for more ^^
 
-the install folder is dummy for now, if you want to help building it check the www/install.php
+the install folder is containing all the files relatives to the install process
 
 the media/ folder contains two subfoders :
 js/ where you put the js which will be compressed

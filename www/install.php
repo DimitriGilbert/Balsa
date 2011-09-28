@@ -281,7 +281,7 @@ if($_POST['bdd_']=="oui")
 function create_js()
 {
 	$js_str='var base_url='.$_POST['url'];
-	$js_st.r=file_get_contents($path.'install/void_js.js');
+	$js_str=file_get_contents($path.'install/void_js.js');
 	if(file_put_contents($path.'media/js/js.js',$init_str))
 	{
 		return true;
