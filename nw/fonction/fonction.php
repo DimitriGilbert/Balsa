@@ -350,7 +350,7 @@ function inclure_stat($page,$ext='php')
 function hook($hook_name,$hook_var)
 {
 	global $_HOOK,$path,$path_w,$base_url;
-	$_HOOK=$hook_var
+	$_HOOK=$hook_var;
 	if(is_file($path.'hook/'.$hook_name.'.php'))
 	{
 		return include_once $path.'hook/'.$hook_name.'.php';

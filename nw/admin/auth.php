@@ -40,6 +40,10 @@ if(is_admin())
 			inclure_plugin($_GET['module']);
 		}
 	}
+	elseif(isset($_GET['install']))
+	{
+		include_once$path.'nw/admin/plugin/installer.php';
+	}
 	else
 	{
 		inclure_plugin('controll_panel');
