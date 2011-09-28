@@ -9,9 +9,6 @@ if(!isset($_SESSION['erreurs']))
 }
 
 $_SESSION['in_time']=microtime();
-//base systeme de fichier
-//base url
-$base_url='http://127.0.0.1/Balsa/www/';
 
 //inclusion de fonction de base
 include_once $path.'fonction/fonction.php';
