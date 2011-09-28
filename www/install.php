@@ -6,7 +6,7 @@
 <?php
 
 #http://php.net/manual/en/function.copy.php
-function copy_r( $path, $dest )
+function copy_r2( $path, $dest )
 {
     if( is_dir($path) )
     {
@@ -21,7 +21,7 @@ function copy_r( $path, $dest )
                 // go on
                 if( is_dir( $path.'/'.$file ) )
                 {
-                    copy_r( $path.'/'.$file, $dest.'/'.$file );
+                    copy_r2( $path.'/'.$file, $dest.'/'.$file );
                 }
                 else
                 {
@@ -42,7 +42,7 @@ function copy_r( $path, $dest )
 }
 
 #http://nashruddin.com/Remove_Directories_Recursively_with_PHP
-function rmdir_r($dir) 
+function rmdir_r_2($dir) 
 {
     $files = scandir($dir);
     array_shift($files);    // remove '.' from array
@@ -51,7 +51,7 @@ function rmdir_r($dir)
     foreach ($files as $file) {
         $file = $dir . '/' . $file;
         if (is_dir($file)) {
-            rmdir_recursive($file);
+            rmdir_r_2($file);
             rmdir($file);
         } else {
             unlink($file);
@@ -62,114 +62,119 @@ function rmdir_r($dir)
 
 function move_nw($path,$path_w,$admin_name)
 {
-	if(!is_dir($path.''))
+	if(is_dir($path))
 	{
-		if(copy_r('../nw',$path))
+		if(!is_dir($path.'fonction'))
 		{
-#			if(!rmdir_r('../nw'))
-#			{
-#				$erreur.='<div>Suppression du repertoire ../nw</div>';
-#			}
-			if(!rename($path.'admin',$path.'admin_'.$admin_name))
+			if(copy_r2('../nw',$path))
 			{
-				$erreur.='<div>renommage du repertoire '.$path.'/nw/admin</div>';
+	#			if(!rmdir_r_2('../nw'))
+	#			{
+	#				$erreur.='<div>Suppression du repertoire ../nw</div>';
+	#			}
+	#			if(!rename($path.'admin',$path.'admin_'.$admin_name))
+	#			{
+	#				$erreur.='<div>renommage du repertoire '.$path.'/nw/admin</div>';
+	#			}
+	#			else
+	#			{
+	#			}
 			}
 			else
 			{
-				$admin_php=
-				'
-				<?php
-				
-				include_once(\''.$path.'init.php\');
-				include_once(\''.$path.'admin_'.$admin_name.'/fonction/auth.php\');				
-				
-				?>
-				';
-				if(!file_put_contents($path_w.'admin_'.$admin_name.'.php',$admin_php))
-				{
-					$erreur.='<div>Création du fichier admin.php</div>';
-					echo $erreur;
-					return false;
-				}
-				else
-				{
-					return true;
-				}
+				$erreur.='<div>creation du repertoire '.$path.'/nw</div>';
+				echo $erreur;
+				return false;
 			}
+			
+			
 		}
-		else
+		$admin_php=
+		'
+		<?php
+	
+		include_once(\''.$path.'init.php\');
+		include_once(\''.$path.'admin/auth.php\');				
+	
+		?>
+		';
+		if(!file_put_contents($path_w.'admin.php',$admin_php))
 		{
-			$erreur.='<div>creation du repertoire '.$path.'/nw</div>';
+			$erreur.='<div>Création du fichier admin.php</div>';
 			echo $erreur;
 			return false;
 		}
+		else
+		{
+			return true;
+		}			
 	}
 }
 
 function bdd_create($bdd_user,$bdd_host,$bdd_pass,$bdd_name)
 {
-  if($_POST['bdd_']=='1')
-{
-	global $bdd,$path,$path_w;
-	$bdd_class_str=
-	'
-	<?php
-class Bdd
-{
-	private $bdUser;
-	private $bdPassWord;
-	private $bdDataBase;
-	private $bdServer;
-	private $connexion;
-	private $estConnecte;
+#	if($_POST['bdd_']=='1')
+#	{
+		global $bdd,$path,$path_w;
+		$bdd_class_str=
+		'
+		<?php
+	class Bdd
+	{
+		private $bdUser;
+		private $bdPassWord;
+		private $bdDataBase;
+		private $bdServer;
+		private $connexion;
+		private $estConnecte;
 
 	
-	function Bdd()
-	{
-		$this->bdUser = "'.$bdd_user.'";
-		$this->bdPassWord = "'.$bdd_pass.'";
-		$this->bdDataBase = "'.$bdd_name.'";
-		$this->bdServer = "'.$bdd_host.'";
-		$this->estConnecte = false;
-		$this->nbreq=0;
-		$this->reqtime=0;
-	}
-	';
-	$bdd_class_str.=file_get_contents($path.'install/void_bdd.class.php');
-	if(file_put_contents($path.'fonction/bdd.class.php',$bdd_class_str))
-	{
-		include_once $path.'fonction/fonction.php';
-		inclure_fonction('bdd.class');
-		$bdd=new Bdd;
-		if($bdd->creat_db_Balsa($bdd_name))
+		function Bdd()
 		{
-			return true;
+			$this->bdUser = "'.$bdd_user.'";
+			$this->bdPassWord = "'.$bdd_pass.'";
+			$this->bdDataBase = "'.$bdd_name.'";
+			$this->bdServer = "'.$bdd_host.'";
+			$this->estConnecte = false;
+			$this->nbreq=0;
+			$this->reqtime=0;
+		}
+		';
+		$bdd_class_str.=file_get_contents($path.'install/void_bdd.class.php');
+		if(file_put_contents($path.'fonction/bdd.class.php',$bdd_class_str))
+		{
+			include_once $path.'fonction/fonction.php';
+			inclure_fonction('bdd.class');
+			$bdd=new Bdd;
+			if($bdd->creat_db_Balsa($bdd_name))
+			{
+				return true;
+			}
+			else
+			{
+				$erreur.='<div>creation de la base de donnée</div>';
+				echo $erreur;
+				return false;
+			}
 		}
 		else
 		{
-			$erreur.='<div>creation de la base de donnée</div>';
+			$erreur.='<div>creation du fichier php de la base de donnée</div>';
 			echo $erreur;
 			return false;
-		}
-	}
-	else
-	{
-		$erreur.='<div>creation du fichier php de la base de donnée</div>';
-		echo $erreur;
-		return false;
-	}		
-}
-  else
-  {
-    return true;
-  }
+		}		
+#	}
+#	else
+#	{
+#		return true;
+#	}
 	
 }
 
 function create_admin($login,$mail,$pass,$pass2)
 {
 	global $bdd,$path,$path_w;
-	$id=$bdd->get_primkey();
+	$id=1;
 	if($pass==$pass2)
 	{
 		$pass=hash('sha512',$pass);
@@ -252,8 +257,7 @@ $base_url=\''.$_POST['url'].'\';
 include_once $path.\'fonction/fonction.php\';
 //connexion Bdd
 ';
-if($_POST['bdd_']=="oui")
-{
+
   $int_str.='inclure_fonction(\'bdd.class\');
   $bdd=new Bdd;
   if($bdd->connect()!==true)
@@ -263,7 +267,7 @@ if($_POST['bdd_']=="oui")
   }
 
 ';
-}
+
 
 	$init_str.=file_get_contents($path.'install/void_init.php');
 	if(file_put_contents($path.'init.php',$init_str))
@@ -280,9 +284,10 @@ if($_POST['bdd_']=="oui")
 
 function create_js()
 {
+	global $path;
 	$js_str='var base_url='.$_POST['url'];
 	$js_str=file_get_contents($path.'install/void_js.js');
-	if(file_put_contents($path.'media/js/js.js',$init_str))
+	if(file_put_contents($path.'media/js/main.js',$js_str))
 	{
 		return true;
 	}
