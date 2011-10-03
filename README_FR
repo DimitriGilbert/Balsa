@@ -1,0 +1,57 @@
+Balsa est un "framework" php, les " sont là car Balsa est très petit et limité en lui même.
+ildefini une structure simple ou chaque chose a sa place pour votre projet.
+
+Pour installer Balsa, il faut extraire le contenu de l'archive dans un repertoir accéssible depuis le web puis se rendre sur le fichier install.php depuis le navigateur
+remplissez le formulaire
+Vous devriez etre bon pour commencer ^^
+
+un Back office est accessible via la page admin.php
+
+A propos de la structure :
+
+Il y a deux dossiers principaux : www/ et nw/, comme leur nom peuvent l'indiquer le dossier www/ sera celui accessible depuis le web et le dossier nw/ ne le sera pas (dans un monde parfait.)
+
+Commencon par le plus simple, le dossier www/ :
+Il y a peu de fichiers dans ce dossier ; index?php, goulot.php, admin.php et le dossier media/
+la page index.php est l'entrée pour les fichiers contenus dans le dossier nw/page/, il inclura,s'il existe, le fichier nommer dans le parametre get 'page'
+la page goulot.php est l'entrée pour les fichiers contenus dans le dossier nw/ajax/, il inclura,s'il existe, le fichier nommer dans le parametre get 'page'
+admin.php a un role identique au deux fichier precedent sauf qu'il gere les requete pour le back office
+
+dans le dossier media/ vous trouverez les sous dossier suivant :
+css/, qui contient la version compresser par balsa des different fichier css
+js/, qui marche de la meme maniere que css/ mais avec les fichier javascript
+img/ qui contiendra les images
+font/ qui contiendra les differentes polices d'ecritures
+
+
+et maintenant le plat de resistance, le dossier nw/ :
+vous trouverez ici le fichier init.php et les dossier suivant : admin, ajax, data, fonction, install, media, page
+le fichier init.php est la premiere partie de logiciel, il initialise les differentes constantes utilisées
+ 
+Le dossier ajax/ contient tout les fichiers appelés par goulot.php avec le parametre get 'page'
+ajouter simplement un fichier ici et appeler le avec l'url goulot.php?page=nom_du_fichier_sans_php
+
+le dossier data/ contiendra les sous dossiers relatif aux données du logiciel
+
+le dossier fonction/ va contenir toutes vos bibliotheque (fonctions et classes) qui seront utiliser dans votre programme
+il contient aussi  un sous dossier lib/ ou vous placerez toutes les librairie tierce que vous utilisez
+le fichier fonction.php contient toutes les fonctionnalités de base, s'il vous plait ne le modifié pas :P
+
+le dossier install/ contient les fichier relatif a l'installation
+
+le dossier media/ contient deux sous dossier :
+js/ qui contient les fichiers js qui seront compressés
+css/ qui contient tout les fichiers css qui seront compressés
+
+le dossier page contient tout les fichier appeler via le parametre get 'page' dans index.php
+
+le dossier admin contient tout les fichier concernant le back office
+le fichier auth.php qui contient toutes les fonction pour l'authentification, c'est aussi lui qui ouvre l'acces  au reste de la partie d'admin
+le dossier fonction/ sert a la meme chose que le dossier nw/fonction
+le dossier page/ sert a la meme chose que le dossier nw/page
+
+
+c'est a peu pres tout :D
+
+en lui meme le projet ne devrait pas evoluer trop fortement, la structure devrais rester fortement identique
+seule la partie admin est en evolution constante
