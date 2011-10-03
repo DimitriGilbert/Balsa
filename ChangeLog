@@ -1,8 +1,19 @@
 CHANGELOG
 
-0.4c
+0.4c :
 
 reprise de l'install du fork de chrysa
 	config de mail.php, de la langue et du nom du site dans install.php
-Creation des plugin chrysa_sache, chrysa_token et chrysa_debug
+Creation des plugin chrysa_cache, chrysa_token et chrysa_debug
 	integration des fonctionnalité crée par Chrysa dans son fork sous forme de plugin Balsa.
+	
+	
+0.4d :
+
+corection d'un bug dans l'installeur de plugins
+ajout des liens d'installation de plugin dans le controll_panel grace au hook 'after_plugin_link'
+
+0.4e :
+ 
+ajout d'un uninstalleur de plugin
+ajout des liens de desintalation des plugins installer

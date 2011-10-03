@@ -44,6 +44,10 @@ if(is_admin())
 	{
 		include_once$path.'admin/plugin/installer.php';
 	}
+	elseif(isset($_GET['uninstall']))
+	{
+		include_once$path.'admin/plugin/uninstaller.php';
+	}
 	else
 	{
 		inclure_plugin('controll_panel');
