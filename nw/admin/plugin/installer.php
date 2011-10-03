@@ -107,11 +107,11 @@ if(is_dir($path.'admin/plugin/'.$_GET['plugin']))
     {
       if($f->getAttribute('parent')=='')
       {
-        mkdir($path.'data/'.$f->getAttirbute('name'));
+        mkdir($path.'data/'.$f->getAttribute('name'));
       }
       else
       {
-        mkdir($path.'data/ '.$f->getAttirbute('parent').'/'.$f->getAttirbute('name') );
+        mkdir($path.'data/ '.$f->getAttribute('parent').'/'.$f->getAttribute('name') );
       }
     }
 //flag d'installation

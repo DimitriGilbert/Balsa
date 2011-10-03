@@ -353,7 +353,7 @@ function hook($hook_name,$hook_var)
 	$_HOOK=$hook_var;
 	if(is_file($path.'hook/'.$hook_name.'.php'))
 	{
-		return include_once $path.'hook/'.$hook_name.'.php';
+		return include $path.'hook/'.$hook_name.'.php';
 	}
 	else
 	{

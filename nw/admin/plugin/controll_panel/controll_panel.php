@@ -70,7 +70,7 @@ function list_page_controller()
 
 function list_plugin()
 {
-	global $path, $base_url;
+	global $path, $base_url,$_HOOK;
 	$display=
 	'
 	<div class="file_list" id="plugin_list">
@@ -89,10 +89,11 @@ function list_plugin()
 		}
 		else
 		{
+			hook('after_plugin_link',array("display","p_name"=>$d));
 			$display.=
 			'
 			<div class="plugin" id="plug_'.$d.'">
-				<a href="'.$base_url.'admin.php?ajax_admin=1&module='.$d.'">'.$d.'</a>
+				<a href="'.$base_url.'admin.php?ajax_admin=1&module='.$d.'">'.$d.'</a>'.$_HOOK['display'].'
 			</div>
 			';
 		}
