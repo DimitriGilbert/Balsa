@@ -1,0 +1,63 @@
+/* 
+    Document   : style_install
+    Created on : 14 oct. 2011, 01:05:22
+    Author     : rudak
+*/
+body{
+    background : #b07b7f url(../img/bg_install.jpg) center top repeat-y;
+    color: #FFF;
+}
+img#logo_install{
+    display: block;
+    margin: auto;
+}
+img#imgConfig{
+    position: absolute;
+    right: 90px;
+    top: 17px;
+}
+div.site{
+}
+
+div.configStep{
+    border: 5px solid #333;
+    width: 760px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: rgba(0,0,0,0.7);
+
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px; 
+    overflow: hidden;
+}
+div.configStep h3{
+    margin-top: 0;
+    margin-left: 50px;
+}
+div.configStep h4{
+    margin-bottom: 0;
+    margin-left: 80px;
+}
+div.configStep label{
+    width: 300px;
+    display: inline-block;
+    text-align: right;
+    padding-right: 10px;
+}
+div.configStep div.info{
+    color: #cccccc;
+    text-align: center;
+    font-size: 0.8em;
+}
+div.configStep input[type=text],div.configStep input[type=password]{
+    text-align: center;
+    width: 150px;
+    display: inline-block;
+    padding: 5px;
+    margin: 5px 0;
+    margin-right: 10px;
+}
+div.configStep input[type=submit]{
+    float: right;    
+}

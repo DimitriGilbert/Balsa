@@ -67,4 +67,9 @@ ajout des liens de desintalation des plugins installer
 			after_plugin_install
 		nw/admin/plugin/uninstaller.php
 			after_plugin_uninstall
+			
+0.4g :
+	reprise du fork de Rudak
+		style pour l'install (\o/, yeah, it's not a blank page anymore :D)
+		suppression de la notice du a $_GET['action']
 		
