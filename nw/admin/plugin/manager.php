@@ -1,21 +1,23 @@
 <?php
 global $path,$path_w,$base_url;
 
-class plugin_manager()
+class plugin_manager
 {
-	$path='';
-	$name='';
-	$xml=new DOMDocument();
-	$to_install=array('fonction','page','ajax','hook','media/css','media/js');
+	public $path;
+	public $name;
+	public $xml;
+	public $to_install;
 	
-	function __init($plugin)
+	function __construct($plugin)
 	{
-		global $path
+		global $path;
 		$this->path=$path.'admin/plugin/'.$plugin.'/';
 		if(is_file($this->path.'install.xml'))
 		{
 			$this->name=$plugin;
-			$this->xml->load($this6>path.'install.xml');
+			$this->xml=new DOMDocument();
+			$this->xml->load($this->path.'install.xml');
+			$this->to_install=array('fonction','page','ajax','hook','media/css','media/js');
 		}
 		else
 		{
@@ -25,7 +27,7 @@ class plugin_manager()
 	
 	function install($quoi,$node)
 	{
-		global $path
+		global $path;
 		if($node->getAttribute('file')!='all')
 		{
 			$f_list=$node->childNodes;
@@ -42,7 +44,7 @@ class plugin_manager()
 	
 	function uninstall($quoi,$node)
 	{
-		global $path
+		global $path;
 		if($node->getAttribute('file')!='all')
 		{
 			$f_list=$node->childNodes;
@@ -70,7 +72,7 @@ class plugin_manager()
 	
 	function install_data()
 	{
-		global $path
+		global $path;
 		$fold=$this->xml->getElementsByTagName('folder');
 		foreach($fold as $f)
 		{
@@ -87,6 +89,7 @@ class plugin_manager()
 	
 	function install_flag()
 	{
+		global $base_url;
 		$install_t=fopen($this->path.'installed','a');
 		fclose($install_t);
 		hook('after_plugin_install',array('plugin'=>$this->name));
@@ -95,7 +98,8 @@ class plugin_manager()
 		
 	function uninstall_flag()
 	{
-		unlink($this->path.'installed','a');
+		global $base_url;
+		unlink($this->path.'installed');
 		hook('after_plugin_uninstall',array('plugin'=>$this->name));
 		echo 'la desinstallation de '.$this->name.' c\'est bien deroule<br/><a href="'.$base_url.'admin.php">retour a l\'admin</a>';
 	}
@@ -103,6 +107,7 @@ class plugin_manager()
 	function install_all()
 	{
 		global $path_w;
+		print_r($this->to_install);
 		foreach($this->to_install as $t)
 		{
 			if($t=='media/js')
@@ -117,7 +122,7 @@ class plugin_manager()
 			{
 				$t2=$t;
 			}
-			$this->install($t,$this->xml->getElementsByTagName($t2)->item(0))
+			$this->install($t,$this->xml->getElementsByTagName($t2)->item(0));
 		}
 		$this->install_data();
 		copy_r($this->path.'media/img',$path_w.'media/img');
@@ -141,7 +146,7 @@ class plugin_manager()
 			{
 				$t2=$t;
 			}
-			$this->uninstall($t,$this->xml->getElementsByTagName($t2)->item(0))
+			$this->uninstall($t,$this->xml->getElementsByTagName($t2)->item(0));
 		}		
 		//reste les image a desintaller !!	
 		$this->uninstall_flag();

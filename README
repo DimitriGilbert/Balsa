@@ -4,21 +4,13 @@ finally the installer is working
 to install balsa browse your www/ folder and execute install.php from your browser
 fill in the field
 you should be good to go ^^
-<--old
-to make it work it's simple :
-_edit the nw/init.php file and put the right values to $path (the path to the nw folder), $path_w (the path to the www folder) and $base_url (your url to access the www folder)
-_edit the nw/fonction/bdd.class.php and put the right values for your database
-_edit the nw/admin/admin.xml as it's allready, the pass hash is sha512.
-_edit the nw/media/js/main.js ans put the right value for base_url
--->
 
 the controll panel is accessible via the admin.php page.
 
 about the structure :
 there are 2 main folders : www/ and nw/ , as there names should evoque the first one is whats accessible on the web and the second is the non-web folder :)
 
-
-
+__________________________WWW FOLDER________________________________
 start with the easy one the www/:
 there's few files and a folder here : index.php, goulot.php, admin.php and the media/ folder
 the index.php is the main controller for pages, it includes, if it exists, the page called by the get parameter 'page'
@@ -26,14 +18,14 @@ the goulot.php does the same with the ajax call, and includes, if it exists, the
 the admin.php  plays the same role with admin requests :)
 
 in the media/ folder you'll find few sub-folders :
-css/, which contain css.pph, that serve a compressed version of the css, and the lib folder, wwhich contain the css libs
+css/, which contain css.php, that serve a compressed version of the css, and the lib folder, wwhich contain the css libs
 js/, which work the same way as css/
 img/, which contain all the images
 font/, wich contain the fonts 
 and dl/ wich contain all the file to download
 
 
-
+__________________________NW FOLDER________________________________
 and now the main course, the nw/ folder :
 here you'll find init.php and the following folders :
 admin, ajax, data, fonction, install, media, page
@@ -74,7 +66,7 @@ I think most of the work there is still to do is on the admin part as Balsa inte
 
 
 
-
+__________________________NW/ADMIN FOLDER________________________________
 let's try to detail the admin part
 
 first of  all the auth.php wich contain all the functions to id and log in an admin, it also gives access to the different scripts present in the admin part
@@ -82,30 +74,29 @@ please dont modify this file as it will probably be updated in further versions,
 
 the the fonction/ folder wich will contain all the different functions and class files for the admin
 
-the page/ folder comports the same way as the nw/page/ folder with the admin.php file.
+the page/ .
 
 
-the plugin folder will contain all the different main files for plugins in Balsa,   
-this is how work the plugin installer :
-first you create a folder with you're plugin name,
-then create fonction/, ajax/, page/ and media/ sub-folders,
-create also the js/, css/ and img/ subfolders in the media/ folder created before
-put the file you use in your plugin in the right folders (as they where in the nw/ sb-folders)
-once the structure is filled copy the void_install.xml file in your main folder and rename it install.xml
-fill the xml up as it's shown (speak for itself i think but if you need more precisions let me know :) )
-you can add more files in it like i did for the editor pluging shipped with Balsa to use it, the only constraint you got here is to put a index.php file which will serve as main controller for your plugin
-give a look at the editor plugin file and you'll get it really quickly, 
-but as said you can install you js and css file with the previously described method :)
+the plugin/ folder will contain all the different main files for plugins in Balsa,   
+	this is how work the plugin installer :
+	first you create a folder with you're plugin name,
+	then create fonction/, ajax/, page/ and media/ sub-folders,
+	create also the js/, css/ and img/ subfolders in the media/ folder created before
+	put the file you use in your plugin in the right folders (as they where in the nw/ sb-folders)
+	once the structure is filled copy the void_install.xml file in your main folder and rename it install.xml
+	fill the xml up as it's shown (speak for itself i think but if you need more precisions let me know :) )
+	you can add more files in it like i did for the editor pluging shipped with Balsa to use it, the only constraint you got here is to put a index.php file which will serve as main controller for your plugin
+	give a look at the editor plugin file and you'll get it really quickly, 
+	but as said you can install you js and css file with the previously described method :)
 
-there's a HelloWorld plugin already shipped with Balsa so you'll see how it can work on a small plugin :)
+	there's a HelloWorld plugin already shipped with Balsa so you'll see how it can work on a small plugin :)
 
 i've allready planned to make a packager to build your plugins more simply by automating most of the task,
 you'll choose the file with the explorer shiped with Balsa (and used in the editor), give a name to your package and it will do the rest :)
 for further installation, as DB tables or built-in data files you'll have to script it and declenche it via your index file in your folder by using the url
-admin.php?module=<your_plugin_name>&<your_trigger_variable>=<your_trigger_value>
+admin.php?page_admin=1&module=<your_plugin_name>&<your_trigger_variable>=<your_trigger_value>
 for example with a plugin named plop we could have
-admin.php?module=plop&install=true
-a hook system is also in dev (you can see most of it in the source already :P )
+admin.php?page_admin=1&module=plop&install=true
 
 
 As its name wants to show, Balsa is just a basic structure and a bunch of tools you can use to shape your own desire on the web and redistribute it really easily :)

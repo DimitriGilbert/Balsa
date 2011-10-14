@@ -103,5 +103,5 @@ $nomDesFichiersDeLangue = 'traduction'; // Le nom de nos fichiers .mo
 bindtextdomain($nomDesFichiersDeLangue, $path."nw/locale"); // On indique le chemin vers les fichiers .mo
 textdomain($nomDesFichiersDeLangue); // Le nom du domaine par défaut
 
-
+hook('after_init',array());
 ?>

@@ -211,7 +211,7 @@ traite_fin_de_page();
 include_once  \'' . $path . 'init.php\';
 	';
 
-            $index_str.=file_get_contents($path . 'install/void_bdd.class.php');
+            $index_str.=file_get_contents($path . 'install/void_goulot.php');
 
             if (file_put_contents($path_w . 'goulot.php', $index_str)) {
                 return true;

@@ -73,3 +73,19 @@ ajout des liens de desintalation des plugins installer
 		style pour l'install (\o/, yeah, it's not a blank page anymore :D)
 		suppression de la notice du a $_GET['action'] 
 		
+0.4h :
+	mise en place de la class plugin_manager dans nw/admin/plugin/installer.php et dans nw/admin/plugin/uninstaller.php 
+	correction de l'install qui copier void_bbd.class pour goulot.php
+	lise a jour du wiki pour l'installation et l'utilisation
+	rajout de hook
+		nw/page/index.php
+			index_before_inclure_page
+			index_after_inclure_page
+		nw/init.php
+			after_init		
+		www/goulot.php
+			index_before_inclure_ajax
+			index_after_inclure_ajax
+		
+		
+		

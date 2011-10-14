@@ -11,6 +11,9 @@ A propos de la structure :
 
 Il y a deux dossiers principaux : www/ et nw/, comme leur nom peuvent l'indiquer le dossier www/ sera celui accessible depuis le web et le dossier nw/ ne le sera pas (dans un monde parfait.)
 
+
+__________________________DOSSIER WWW__________________________
+
 Commencon par le plus simple, le dossier www/ :
 Il y a peu de fichiers dans ce dossier ; index?php, goulot.php, admin.php et le dossier media/
 la page index.php est l'entrée pour les fichiers contenus dans le dossier nw/page/, il inclura,s'il existe, le fichier nommer dans le parametre get 'page'
@@ -23,6 +26,7 @@ js/, qui marche de la meme maniere que css/ mais avec les fichier javascript
 img/ qui contiendra les images
 font/ qui contiendra les differentes polices d'ecritures
 
+__________________________DOSSIER NW__________________________
 
 et maintenant le plat de resistance, le dossier nw/ :
 vous trouverez ici le fichier init.php et les dossier suivant : admin, ajax, data, fonction, install, media, page
@@ -48,7 +52,6 @@ le dossier page contient tout les fichier appeler via le parametre get 'page' da
 le dossier admin contient tout les fichier concernant le back office
 le fichier auth.php qui contient toutes les fonction pour l'authentification, c'est aussi lui qui ouvre l'acces  au reste de la partie d'admin
 le dossier fonction/ sert a la meme chose que le dossier nw/fonction
-le dossier page/ sert a la meme chose que le dossier nw/page
 
 
 c'est a peu pres tout :D

@@ -9,10 +9,14 @@
 		<div class="site" id="site">
 			<h1>Bienvenue sur Balsa !</h1>
 			<?php
+			hook('index_before_inclure_page',array('page'=>$_GET['page'],'display'=>''));
+			echo $_HOOK['display'];
 			if(isset($_GET['page']))
 			{
 				inclure_page($_GET['page']);
 			}
+			hook('index_after_inclure_page',array('page'=>$_GET['page'],'display'=>''));
+			echo $_HOOK['display'];
 			?>
 		</div>
 		<div style="clear:both"></div>

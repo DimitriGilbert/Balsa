@@ -15747,3 +15747,2216 @@
 			
 			</erreurs>
 		
+		<requete time="2011-10-14 14:17:31" gen="0.015001">
+			<client id="123">
+				<navigateur>
+	
+			<nom>Mozilla Firefox</nom>
+		
+			<version>7.0.1</version>
+		
+			<type>desktop</type>
+		
+			<os>linux</os>
+		
+		</navigateur>
+		<url>
+			/Balsa/www/admin.php?page_admin=a&module=controll_panel
+		</url>
+	
+			<erreurs>
+		
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+			</erreurs>
+		
+		<requete time="2011-10-14 14:17:31" gen="0.0014379999999999">
+			<client id="123">
+				<navigateur>
+	
+			<nom>Mozilla Firefox</nom>
+		
+			<version>7.0.1</version>
+		
+			<type>desktop</type>
+		
+			<os>linux</os>
+		
+		</navigateur>
+		<url>
+			/Balsa/www/admin.php?ajax_admin=1&module=controll_panel&action=css
+		</url>
+	
+			<erreurs>
+		
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+			</erreurs>
+		
+		<requete time="2011-10-14 14:17:31" gen="0.001672">
+			<client id="123">
+				<navigateur>
+	
+			<nom>Mozilla Firefox</nom>
+		
+			<version>7.0.1</version>
+		
+			<type>desktop</type>
+		
+			<os>linux</os>
+		
+		</navigateur>
+		<url>
+			/Balsa/www/admin.php?ajax_admin=1&module=controll_panel&action=js
+		</url>
+	
+			<erreurs>
+		
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+			</erreurs>
+		
+		<requete time="2011-10-14 14:24:47" gen="0.070954">
+			<client id="123">
+				<navigateur>
+	
+			<nom>Mozilla Firefox</nom>
+		
+			<version>7.0.1</version>
+		
+			<type>desktop</type>
+		
+			<os>linux</os>
+		
+		</navigateur>
+		<url>
+			/Balsa/www//admin.php?install=1&plugin=chrysa_cache
+		</url>
+	
+			<erreurs>
+		
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/admin/plungin/manager.php n'existe pas.</erreur>
+			
+			</erreurs>
+		
+		<requete time="2011-10-14 14:24:51" gen="0.008803">
+			<client id="123">
+				<navigateur>
+	
+			<nom>Mozilla Firefox</nom>
+		
+			<version>7.0.1</version>
+		
+			<type>desktop</type>
+		
+			<os>linux</os>
+		
+		</navigateur>
+		<url>
+			/Balsa/www/admin.php
+		</url>
+	
+			<erreurs>
+		
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/admin/plungin/manager.php n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+			</erreurs>
+		
+		<requete time="2011-10-14 14:24:51" gen="0.001486">
+			<client id="123">
+				<navigateur>
+	
+			<nom>Mozilla Firefox</nom>
+		
+			<version>7.0.1</version>
+		
+			<type>desktop</type>
+		
+			<os>linux</os>
+		
+		</navigateur>
+		<url>
+			/Balsa/www/admin.php?ajax_admin=1&module=controll_panel&action=css
+		</url>
+	
+			<erreurs>
+		
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/admin/plungin/manager.php n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+			</erreurs>
+		
+		<requete time="2011-10-14 14:24:51" gen="0.001289">
+			<client id="123">
+				<navigateur>
+	
+			<nom>Mozilla Firefox</nom>
+		
+			<version>7.0.1</version>
+		
+			<type>desktop</type>
+		
+			<os>linux</os>
+		
+		</navigateur>
+		<url>
+			/Balsa/www/admin.php?ajax_admin=1&module=controll_panel&action=js
+		</url>
+	
+			<erreurs>
+		
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/admin/plungin/manager.php n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+			</erreurs>
+		
+		<requete time="2011-10-14 14:24:54" gen="0.002809">
+			<client id="123">
+				<navigateur>
+	
+			<nom>Mozilla Firefox</nom>
+		
+			<version>7.0.1</version>
+		
+			<type>desktop</type>
+		
+			<os>linux</os>
+		
+		</navigateur>
+		<url>
+			/Balsa/www//admin.php?uninstall=1&plugin=chrysa_cache
+		</url>
+	
+			<erreurs>
+		
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/admin/plungin/manager.php n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+			</erreurs>
+		
+		<requete time="2011-10-14 14:25:33" gen="0.009425">
+			<client id="123">
+				<navigateur>
+	
+			<nom>Mozilla Firefox</nom>
+		
+			<version>7.0.1</version>
+		
+			<type>desktop</type>
+		
+			<os>linux</os>
+		
+		</navigateur>
+		<url>
+			/Balsa/www/admin.php
+		</url>
+	
+			<erreurs>
+		
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/admin/plungin/manager.php n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+			</erreurs>
+		
+		<requete time="2011-10-14 14:25:33" gen="0.001592">
+			<client id="123">
+				<navigateur>
+	
+			<nom>Mozilla Firefox</nom>
+		
+			<version>7.0.1</version>
+		
+			<type>desktop</type>
+		
+			<os>linux</os>
+		
+		</navigateur>
+		<url>
+			/Balsa/www/admin.php?ajax_admin=1&module=controll_panel&action=css
+		</url>
+	
+			<erreurs>
+		
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/admin/plungin/manager.php n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+			</erreurs>
+		
+		<requete time="2011-10-14 14:25:33" gen="0.001545">
+			<client id="123">
+				<navigateur>
+	
+			<nom>Mozilla Firefox</nom>
+		
+			<version>7.0.1</version>
+		
+			<type>desktop</type>
+		
+			<os>linux</os>
+		
+		</navigateur>
+		<url>
+			/Balsa/www/admin.php?ajax_admin=1&module=controll_panel&action=js
+		</url>
+	
+			<erreurs>
+		
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/admin/plungin/manager.php n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+			</erreurs>
+		
+		<requete time="2011-10-14 14:26:31" gen="0.002484">
+			<client id="123">
+				<navigateur>
+	
+			<nom>Mozilla Firefox</nom>
+		
+			<version>7.0.1</version>
+		
+			<type>desktop</type>
+		
+			<os>linux</os>
+		
+		</navigateur>
+		<url>
+			/Balsa/www//admin.php?install=1&plugin=chrysa_cache
+		</url>
+	
+			<erreurs>
+		
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/admin/plungin/manager.php n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+			</erreurs>
+		
+		<requete time="2011-10-14 14:26:38" gen="0.009217">
+			<client id="123">
+				<navigateur>
+	
+			<nom>Mozilla Firefox</nom>
+		
+			<version>7.0.1</version>
+		
+			<type>desktop</type>
+		
+			<os>linux</os>
+		
+		</navigateur>
+		<url>
+			/Balsa/www/admin.php
+		</url>
+	
+			<erreurs>
+		
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/admin/plungin/manager.php n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+			</erreurs>
+		
+		<requete time="2011-10-14 14:26:38" gen="0.001462">
+			<client id="123">
+				<navigateur>
+	
+			<nom>Mozilla Firefox</nom>
+		
+			<version>7.0.1</version>
+		
+			<type>desktop</type>
+		
+			<os>linux</os>
+		
+		</navigateur>
+		<url>
+			/Balsa/www/admin.php?ajax_admin=1&module=controll_panel&action=css
+		</url>
+	
+			<erreurs>
+		
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/admin/plungin/manager.php n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+			</erreurs>
+		
+		<requete time="2011-10-14 14:26:38" gen="0.001518">
+			<client id="123">
+				<navigateur>
+	
+			<nom>Mozilla Firefox</nom>
+		
+			<version>7.0.1</version>
+		
+			<type>desktop</type>
+		
+			<os>linux</os>
+		
+		</navigateur>
+		<url>
+			/Balsa/www/admin.php?ajax_admin=1&module=controll_panel&action=js
+		</url>
+	
+			<erreurs>
+		
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/admin/plungin/manager.php n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+			</erreurs>
+		
+		<requete time="2011-10-14 14:26:40" gen="0.002346">
+			<client id="123">
+				<navigateur>
+	
+			<nom>Mozilla Firefox</nom>
+		
+			<version>7.0.1</version>
+		
+			<type>desktop</type>
+		
+			<os>linux</os>
+		
+		</navigateur>
+		<url>
+			/Balsa/www//admin.php?uninstall=1&plugin=chrysa_cache
+		</url>
+	
+			<erreurs>
+		
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/admin/plungin/manager.php n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+			</erreurs>
+		
+		<requete time="2011-10-14 14:27:10" gen="0.009069">
+			<client id="123">
+				<navigateur>
+	
+			<nom>Mozilla Firefox</nom>
+		
+			<version>7.0.1</version>
+		
+			<type>desktop</type>
+		
+			<os>linux</os>
+		
+		</navigateur>
+		<url>
+			/Balsa/www/admin.php
+		</url>
+	
+			<erreurs>
+		
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/admin/plungin/manager.php n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+			</erreurs>
+		
+		<requete time="2011-10-14 14:27:10" gen="0.001428">
+			<client id="123">
+				<navigateur>
+	
+			<nom>Mozilla Firefox</nom>
+		
+			<version>7.0.1</version>
+		
+			<type>desktop</type>
+		
+			<os>linux</os>
+		
+		</navigateur>
+		<url>
+			/Balsa/www/admin.php?ajax_admin=1&module=controll_panel&action=css
+		</url>
+	
+			<erreurs>
+		
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/admin/plungin/manager.php n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+			</erreurs>
+		
+		<requete time="2011-10-14 14:27:10" gen="0.001636">
+			<client id="123">
+				<navigateur>
+	
+			<nom>Mozilla Firefox</nom>
+		
+			<version>7.0.1</version>
+		
+			<type>desktop</type>
+		
+			<os>linux</os>
+		
+		</navigateur>
+		<url>
+			/Balsa/www/admin.php?ajax_admin=1&module=controll_panel&action=js
+		</url>
+	
+			<erreurs>
+		
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/admin/plungin/manager.php n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+			</erreurs>
+		
+		<requete time="2011-10-14 14:27:11" gen="0.0021249999999999">
+			<client id="123">
+				<navigateur>
+	
+			<nom>Mozilla Firefox</nom>
+		
+			<version>7.0.1</version>
+		
+			<type>desktop</type>
+		
+			<os>linux</os>
+		
+		</navigateur>
+		<url>
+			/Balsa/www//admin.php?uninstall=1&plugin=chrysa_cache
+		</url>
+	
+			<erreurs>
+		
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/admin/plungin/manager.php n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+			</erreurs>
+		
+		<requete time="2011-10-14 14:27:17" gen="0.009396">
+			<client id="123">
+				<navigateur>
+	
+			<nom>Mozilla Firefox</nom>
+		
+			<version>7.0.1</version>
+		
+			<type>desktop</type>
+		
+			<os>linux</os>
+		
+		</navigateur>
+		<url>
+			/Balsa/www/admin.php
+		</url>
+	
+			<erreurs>
+		
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/admin/plungin/manager.php n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+			</erreurs>
+		
+		<requete time="2011-10-14 14:27:17" gen="0.001557">
+			<client id="123">
+				<navigateur>
+	
+			<nom>Mozilla Firefox</nom>
+		
+			<version>7.0.1</version>
+		
+			<type>desktop</type>
+		
+			<os>linux</os>
+		
+		</navigateur>
+		<url>
+			/Balsa/www/admin.php?ajax_admin=1&module=controll_panel&action=css
+		</url>
+	
+			<erreurs>
+		
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/admin/plungin/manager.php n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+			</erreurs>
+		
+		<requete time="2011-10-14 14:27:17" gen="0.002252">
+			<client id="123">
+				<navigateur>
+	
+			<nom>Mozilla Firefox</nom>
+		
+			<version>7.0.1</version>
+		
+			<type>desktop</type>
+		
+			<os>linux</os>
+		
+		</navigateur>
+		<url>
+			/Balsa/www/admin.php?ajax_admin=1&module=controll_panel&action=js
+		</url>
+	
+			<erreurs>
+		
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/admin/plungin/manager.php n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+			</erreurs>
+		
+		<requete time="2011-10-14 14:27:19" gen="0.0023420000000001">
+			<client id="123">
+				<navigateur>
+	
+			<nom>Mozilla Firefox</nom>
+		
+			<version>7.0.1</version>
+		
+			<type>desktop</type>
+		
+			<os>linux</os>
+		
+		</navigateur>
+		<url>
+			/Balsa/www//admin.php?install=1&plugin=chrysa_cache
+		</url>
+	
+			<erreurs>
+		
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/admin/plungin/manager.php n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+			</erreurs>
+		
+		<requete time="2011-10-14 14:27:21" gen="0.009933">
+			<client id="123">
+				<navigateur>
+	
+			<nom>Mozilla Firefox</nom>
+		
+			<version>7.0.1</version>
+		
+			<type>desktop</type>
+		
+			<os>linux</os>
+		
+		</navigateur>
+		<url>
+			/Balsa/www/admin.php
+		</url>
+	
+			<erreurs>
+		
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/admin/plungin/manager.php n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+			</erreurs>
+		
+		<requete time="2011-10-14 14:27:21" gen="0.001277">
+			<client id="123">
+				<navigateur>
+	
+			<nom>Mozilla Firefox</nom>
+		
+			<version>7.0.1</version>
+		
+			<type>desktop</type>
+		
+			<os>linux</os>
+		
+		</navigateur>
+		<url>
+			/Balsa/www/admin.php?ajax_admin=1&module=controll_panel&action=css
+		</url>
+	
+			<erreurs>
+		
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/admin/plungin/manager.php n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+			</erreurs>
+		
+		<requete time="2011-10-14 14:27:21" gen="0.001396">
+			<client id="123">
+				<navigateur>
+	
+			<nom>Mozilla Firefox</nom>
+		
+			<version>7.0.1</version>
+		
+			<type>desktop</type>
+		
+			<os>linux</os>
+		
+		</navigateur>
+		<url>
+			/Balsa/www/admin.php?ajax_admin=1&module=controll_panel&action=js
+		</url>
+	
+			<erreurs>
+		
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/admin/plungin/manager.php n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+			</erreurs>
+		
+		<requete time="2011-10-14 14:27:22" gen="0.002265">
+			<client id="123">
+				<navigateur>
+	
+			<nom>Mozilla Firefox</nom>
+		
+			<version>7.0.1</version>
+		
+			<type>desktop</type>
+		
+			<os>linux</os>
+		
+		</navigateur>
+		<url>
+			/Balsa/www//admin.php?uninstall=1&plugin=chrysa_cache
+		</url>
+	
+			<erreurs>
+		
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/admin/plungin/manager.php n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+			</erreurs>
+		
+		<requete time="2011-10-14 14:27:23" gen="0.01097">
+			<client id="123">
+				<navigateur>
+	
+			<nom>Mozilla Firefox</nom>
+		
+			<version>7.0.1</version>
+		
+			<type>desktop</type>
+		
+			<os>linux</os>
+		
+		</navigateur>
+		<url>
+			/Balsa/www/admin.php
+		</url>
+	
+			<erreurs>
+		
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/admin/plungin/manager.php n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+			</erreurs>
+		
+		<requete time="2011-10-14 14:27:23" gen="0.001618">
+			<client id="123">
+				<navigateur>
+	
+			<nom>Mozilla Firefox</nom>
+		
+			<version>7.0.1</version>
+		
+			<type>desktop</type>
+		
+			<os>linux</os>
+		
+		</navigateur>
+		<url>
+			/Balsa/www/admin.php?ajax_admin=1&module=controll_panel&action=css
+		</url>
+	
+			<erreurs>
+		
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/admin/plungin/manager.php n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+			</erreurs>
+		
+		<requete time="2011-10-14 14:27:23" gen="0.001509">
+			<client id="123">
+				<navigateur>
+	
+			<nom>Mozilla Firefox</nom>
+		
+			<version>7.0.1</version>
+		
+			<type>desktop</type>
+		
+			<os>linux</os>
+		
+		</navigateur>
+		<url>
+			/Balsa/www/admin.php?ajax_admin=1&module=controll_panel&action=js
+		</url>
+	
+			<erreurs>
+		
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/admin/plungin/manager.php n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+			</erreurs>
+		
+		<requete time="2011-10-14 14:29:34" gen="0.009901">
+			<client id="123">
+				<navigateur>
+	
+			<nom>Mozilla Firefox</nom>
+		
+			<version>7.0.1</version>
+		
+			<type>desktop</type>
+		
+			<os>linux</os>
+		
+		</navigateur>
+		<url>
+			/Balsa/www/admin.php?page_admin=a&module=controll_panel
+		</url>
+	
+			<erreurs>
+		
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/admin/plungin/manager.php n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+			</erreurs>
+		
+		<requete time="2011-10-14 14:29:34" gen="0.001511">
+			<client id="123">
+				<navigateur>
+	
+			<nom>Mozilla Firefox</nom>
+		
+			<version>7.0.1</version>
+		
+			<type>desktop</type>
+		
+			<os>linux</os>
+		
+		</navigateur>
+		<url>
+			/Balsa/www/admin.php?ajax_admin=1&module=controll_panel&action=css
+		</url>
+	
+			<erreurs>
+		
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/admin/plungin/manager.php n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+			</erreurs>
+		
+		<requete time="2011-10-14 14:29:34" gen="0.001413">
+			<client id="123">
+				<navigateur>
+	
+			<nom>Mozilla Firefox</nom>
+		
+			<version>7.0.1</version>
+		
+			<type>desktop</type>
+		
+			<os>linux</os>
+		
+		</navigateur>
+		<url>
+			/Balsa/www/admin.php?ajax_admin=1&module=controll_panel&action=js
+		</url>
+	
+			<erreurs>
+		
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/admin/plungin/manager.php n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+			</erreurs>
+		
+		<requete time="2011-10-14 14:29:37" gen="0.008808">
+			<client id="123">
+				<navigateur>
+	
+			<nom>Mozilla Firefox</nom>
+		
+			<version>7.0.1</version>
+		
+			<type>desktop</type>
+		
+			<os>linux</os>
+		
+		</navigateur>
+		<url>
+			/Balsa/www/admin.php?page_admin=a&module=controll_panel&action=f_css
+		</url>
+	
+			<erreurs>
+		
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/admin/plungin/manager.php n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+			</erreurs>
+		
+		<requete time="2011-10-14 14:29:37" gen="0.001656">
+			<client id="123">
+				<navigateur>
+	
+			<nom>Mozilla Firefox</nom>
+		
+			<version>7.0.1</version>
+		
+			<type>desktop</type>
+		
+			<os>linux</os>
+		
+		</navigateur>
+		<url>
+			/Balsa/www/admin.php?ajax_admin=1&module=controll_panel&action=css
+		</url>
+	
+			<erreurs>
+		
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/admin/plungin/manager.php n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+			</erreurs>
+		
+		<requete time="2011-10-14 14:29:40" gen="0.008882">
+			<client id="123">
+				<navigateur>
+	
+			<nom>Mozilla Firefox</nom>
+		
+			<version>7.0.1</version>
+		
+			<type>desktop</type>
+		
+			<os>linux</os>
+		
+		</navigateur>
+		<url>
+			/Balsa/www/admin.php?page_admin=a&module=controll_panel&action=ajax
+		</url>
+	
+			<erreurs>
+		
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/admin/plungin/manager.php n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+			</erreurs>
+		
+		<requete time="2011-10-14 14:29:40" gen="0.00135">
+			<client id="123">
+				<navigateur>
+	
+			<nom>Mozilla Firefox</nom>
+		
+			<version>7.0.1</version>
+		
+			<type>desktop</type>
+		
+			<os>linux</os>
+		
+		</navigateur>
+		<url>
+			/Balsa/www/admin.php?ajax_admin=1&module=controll_panel&action=css
+		</url>
+	
+			<erreurs>
+		
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/admin/plungin/manager.php n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+			</erreurs>
+		
+		<requete time="2011-10-14 14:29:44" gen="0.0097980000000001">
+			<client id="123">
+				<navigateur>
+	
+			<nom>Mozilla Firefox</nom>
+		
+			<version>7.0.1</version>
+		
+			<type>desktop</type>
+		
+			<os>linux</os>
+		
+		</navigateur>
+		<url>
+			/Balsa/www/admin.php?page_admin=a&module=controll_panel&action=plugin
+		</url>
+	
+			<erreurs>
+		
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/admin/plungin/manager.php n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+			</erreurs>
+		
+		<requete time="2011-10-14 14:29:44" gen="0.001342">
+			<client id="123">
+				<navigateur>
+	
+			<nom>Mozilla Firefox</nom>
+		
+			<version>7.0.1</version>
+		
+			<type>desktop</type>
+		
+			<os>linux</os>
+		
+		</navigateur>
+		<url>
+			/Balsa/www/admin.php?ajax_admin=1&module=controll_panel&action=css
+		</url>
+	
+			<erreurs>
+		
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/admin/plungin/manager.php n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+			</erreurs>
+		
+		<requete time="2011-10-14 14:29:46" gen="0.009672">
+			<client id="123">
+				<navigateur>
+	
+			<nom>Mozilla Firefox</nom>
+		
+			<version>7.0.1</version>
+		
+			<type>desktop</type>
+		
+			<os>linux</os>
+		
+		</navigateur>
+		<url>
+			/Balsa/www/admin.php?page_admin=a&module=controll_panel
+		</url>
+	
+			<erreurs>
+		
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/admin/plungin/manager.php n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+			</erreurs>
+		
+		<requete time="2011-10-14 14:29:46" gen="0.0021">
+			<client id="123">
+				<navigateur>
+	
+			<nom>Mozilla Firefox</nom>
+		
+			<version>7.0.1</version>
+		
+			<type>desktop</type>
+		
+			<os>linux</os>
+		
+		</navigateur>
+		<url>
+			/Balsa/www/admin.php?ajax_admin=1&module=controll_panel&action=css
+		</url>
+	
+			<erreurs>
+		
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/admin/plungin/manager.php n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+			</erreurs>
+		
+		<requete time="2011-10-14 14:29:46" gen="0.0013570000000001">
+			<client id="123">
+				<navigateur>
+	
+			<nom>Mozilla Firefox</nom>
+		
+			<version>7.0.1</version>
+		
+			<type>desktop</type>
+		
+			<os>linux</os>
+		
+		</navigateur>
+		<url>
+			/Balsa/www/admin.php?ajax_admin=1&module=controll_panel&action=js
+		</url>
+	
+			<erreurs>
+		
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/admin/plungin/manager.php n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+			</erreurs>
+		
+		<requete time="2011-10-14 14:42:56" gen="0.010289">
+			<client id="123">
+				<navigateur>
+	
+			<nom>Mozilla Firefox</nom>
+		
+			<version>7.0.1</version>
+		
+			<type>desktop</type>
+		
+			<os>linux</os>
+		
+		</navigateur>
+		<url>
+			/Balsa/www/admin.php?page_admin=a&module=controll_panel&action=plugin
+		</url>
+	
+			<erreurs>
+		
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/admin/plungin/manager.php n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+			</erreurs>
+		
+		<requete time="2011-10-14 14:42:56" gen="0.001744">
+			<client id="123">
+				<navigateur>
+	
+			<nom>Mozilla Firefox</nom>
+		
+			<version>7.0.1</version>
+		
+			<type>desktop</type>
+		
+			<os>linux</os>
+		
+		</navigateur>
+		<url>
+			/Balsa/www/admin.php?ajax_admin=1&module=controll_panel&action=css
+		</url>
+	
+			<erreurs>
+		
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/admin/plungin/manager.php n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+			</erreurs>
+		
