@@ -1,5 +1,5 @@
 <?php
-global $path,$path_w;
+global $path,$path_w,$base_url;
 if(is_dir($path.'admin/plugin/'.$_GET['plugin']))
 {
   $p_path= $path.'admin/plugin/'.$_GET['plugin'].'/';
@@ -44,6 +44,20 @@ if(is_dir($path.'admin/plugin/'.$_GET['plugin']))
     else
     {
       copy_r($p_path.'page',$path.'page');
+    }
+ //copy des fichiers hook
+    $hk=$install->getElementsByTagName('hook')->item(0)->getAttribute('file');
+    if($hk!='all')
+    {
+      $hk=$xpath->query('//installer/hook/file');
+      foreach($hk as $h)
+      {
+        copy($p_path.'hook/'.$h->getAttribute('name'),$path.'hook/'.$f->getAttribute('name'));
+      }
+    }
+    else
+    {
+      copy_r($p_path.'hook',$path.'hook');
     }
 //copy des fichiers de ajax
     $aj=$install->getElementsByTagName('ajax')->item(0)->getAttribute('file');
@@ -117,7 +131,8 @@ if(is_dir($path.'admin/plugin/'.$_GET['plugin']))
 //flag d'installation
     $install_t=fopen($p_path.'installed','a');
     fclose($install_t);
-    echo 'l\'installation de '.$_GET['plugin'].' c\'est bien deroule<br/><a href="admin.php">retour a l\'admin</a>';
+    hook('after_plugin_install',array('plugin'=>$_GET['plugin']));
+    echo 'l\'installation de '.str_replace('_',' ',$_GET['plugin']).' c\'est bien deroule<br/><a href="'.$base_url.'admin.php">retour a l\'admin</a>';
   }
   else
   {

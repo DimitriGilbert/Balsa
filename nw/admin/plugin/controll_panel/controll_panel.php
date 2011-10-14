@@ -25,7 +25,7 @@ function list_ajax_controller()
 			'
 			<div class="page" id="page_'.$d.'">
 				<a href="'.$base_url.'goulot.php?page='.$d.'">'.$d.'</a>
-				<a target="_blank" href="http://127.0.0.1/Balsa/www/admin.php?ajax_admin=1&module=editor&edit=ajax/'.$d2.'">éditer</a>
+				<a target="_blank" href="'.$base_url.'admin.php?page_admin=1&module=editor&edit=ajax/'.$d2.'">éditer</a>
 			</div>
 			';
 		}
@@ -59,7 +59,7 @@ function list_page_controller()
 			'
 			<div class="page" id="page_'.$d.'">
 				<a href="'.$base_url.'index.php?page='.$d.'">'.$d.'</a>
-				<a target="_blank" href="http://127.0.0.1/Balsa/www/admin.php?ajax_admin=1&module=editor&edit=page/'.$d2.'">éditer</a>
+				<a target="_blank" href="'.$base_url.'admin.php?page_admin=1&module=editor&edit=ajax/'.$d2.''.$d2.'">éditer</a>
 			</div>
 			';
 		}
@@ -93,7 +93,7 @@ function list_plugin()
 			$display.=
 			'
 			<div class="plugin" id="plug_'.$d.'">
-				<a href="'.$base_url.'admin.php?ajax_admin=1&module='.$d.'">'.$d.'</a>'.$_HOOK['display'].'
+				<a href="'.$base_url.'admin.php?page_admin=1&module='.$d.'">'.$d.'</a>'.$_HOOK['display'].'
 			</div>
 			';
 		}
@@ -122,7 +122,7 @@ function list_function()
 			$display.=
 			'
 			<div class="page" id="page_'.$d.'">
-				<a target="_blank" href="http://127.0.0.1/Balsa/www/admin.php?ajax_admin=1&module=editor&edit=fonction/'.$d.'">'.$d.'</a>
+				<a target="_blank" href="'.$base_url.'admin.php?page_admin=1&module=editor&edit=fonction/'.$d.'">'.$d.'</a>
 			</div>
 			';
 		}
@@ -143,11 +143,12 @@ function list_js()
 	'
 	<div class="file_list" id="js_list">
 	<h2>Liste des fichiers javascript</h2>
+		<a href="#" onclick="regen_js()">vider le cache</a>
 	';
 	$dir=scandir($path.'media/js/');
 	foreach($dir as $d)
 	{
-		if($d=='.' or $d=='..' or is_dir($path.'media/js/'.$d))
+		if($d=='.' or $d=='..' or is_dir($path.'media/js/'.$d) or $d=="balsa_comp_js.php")
 		{
 			continue;
 		}
@@ -156,7 +157,7 @@ function list_js()
 			$display.=
 			'
 			<div class="js" id="js_'.$d.'">
-				<a href="http://127.0.0.1/Balsa/www/admin.php?ajax_admin=1&module=editor&edit=media/js/'.$d.'" target="_blank">'.$d.'</a>
+				<a href="'.$base_url.'admin.php?page_admin=1&module=editor&edit=media/js/'.$d.'" target="_blank">'.$d.'</a>
 			</div>
 			';
 		}
@@ -172,11 +173,12 @@ function list_css()
 	'
 	<div class="file_list" id="css_list">
 	<h2>Liste des fichiers CSS</h2>
+		<a href="#" onclick="regen_css()">vider le cache</a>
 	';
 	$dir=scandir($path.'media/css/');
 	foreach($dir as $d)
 	{
-		if($d=='.' or $d=='..' or is_dir($path.'media/css/'.$d))
+		if($d=='.' or $d=='..' or is_dir($path.'media/css/'.$d) or $d=="balsa_comp_css.php")
 		{
 			continue;
 		}
@@ -185,7 +187,7 @@ function list_css()
 			$display.=
 			'
 			<div class="css" id="css_'.$d.'">
-				<a href="http://127.0.0.1/Balsa/www/admin.php?ajax_admin=1&module=editor&edit=media/css/'.$d.'" target="_blank">'.$d.'</a>
+				<a href="'.$base_url.'admin.php?page_admin=1&module=editor&edit=media/css/'.$d.'" target="_blank">'.$d.'</a>
 			</div>
 			';
 		}
@@ -194,41 +196,47 @@ function list_css()
 	return $display;
 }
 
-function recompile_css()
+function admin_menu()
 {
-
+	global $path;
+	$xml=new DOMDocument();
+	$xml->load($path.'admin/plugin/controll_panel/data/menu.xml');
+	$menu=$xml->getElementsByTagName('menu');
+	echo '<div class="access" id="access"><div class="menus" id="menus">';
+	foreach($menu as $m)
+	{
+		inc($path.'admin/plugin/'.$m->getAttribute('module').'/menu.php');
+	}
+	echo '<div class="clear"></div></div></div>';
 }
 
-function recompile_js()
+function add_admin_menu($module)
 {
-
+	global $path;
+	if(is_file($path.'admin/plugin/'.$module.'/menu.php'))
+	{
+		$xml=new DOMDocument();
+		$xml->load($path.'admin/plugin/controll_panel/data/menu.xml');
+		$m=$xml->createElement('menu');
+		$m->setAttribute('module',$module);
+		$xml->documentElement->appendChild($m);
+		$xml->save($path.'admin/plugin/controll_panel/data/menu.xml');
+	}
 }
-
-function list_admin()
+function del_admin_menu($module)
 {
-
+	global $path;
+	if(is_file($path.'admin/plugin/'.$module.'/menu.php'))
+	{
+		$xml=new DOMDocument();
+		$xml->load($path.'admin/plugin/controll_panel/data/menu.xml');
+		$x=new DOMXpath($xml);
+		$m=$x->query('//menus/menu[@module="'.$module.'"]')->item(0);
+		if($m!='' or $m!=null or $m)
+		{
+			$xml->documentElement->removeChild($m);
+			$xml->save($path.'admin/plugin/controll_panel/data/menu.xml');		
+		}
+	}
 }
-
-function mod_pass($old,$new,$new2)
-{
-
-}
-
-function mod_mail($new)
-{
-
-}
-
-function add_admin($nom,$mail,$pass,$pass2)
-{
-
-}
-
-
-
-function back_file($type,$name)
-{
-
-}
-
 ?>

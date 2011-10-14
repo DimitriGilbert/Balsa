@@ -1,0 +1,181 @@
+
+		<requete time="2011-10-05 02:07:43" gen="0.012749">
+			<client id="123">
+				<navigateur>
+	
+			<nom>Mozilla Firefox</nom>
+		
+			<version>7.0.1</version>
+		
+			<type>desktop</type>
+		
+			<os>linux</os>
+		
+		</navigateur>
+		<url>
+			/Balsa/www/admin.php
+		</url>
+	
+			</client>
+		</requete>
+	
+		<requete time="2011-10-05 02:07:43" gen="0.00201">
+			<client id="123">
+				<navigateur>
+	
+			<nom>Mozilla Firefox</nom>
+		
+			<version>7.0.1</version>
+		
+			<type>desktop</type>
+		
+			<os>linux</os>
+		
+		</navigateur>
+		<url>
+			/Balsa/www/admin.php?ajax_admin=1&module=controll_panel&action=css
+		</url>
+	
+			</client>
+		</requete>
+	
+		<requete time="2011-10-05 10:09:56" gen="0.024261">
+			<client id="123">
+				<navigateur>
+	
+			<nom>Mozilla Firefox</nom>
+		
+			<version>7.0.1</version>
+		
+			<type>desktop</type>
+		
+			<os>linux</os>
+		
+		</navigateur>
+		<url>
+			/Balsa/www/admin.php
+		</url>
+	
+			</client>
+		</requete>
+	
+		<requete time="2011-10-05 10:09:56" gen="0.0024120000000001">
+			<client id="123">
+				<navigateur>
+	
+			<nom>Mozilla Firefox</nom>
+		
+			<version>7.0.1</version>
+		
+			<type>desktop</type>
+		
+			<os>linux</os>
+		
+		</navigateur>
+		<url>
+			/Balsa/www/admin.php?ajax_admin=1&module=controll_panel&action=css
+		</url>
+	
+			</client>
+		</requete>
+	
+		<requete time="2011-10-05 10:58:31" gen="0.005383">
+			<client id="123">
+				<navigateur>
+	
+			<nom>Mozilla Firefox</nom>
+		
+			<version>7.0.1</version>
+		
+			<type>desktop</type>
+		
+			<os>linux</os>
+		
+		</navigateur>
+		<url>
+			/Balsa/www/admin.php
+		</url>
+	
+			</client>
+		</requete>
+	
+		<requete time="2011-10-05 10:58:32" gen="0.002063">
+			<client id="123">
+				<navigateur>
+	
+			<nom>Mozilla Firefox</nom>
+		
+			<version>7.0.1</version>
+		
+			<type>desktop</type>
+		
+			<os>linux</os>
+		
+		</navigateur>
+		<url>
+			/Balsa/www/admin.php?ajax_admin=1&module=controll_panel&action=css
+		</url>
+	
+			</client>
+		</requete>
+	
+		<requete time="2011-10-05 11:08:24" gen="0.008235">
+			<client id="123">
+				<navigateur>
+	
+			<nom>Mozilla Firefox</nom>
+		
+			<version>7.0.1</version>
+		
+			<type>desktop</type>
+		
+			<os>linux</os>
+		
+		</navigateur>
+		<url>
+			/Balsa/www/admin.php
+		</url>
+	
+			</client>
+		</requete>
+	
+		<requete time="2011-10-05 11:08:24" gen="0.002068">
+			<client id="123">
+				<navigateur>
+	
+			<nom>Mozilla Firefox</nom>
+		
+			<version>7.0.1</version>
+		
+			<type>desktop</type>
+		
+			<os>linux</os>
+		
+		</navigateur>
+		<url>
+			/Balsa/www/admin.php?ajax_admin=1&module=controll_panel&action=css
+		</url>
+	
+			</client>
+		</requete>
+	
+		<requete time="2011-10-05 23:39:49" gen="0.007544">
+			<client id="123">
+				<navigateur>
+	
+			<nom>Mozilla Firefox</nom>
+		
+			<version>7.0.1</version>
+		
+			<type>desktop</type>
+		
+			<os>linux</os>
+		
+		</navigateur>
+		<url>
+			/Balsa/www/
+		</url>
+	
+			</client>
+		</requete>
+	

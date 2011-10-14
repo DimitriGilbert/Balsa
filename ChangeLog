@@ -17,3 +17,54 @@ ajout des liens d'installation de plugin dans le controll_panel grace au hook 'a
  
 ajout d'un uninstalleur de plugin
 ajout des liens de desintalation des plugins installer
+
+0.4f :
+	reprise en partie des modifications de l'install de chrysa 
+		ajout du void_mail.php oublié dans le dossier install
+		ajout du void_js.js oublié dans le dossier d'install
+		ajout de la suppression lors de l'installation des fichiers déja existants pour
+		  www/admin.php
+		  www/goulot.php
+		  nw/fonction/bdd.class.php
+		  nw/fonction/mail.php
+		  nw/admin/admin.xml
+		ajout d'un retour booléen a la fonction rmdir_r_2() (install.php)
+		debug de la création de base de données (install.php/bdd.class.php)
+		debug de la fonction de création du fichier main.js (install.php)
+		
+	reprise des modifications sur l'installer de plugin (rajout des hooks)
+	debut de creation de plugin_manager
+		pour avoir quelque chose de plus propre que les fichiers installer.php et uninstaller.php
+		
+	modification des fonctions chrysa_ pour les rendre installable et implémenter des fonctionnalités
+	
+	mise a jour des fonctionnalité d'appel de css (creation d'un fichier php dans nw/media/css/balsa_comp_css.php) contenant tout les css concatenés inclus par le fichier www/media/css/css.php
+	
+	prise en charge de la variable page_admin
+		mise en place d'un header et footer commun pour toutes les page admin,
+	
+	modification du controll_panel
+		suppression du cache js et css
+		ajout de la creation des menu : 
+			lors de l'install des plugins, si un fichier "menu.php" est trouver dans le dossier du plugin, il sera appeler lors de la generation du menu dans le controll_panel
+			inversement au uninstall
+			les differents menu a appeler sont stocker dans nw/admin/plugin/controll_panel/data/menu.xml
+		sous page differencier pour visionner les fichiers (ajax, page,js, css, plugin, fonction)
+		creation de l'entree du menu avec son sous-menu	
+	
+	rajout de hook :
+		nw/fonction/fonction.php
+			before_traite_fin_page
+			traite_fin_page_complete_report
+			before_valid_input
+			valid_input_false
+			after_valid_input
+			before_is_logged
+			before_report_erreur
+		nw/admin/plugin/controll_panel/controll_panel.php
+			after_plugin_link
+		nw/admin/plugin/installer.php
+			after_plugin_install
+		nw/admin/plugin/uninstaller.php
+			after_plugin_uninstall
+		

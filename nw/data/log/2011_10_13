@@ -1,0 +1,733 @@
+
+		<requete time="2011-10-13 17:00:44" gen="0.005815">
+			<client id="123">
+				<navigateur>
+	
+			<nom>Mozilla Firefox</nom>
+		
+			<version>7.0.1</version>
+		
+			<type>desktop</type>
+		
+			<os>linux</os>
+		
+		</navigateur>
+		<url>
+			/Balsa/www/admin.php
+		</url>
+	
+			<erreurs>
+		
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa_2/chrysa/nw/media/js/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa_2/chrysa/nw/media/js/.. n'existe pas.</erreur>
+			
+			</erreurs>
+		
+			</client>
+		</requete>
+	
+		<requete time="2011-10-13 17:00:45" gen="0.046147">
+			<client id="123">
+				<navigateur>
+	
+			<nom>Mozilla Firefox</nom>
+		
+			<version>7.0.1</version>
+		
+			<type>desktop</type>
+		
+			<os>linux</os>
+		
+		</navigateur>
+		<url>
+			/Balsa/www/admin.php?ajax_admin=1&module=controll_panel&action=css
+		</url>
+	
+			<erreurs>
+		
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa_2/chrysa/nw/media/js/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa_2/chrysa/nw/media/js/.. n'existe pas.</erreur>
+			
+			</erreurs>
+		
+			</client>
+		</requete>
+	
+		<requete time="2011-10-13 17:22:19" gen="0.00464">
+			<client id="123">
+				<navigateur>
+	
+			<nom>Mozilla Firefox</nom>
+		
+			<version>7.0.1</version>
+		
+			<type>desktop</type>
+		
+			<os>linux</os>
+		
+		</navigateur>
+		<url>
+			/Balsa/www/admin.php
+		</url>
+	
+			<erreurs>
+		
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa_2/chrysa/nw/media/js/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa_2/chrysa/nw/media/js/.. n'existe pas.</erreur>
+			
+			</erreurs>
+		
+			</client>
+		</requete>
+	
+		<requete time="2011-10-13 17:22:19" gen="0.001189">
+			<client id="123">
+				<navigateur>
+	
+			<nom>Mozilla Firefox</nom>
+		
+			<version>7.0.1</version>
+		
+			<type>desktop</type>
+		
+			<os>linux</os>
+		
+		</navigateur>
+		<url>
+			/Balsa/www/admin.php?ajax_admin=1&module=controll_panel&action=css
+		</url>
+	
+			<erreurs>
+		
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa_2/chrysa/nw/media/js/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa_2/chrysa/nw/media/js/.. n'existe pas.</erreur>
+			
+			</erreurs>
+		
+			</client>
+		</requete>
+	
+		<requete time="2011-10-13 17:22:56" gen="0.00475">
+			<client id="123">
+				<navigateur>
+	
+			<nom>Mozilla Firefox</nom>
+		
+			<version>7.0.1</version>
+		
+			<type>desktop</type>
+		
+			<os>linux</os>
+		
+		</navigateur>
+		<url>
+			/Balsa/www/admin.php
+		</url>
+	
+			<erreurs>
+		
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa_2/chrysa/nw/media/js/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa_2/chrysa/nw/media/js/.. n'existe pas.</erreur>
+			
+			</erreurs>
+		
+			</client>
+		</requete>
+	
+		<requete time="2011-10-13 17:22:56" gen="0.001266">
+			<client id="123">
+				<navigateur>
+	
+			<nom>Mozilla Firefox</nom>
+		
+			<version>7.0.1</version>
+		
+			<type>desktop</type>
+		
+			<os>linux</os>
+		
+		</navigateur>
+		<url>
+			/Balsa/www/admin.php?ajax_admin=1&module=controll_panel&action=css
+		</url>
+	
+			<erreurs>
+		
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa_2/chrysa/nw/media/js/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa_2/chrysa/nw/media/js/.. n'existe pas.</erreur>
+			
+			</erreurs>
+		
+			</client>
+		</requete>
+	
+		<requete time="2011-10-13 17:27:07" gen="0.004769">
+			<client id="123">
+				<navigateur>
+	
+			<nom>Mozilla Firefox</nom>
+		
+			<version>7.0.1</version>
+		
+			<type>desktop</type>
+		
+			<os>linux</os>
+		
+		</navigateur>
+		<url>
+			/Balsa/www/admin.php
+		</url>
+	
+			<erreurs>
+		
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa_2/chrysa/nw/media/js/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa_2/chrysa/nw/media/js/.. n'existe pas.</erreur>
+			
+			</erreurs>
+		
+			</client>
+		</requete>
+	
+		<requete time="2011-10-13 17:27:07" gen="0.001377">
+			<client id="123">
+				<navigateur>
+	
+			<nom>Mozilla Firefox</nom>
+		
+			<version>7.0.1</version>
+		
+			<type>desktop</type>
+		
+			<os>linux</os>
+		
+		</navigateur>
+		<url>
+			/Balsa/www/admin.php?ajax_admin=1&module=controll_panel&action=css
+		</url>
+	
+			<erreurs>
+		
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa_2/chrysa/nw/media/js/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa_2/chrysa/nw/media/js/.. n'existe pas.</erreur>
+			
+			</erreurs>
+		
+			</client>
+		</requete>
+	
+		<requete time="2011-10-13 17:28:11" gen="0.0024259999999999">
+			<client id="123">
+				<navigateur>
+	
+			<nom>Mozilla Firefox</nom>
+		
+			<version>7.0.1</version>
+		
+			<type>desktop</type>
+		
+			<os>linux</os>
+		
+		</navigateur>
+		<url>
+			/Balsa/www/admin.php
+		</url>
+	
+			<erreurs>
+		
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa_2/chrysa/nw/media/js/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa_2/chrysa/nw/media/js/.. n'existe pas.</erreur>
+			
+			</erreurs>
+		
+			</client>
+		</requete>
+	
+		<requete time="2011-10-13 17:28:11" gen="0.001315">
+			<client id="123">
+				<navigateur>
+	
+			<nom>Mozilla Firefox</nom>
+		
+			<version>7.0.1</version>
+		
+			<type>desktop</type>
+		
+			<os>linux</os>
+		
+		</navigateur>
+		<url>
+			/Balsa/www/admin.php?ajax_admin=1&module=controll_panel&action=css
+		</url>
+	
+			<erreurs>
+		
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa_2/chrysa/nw/media/js/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa_2/chrysa/nw/media/js/.. n'existe pas.</erreur>
+			
+			</erreurs>
+		
+			</client>
+		</requete>
+	
+		<requete time="2011-10-13 17:28:38" gen="0.002602">
+			<client id="123">
+				<navigateur>
+	
+			<nom>Mozilla Firefox</nom>
+		
+			<version>7.0.1</version>
+		
+			<type>desktop</type>
+		
+			<os>linux</os>
+		
+		</navigateur>
+		<url>
+			/Balsa/www/admin.php
+		</url>
+	
+			<erreurs>
+		
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa_2/chrysa/nw/media/js/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa_2/chrysa/nw/media/js/.. n'existe pas.</erreur>
+			
+			</erreurs>
+		
+			</client>
+		</requete>
+	
+		<requete time="2011-10-13 17:28:38" gen="0.0014729999999999">
+			<client id="123">
+				<navigateur>
+	
+			<nom>Mozilla Firefox</nom>
+		
+			<version>7.0.1</version>
+		
+			<type>desktop</type>
+		
+			<os>linux</os>
+		
+		</navigateur>
+		<url>
+			/Balsa/www/admin.php?ajax_admin=1&module=controll_panel&action=js
+		</url>
+	
+			<erreurs>
+		
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa_2/chrysa/nw/media/js/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa_2/chrysa/nw/media/js/.. n'existe pas.</erreur>
+			
+			</erreurs>
+		
+			</client>
+		</requete>
+	
+		<requete time="2011-10-13 17:28:38" gen="0.001496">
+			<client id="123">
+				<navigateur>
+	
+			<nom>Mozilla Firefox</nom>
+		
+			<version>7.0.1</version>
+		
+			<type>desktop</type>
+		
+			<os>linux</os>
+		
+		</navigateur>
+		<url>
+			/Balsa/www/admin.php?ajax_admin=1&module=controll_panel&action=css
+		</url>
+	
+			<erreurs>
+		
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa_2/chrysa/nw/media/js/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa_2/chrysa/nw/media/js/.. n'existe pas.</erreur>
+			
+			</erreurs>
+		
+			</client>
+		</requete>
+	
+		<requete time="2011-10-13 17:28:41" gen="0.001432">
+			<client id="123">
+				<navigateur>
+	
+			<nom>Mozilla Firefox</nom>
+		
+			<version>7.0.1</version>
+		
+			<type>desktop</type>
+		
+			<os>linux</os>
+		
+		</navigateur>
+		<url>
+			/Balsa/www/admin.php?ajax_admin=1&module=controll_panel&action=regen_js
+		</url>
+	
+			<erreurs>
+		
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa_2/chrysa/nw/media/js/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa_2/chrysa/nw/media/js/.. n'existe pas.</erreur>
+			
+			</erreurs>
+		
+			</client>
+		</requete>
+	
+		<requete time="2011-10-13 17:29:24" gen="0.002603">
+			<client id="123">
+				<navigateur>
+	
+			<nom>Mozilla Firefox</nom>
+		
+			<version>7.0.1</version>
+		
+			<type>desktop</type>
+		
+			<os>linux</os>
+		
+		</navigateur>
+		<url>
+			/Balsa/www/admin.php
+		</url>
+	
+			<erreurs>
+		
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa_2/chrysa/nw/media/js/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa_2/chrysa/nw/media/js/.. n'existe pas.</erreur>
+			
+			</erreurs>
+		
+			</client>
+		</requete>
+	
+		<requete time="2011-10-13 17:29:25" gen="0.001205">
+			<client id="123">
+				<navigateur>
+	
+			<nom>Mozilla Firefox</nom>
+		
+			<version>7.0.1</version>
+		
+			<type>desktop</type>
+		
+			<os>linux</os>
+		
+		</navigateur>
+		<url>
+			/Balsa/www/admin.php?ajax_admin=1&module=controll_panel&action=css
+		</url>
+	
+			<erreurs>
+		
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa_2/chrysa/nw/media/js/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa_2/chrysa/nw/media/js/.. n'existe pas.</erreur>
+			
+			</erreurs>
+		
+			</client>
+		</requete>
+	
+		<requete time="2011-10-13 17:29:25" gen="0.001514">
+			<client id="123">
+				<navigateur>
+	
+			<nom>Mozilla Firefox</nom>
+		
+			<version>7.0.1</version>
+		
+			<type>desktop</type>
+		
+			<os>linux</os>
+		
+		</navigateur>
+		<url>
+			/Balsa/www/admin.php?ajax_admin=1&module=controll_panel&action=js
+		</url>
+	
+			<erreurs>
+		
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa_2/chrysa/nw/media/js/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa_2/chrysa/nw/media/js/.. n'existe pas.</erreur>
+			
+			</erreurs>
+		
+			</client>
+		</requete>
+	
+		<requete time="2011-10-13 17:29:26" gen="0.001468">
+			<client id="123">
+				<navigateur>
+	
+			<nom>Mozilla Firefox</nom>
+		
+			<version>7.0.1</version>
+		
+			<type>desktop</type>
+		
+			<os>linux</os>
+		
+		</navigateur>
+		<url>
+			/Balsa/www/admin.php?ajax_admin=1&module=controll_panel&action=regen_js
+		</url>
+	
+			<erreurs>
+		
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa_2/chrysa/nw/media/js/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa_2/chrysa/nw/media/js/.. n'existe pas.</erreur>
+			
+			</erreurs>
+		
+			</client>
+		</requete>
+	
+		<requete time="2011-10-13 17:29:32" gen="0.003664">
+			<client id="123">
+				<navigateur>
+	
+			<nom>Mozilla Firefox</nom>
+		
+			<version>7.0.1</version>
+		
+			<type>desktop</type>
+		
+			<os>linux</os>
+		
+		</navigateur>
+		<url>
+			/Balsa/www/admin.php
+		</url>
+	
+			<erreurs>
+		
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa_2/chrysa/nw/media/js/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa_2/chrysa/nw/media/js/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/js/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/js/.. n'existe pas.</erreur>
+			
+			</erreurs>
+		
+			</client>
+		</requete>
+	
+		<requete time="2011-10-13 17:29:32" gen="0.001332">
+			<client id="123">
+				<navigateur>
+	
+			<nom>Mozilla Firefox</nom>
+		
+			<version>7.0.1</version>
+		
+			<type>desktop</type>
+		
+			<os>linux</os>
+		
+		</navigateur>
+		<url>
+			/Balsa/www/admin.php?ajax_admin=1&module=controll_panel&action=css
+		</url>
+	
+			<erreurs>
+		
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa_2/chrysa/nw/media/js/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa_2/chrysa/nw/media/js/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/js/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/js/.. n'existe pas.</erreur>
+			
+			</erreurs>
+		
+			</client>
+		</requete>
+	
+		<requete time="2011-10-13 17:29:32" gen="0.00156">
+			<client id="123">
+				<navigateur>
+	
+			<nom>Mozilla Firefox</nom>
+		
+			<version>7.0.1</version>
+		
+			<type>desktop</type>
+		
+			<os>linux</os>
+		
+		</navigateur>
+		<url>
+			/Balsa/www/admin.php?ajax_admin=1&module=controll_panel&action=js
+		</url>
+	
+			<erreurs>
+		
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa_2/chrysa/nw/media/js/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa_2/chrysa/nw/media/js/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/js/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/js/.. n'existe pas.</erreur>
+			
+			</erreurs>
+		
+			</client>
+		</requete>
+	
+		<requete time="2011-10-13 17:29:44" gen="0.002272">
+			<client id="123">
+				<navigateur>
+	
+			<nom>Mozilla Firefox</nom>
+		
+			<version>7.0.1</version>
+		
+			<type>desktop</type>
+		
+			<os>linux</os>
+		
+		</navigateur>
+		<url>
+			/Balsa/www/admin.php
+		</url>
+	
+			<erreurs>
+		
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa_2/chrysa/nw/media/js/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa_2/chrysa/nw/media/js/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/js/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/js/.. n'existe pas.</erreur>
+			
+			</erreurs>
+		
+			</client>
+		</requete>
+	
+		<requete time="2011-10-13 17:29:44" gen="0.001443">
+			<client id="123">
+				<navigateur>
+	
+			<nom>Mozilla Firefox</nom>
+		
+			<version>7.0.1</version>
+		
+			<type>desktop</type>
+		
+			<os>linux</os>
+		
+		</navigateur>
+		<url>
+			/Balsa/www/admin.php?ajax_admin=1&module=controll_panel&action=css
+		</url>
+	
+			<erreurs>
+		
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa_2/chrysa/nw/media/js/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa_2/chrysa/nw/media/js/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/js/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/js/.. n'existe pas.</erreur>
+			
+			</erreurs>
+		
+			</client>
+		</requete>
+	
+		<requete time="2011-10-13 17:29:44" gen="0.001303">
+			<client id="123">
+				<navigateur>
+	
+			<nom>Mozilla Firefox</nom>
+		
+			<version>7.0.1</version>
+		
+			<type>desktop</type>
+		
+			<os>linux</os>
+		
+		</navigateur>
+		<url>
+			/Balsa/www/admin.php?ajax_admin=1&module=controll_panel&action=js
+		</url>
+	
+			<erreurs>
+		
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa_2/chrysa/nw/media/js/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa_2/chrysa/nw/media/js/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/js/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/js/.. n'existe pas.</erreur>
+			
+			</erreurs>
+		
+			</client>
+		</requete>
+	
+		<requete time="2011-10-13 17:30:07" gen="0.00153">
+			<client id="123">
+				<navigateur>
+	
+			<nom>Mozilla Firefox</nom>
+		
+			<version>7.0.1</version>
+		
+			<type>desktop</type>
+		
+			<os>linux</os>
+		
+		</navigateur>
+		<url>
+			/Balsa/www/
+		</url>
+	
+			<erreurs>
+		
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa_2/chrysa/nw/media/js/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa_2/chrysa/nw/media/js/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/js/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/js/.. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/. n'existe pas.</erreur>
+			
+				<erreur>systeme_la page /home/didi/Documents/web_serveur/Balsa/nw/media/css/.. n'existe pas.</erreur>
+			
+			</erreurs>
+		
+			</client>
+		</requete>
+	
