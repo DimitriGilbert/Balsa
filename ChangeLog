@@ -71,5 +71,5 @@ ajout des liens de desintalation des plugins installer
 0.4g :
 	reprise du fork de Rudak
 		style pour l'install (\o/, yeah, it's not a blank page anymore :D)
-		suppression de la notice du a $_GET['action']
+		suppression de la notice du a $_GET['action'] 
 		
