@@ -1,4 +1,4 @@
-/* 
+/*
     Document   : style_install
     Created on : 14 oct. 2011, 01:05:22
     Author     : rudak
@@ -28,8 +28,14 @@ div.configStep{
 
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
-    border-radius: 10px; 
+    border-radius: 10px;
     overflow: hidden;
+}
+div.configStep .db_infos_ok {
+    display: block;
+}
+div.configStep .no_db_infos {
+    display: none;
 }
 div.configStep h3{
     margin-top: 0;
@@ -59,5 +65,5 @@ div.configStep input[type=text],div.configStep input[type=password]{
     margin-right: 10px;
 }
 div.configStep input[type=submit]{
-    float: right;    
+    float: right;
 }
