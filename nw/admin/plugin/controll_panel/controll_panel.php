@@ -207,7 +207,7 @@ function admin_menu()
 	{
 		inc($path.'admin/plugin/'.$m->getAttribute('module').'/menu.php');
 	}
-	echo '<div class="clear"></div></div></div>';
+	echo '<div class="clear"></div></div>';
 }
 
 function add_admin_menu($module)

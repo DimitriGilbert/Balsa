@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<installer><fonction file=""><libs/></fonction><page file=""/><hook file=""/><ajax file=""/><media><css/><js/><img/></media><data><folder name="locale" parent=""/></data></installer>

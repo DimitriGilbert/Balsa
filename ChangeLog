@@ -86,6 +86,14 @@ ajout des liens de desintalation des plugins installer
 		www/goulot.php
 			index_before_inclure_ajax
 			index_after_inclure_ajax
+			
+0.4i :
+	reprise de la plupart des modifications de chrysa :
+		correction de bug diverse (serapporter a https://github.com/chrysa/Balsa/blob/master/ChangeLog)
+		fichier hook after_init.php modifié,
+		uploader de plugins (au format zip)
+		possibilité de neoud file vide dans les fichier d'install xml
+		plugin de gestion multilingue
 		
 		
 		

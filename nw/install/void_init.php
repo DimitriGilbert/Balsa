@@ -95,13 +95,5 @@ if(!is_logged())
 	$get['page']=$page_de_base;
 }
 
-//definition de la langue
-$langage='fr_FR';
-putenv("LANG=$langage"); // On modifie la variable d'environnement
-setlocale(LC_ALL, $langage); // On modifie les informations de localisation en fonction de la langue	
-$nomDesFichiersDeLangue = 'traduction'; // Le nom de nos fichiers .mo	
-bindtextdomain($nomDesFichiersDeLangue, $path."nw/locale"); // On indique le chemin vers les fichiers .mo
-textdomain($nomDesFichiersDeLangue); // Le nom du domaine par défaut
-
 hook('after_init',array());
 ?>

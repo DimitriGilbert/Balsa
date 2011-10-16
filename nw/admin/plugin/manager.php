@@ -28,18 +28,21 @@ class plugin_manager
 	function install($quoi,$node)
 	{
 		global $path;
-		if($node->getAttribute('file')!='all')
+		if($node->getAttribute('file')!='')
 		{
-			$f_list=$node->childNodes;
-			foreach($f_list as $f)
+			if($node->getAttribute('file')!='all')
 			{
-				copy($this->path.$quoi.'/'.$f->getAttribute('name'),$path.$quoi.'/'.$f->getAttribute('name'));
+				$f_list=$node->childNodes;
+				foreach($f_list as $f)
+				{
+					copy($this->path.$quoi.'/'.$f->getAttribute('name'),$path.$quoi.'/'.$f->getAttribute('name'));
+				}
 			}
-		}
-		else
-		{
-			copy_r($this->path.$quoi,$path.$quoi);
-		}
+			else
+			{
+				copy_r($this->path.$quoi,$path.$quoi);
+			}
+		}		
 	}
 	
 	function uninstall($quoi,$node)
@@ -78,11 +81,17 @@ class plugin_manager
 		{
 		  if($f->getAttribute('parent')=='')
 		  {
-		    mkdir($path.'data/'.$f->getAttribute('name'));
+		  	if(!is_dir($path.'data/'.$f->getAttribute('name')))
+		  	{
+		  		mkdir($path.'data/'.$f->getAttribute('name'));
+		  	}		    
 		  }
 		  else
 		  {
-		    mkdir($path.'data/ '.$f->getAttribute('parent').'/'.$f->getAttribute('name') );
+		  	if(!is_dir($path.'data/ '.$f->getAttribute('parent').'/'.$f->getAttribute('name')))
+		  	{
+		  		mkdir($path.'data/ '.$f->getAttribute('parent').'/'.$f->getAttribute('name'));
+		  	}		    
 		  }
 		}
 	}
@@ -107,7 +116,6 @@ class plugin_manager
 	function install_all()
 	{
 		global $path_w;
-		print_r($this->to_install);
 		foreach($this->to_install as $t)
 		{
 			if($t=='media/js')

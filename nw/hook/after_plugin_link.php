@@ -7,14 +7,14 @@ if(is_file($path.'admin/plugin/'.$p_n.'/install.xml'))
 	{
 		$_HOOK['display']=
 		'
-			<a href="'.$base_url.'/admin.php?uninstall=1&plugin='.$p_n.'"> desinstaller</a>
+			<a href="'.$base_url.'admin.php?uninstall=1&plugin='.$p_n.'"> desinstaller</a>
 		';
 	}
 	else
 	{
 		$_HOOK['display']=
 		'
-			<a href="'.$base_url.'/admin.php?install=1&plugin='.$p_n.'"> installer</a>
+			<a href="'.$base_url.'admin.php?install=1&plugin='.$p_n.'"> installer</a>
 		';
 	}
 }
