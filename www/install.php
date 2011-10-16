@@ -3,6 +3,16 @@
     <head>
         <link rel="stylesheet" href="media/css/css.css" type="text/css" media="all" />
         <link rel="stylesheet" href="media/css/style_install.css" type="text/css" media="all" />
+        <script type="text/javascript">
+            function displayDbInfos(display) {
+                if(display) {
+                    document.getElementById("db_infos").className = "db_infos_ok";
+                }
+                else {
+                    document.getElementById("db_infos").className = "no_db_infos";
+                }
+            }
+        </script>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <?php
         #http://php.net/manual/en/function.copy.php
@@ -83,10 +93,10 @@
                 $admin_php =
                         '
 		<?php
-	
+
 		include_once(\'' . $path . 'init.php\');
-		include_once(\'' . $path . 'admin/auth.php\');				
-	
+		include_once(\'' . $path . 'admin/auth.php\');
+
 		?>
 		';
                 if (!file_put_contents($path_w . 'admin.php', $admin_php)) {
@@ -117,7 +127,7 @@
 		private $connexion;
 		private $estConnecte;
 
-	
+
 		function Bdd()
 		{
 			$this->bdUser = "' . $bdd_user . '";
@@ -378,7 +388,7 @@ include_once $path.\'fonction/fonction.php\';
                                 <label for="admin_path">Modification du chemin de l'admin </label>
                                 <input type="text" id="admin_path" name="admin_path" />
                                 <div  class='info'>Pour plus de securité, il faut modifie le chemin d'accés a l'interface d'administration</div>
-                            </div>				
+                            </div>
                             <div>
                                 <label for="url">URL du projet </label><input type="text" id="url" name="url" />/
                                 <div  class='info'>L'url qui permet l'accé au repertoire www depuis internet</div>
@@ -390,21 +400,23 @@ include_once $path.\'fonction/fonction.php\';
 
                             <h4>Utiliser une base de donnée</h4>
                             <label for="db_1">Oui :</label>
-                            <input type="radio" id="db_1" name="db_" value="oui" /><br />
+                            <input type="radio" id="db_1" name="db_" value="oui" onclick="displayDbInfos(true);" /><br />
                             <label for="db_2">Non :</label>
-                            <input type="radio" id="db_2" name="db_" value="non" checked="checked" /><br />
+                            <input type="radio" id="db_2" name="db_" value="non" checked="checked" onclick="displayDbInfos(false);" /><br />
 
-                            <label for="db_host">Hote de la base de donnée </label>
-                            <input type="text" value="localhost" id="db_host" name="db_host" />
+                            <div class="no_db_infos" id="db_infos">
+                                <label for="db_host">Hote de la base de donnée </label>
+                                <input type="text" value="localhost" id="db_host" name="db_host" />
 
-                            <label for="db_user">Utilisateur de la base de donnée </label>
-                            <input type="text" value="root" id="db_user" name="db_user" />
+                                <label for="db_user">Utilisateur de la base de donnée </label>
+                                <input type="text" value="root" id="db_user" name="db_user" />
 
-                            <label for="db_pass">Password de la base de donnée </label>
-                            <input type="password" id="db_pass" name="db_pass" />
+                                <label for="db_pass">Password de la base de donnée </label>
+                                <input type="password" id="db_pass" name="db_pass" />
 
-                            <label for="db_name">Nom de la base de donnée </label>
-                            <input type="text" value="Balsa" id="db_name" name="db_name" />
+                                <label for="db_name">Nom de la base de donnée </label>
+                                <input type="text" value="Balsa" id="db_name" name="db_name" />
+                            </div>
 
                             <div>
                                 <h4>Faut-il créer la base de donnée ? </h4>
@@ -431,7 +443,7 @@ include_once $path.\'fonction/fonction.php\';
                             <div>
                                 <label for="admin_mail">Mail de l'admin </label>
                                 <input type="text" id="admin_mail" name="admin_mail" />
-                            </div>	
+                            </div>
                         </div>
                         <div class="configStep">
                             <h3>Configuration du serveur mail</h3>
@@ -450,7 +462,7 @@ include_once $path.\'fonction/fonction.php\';
                             <div>
                                 <label for="mdp_mail">Mot de passe </label>
                                 <input type="password" id="mdp_mail" name="mdp_mail" />
-                            </div>	
+                            </div>
                         </div>
                         <div class="configStep">
                             <h3>Finalisation de l'instalation</h3>
@@ -467,7 +479,7 @@ include_once $path.\'fonction/fonction.php\';
                             <div style="clear:both"></div>
                             <input type="submit" value="suivant" />
                         </div>
-                    </form>                    
+                    </form>
                 </div>
                 <div style="clear:both"></div>
             </body>
