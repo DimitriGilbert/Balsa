@@ -1,16 +1,13 @@
 <?php
 global $path;
-if(isset($_GET['install']))
-{
+if(isset($_GET['install'])){
 
-}
-else
-{
-?>
-<a href="<?php echo $base_url; ?>admin.php?page_admin=1&module=chrysa_lang&action=ajout_lang">ajouter une langue</a>
-<a href="<?php echo $base_url; ?>admin.php?page_admin=1&module=chrysa_lang&action=gestion_lang">gérer les langues</a>
-<a href="<?php echo $base_url; ?>admin.php?page_admin=1&module=chrysa_lang&action=gen_all_lang">regénérer les fichiers langues</a>
-<?php	
+}else{
+	?>
+	<a href="<?php echo $base_url; ?>admin.php?page_admin=1&module=chrysa_lang&action=ajout_lang">ajouter une langue</a>
+	<a href="<?php echo $base_url; ?>admin.php?page_admin=1&module=chrysa_lang&action=gestion_lang">gérer les langues</a>
+	<a href="<?php echo $base_url; ?>admin.php?page_admin=1&module=chrysa_lang&action=gen_all_lang">regénérer les fichiers langues</a>
+	<?php	
 	switch($_GET['action']){
 		case 'ajout_lang':
 				inc($path.'admin/plugin/chrysa_lang/ajout_lang.php');

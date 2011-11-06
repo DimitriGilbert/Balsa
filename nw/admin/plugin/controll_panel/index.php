@@ -5,7 +5,7 @@ $action=$_GET['action'];
 switch($action)
 {
 	case'':
-		echo list_plugin();
+		echo list_plugin_install();
 		echo list_function();
 		echo list_page_controller();
 		echo list_ajax_controller();
@@ -16,7 +16,7 @@ switch($action)
 		<?php
 		break;
 	case'plugin':
-		echo list_plugin();
+		include_once($path.'admin/plugin/controll_panel/gestion_plugin.php');
 		break;
 	case'fonction':
 		echo list_function();

@@ -192,14 +192,23 @@ function traite_fin_de_page()
 }
 
 //compress js and css script
-function compresse_text($str)//will remove blank, \t, \n ,... to compress js and css file
+function compresse_text($str,$js=false)//will remove blank, \t, \n ,... to compress js and css file
 {
-#	http://castlesblog.com/2010/august/14/php-javascript-css-minification
-	$str = preg_replace("/((?:\/\*(?:[^*]|(?:\*+[^*\/]))*\*+\/)|(?:\/\/.*))/", "", $str);
-    /* remove tabs, spaces, newlines, etc. */
-    $str = str_replace(array("\r\n","\r","\t","\n",'  ','    ','     '), '', $str);
-    /* remove other spaces before/after ) */
-    $str = preg_replace(array('(( )+\))','(\)( )+)'), ')', $str);
+	if(!$js)
+	{
+		#	http://castlesblog.com/2010/august/14/php-javascript-css-minification
+		$str = preg_replace("/((?:\/\*(?:[^*]|(?:\*+[^*\/]))*\*+\/)|(?:\/\/.*))/", "", $str);
+		/* remove tabs, spaces, newlines, etc. */
+		$str = str_replace(array("\r\n","\r","\t","\n",'  ','    ','     '), '', $str);
+		/* remove other spaces before/after ) */
+		$str = preg_replace(array('(( )+\))','(\)( )+)'), ')', $str);
+	}
+	else
+	{
+		inclure_fonction('lib/jsmin.php');
+		$str=jsmin::minify($str);
+	}
+
 	return $str;
 }
 
@@ -299,7 +308,7 @@ function inclure_js($min=false,$php=false)
 
 		if($min)
 		{
-			$js_str=compresse_text($js_str);
+			$js_str=compresse_text($js_str,true);
 		}
 		if(!file_put_contents($path.'media/js/balsa_comp_js.php',$js_str))
 		{
@@ -477,12 +486,15 @@ function rmdir_r($dir)
     foreach ($files as $file) {
         $file = $dir . '/' . $file;
         if (is_dir($file)) {
-            rmdir_recursive($file);
-            rmdir($file);
+            rmdir_r($file);
         } else {
             unlink($file);
         }
     }
-    rmdir($dir);
+    if(rmdir($dir)){
+        return true;
+    }else{
+        return false;
+    }
 }
 ?>

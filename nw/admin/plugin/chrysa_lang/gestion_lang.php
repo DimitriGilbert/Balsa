@@ -61,7 +61,7 @@ if(isset($_GET['lang'])){
 		</select>
 		<input type="hidden" name="lang" value="<?php echo $al; ?>"/>
 		<input type="submit" name="ajouter" value="ajouter"/>
-		(le nom de la page doit être différent de traduction car ce dernier est utilisé pour le fichier global)
+		(le nom de la page doit être différent de "traduction" car ce dernier est utilisé pour le fichier global)
 	</form>
 </span>
 <?php

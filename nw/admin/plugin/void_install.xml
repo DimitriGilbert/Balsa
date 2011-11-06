@@ -9,6 +9,9 @@
 <page file="">
 <file name="file_name" type="file_type"/>
 </page>
+<hook file="">
+<file name="file_name" type="file_type"/>
+</hook>
 <ajax file="">
 <file name="file_name" type="file_type"/>
 </ajax>

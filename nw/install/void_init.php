@@ -95,5 +95,7 @@ if(!is_logged())
 	$get['page']=$page_de_base;
 }
 
-hook('after_init',array());
+
+hook('after_init',array('p_name'=>'chrysa_lang'));
+$_HOOK['display'];
 ?>

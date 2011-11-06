@@ -9,6 +9,6 @@ global $base_url;
 		<div class="sub_menu"><a href="<?php echo $base_url.'admin.php?page_admin=a&module=controll_panel&action=fonction' ?>">bibliothèques de fonctions</a></div>
 		<div class="sub_menu"><a href="<?php echo $base_url.'admin.php?page_admin=a&module=controll_panel&action=f_js' ?>">fichiers javascript</a></div>
 		<div class="sub_menu"><a href="<?php echo $base_url.'admin.php?page_admin=a&module=controll_panel&action=f_css' ?>">fichiers css</a></div>
-		<div class="sub_menu"><a href="<?php echo $base_url.'admin.php?page_admin=a&module=controll_panel&action=plugin' ?>">plugins</a></div>
+		<div class="sub_menu"><a href="<?php echo $base_url.'admin.php?page_admin=a&module=controll_panel&action=plugin' ?>">gestion de plugins</a></div>
 	</div>
 </div>

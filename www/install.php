@@ -285,7 +285,7 @@ include_once $path.\'fonction/fonction.php\';
 
 		function create_js() {
 			global $path, $base_url;
-
+			unlink($path.'media/js/balsa_comp_js.php');
 			$js_str = 'var base_url="' . $base_url . '"';
 			$js_str.=file_get_contents($path . 'install/void_main.js');
 			if (file_put_contents($path . 'media/js/main.js', $js_str)) {
@@ -510,4 +510,3 @@ include_once $path.\'fonction/fonction.php\';
 		break;
 }
 ?>
-

@@ -1,7 +1,6 @@
 CHANGELOG
 
 0.4c :
-
 reprise de l'install du fork de chrysa
 	config de mail.php, de la langue et du nom du site dans install.php
 Creation des plugin chrysa_cache, chrysa_token et chrysa_debug
@@ -9,12 +8,10 @@ Creation des plugin chrysa_cache, chrysa_token et chrysa_debug
 	
 	
 0.4d :
-
 corection d'un bug dans l'installeur de plugins
 ajout des liens d'installation de plugin dans le controll_panel grace au hook 'after_plugin_link'
 
 0.4e :
- 
 ajout d'un uninstalleur de plugin
 ajout des liens de desintalation des plugins installer
 
@@ -89,11 +86,42 @@ ajout des liens de desintalation des plugins installer
 			
 0.4i :
 	reprise de la plupart des modifications de chrysa :
-		correction de bug diverse (serapporter a https://github.com/chrysa/Balsa/blob/master/ChangeLog)
+		correction de bug diverse (serapporter a https://github.com/chrysa/Balsa/commit/4ad182ce3d69d5a68824a10329ee4775e043022c#diff-0)
 		fichier hook after_init.php modifié,
 		uploader de plugins (au format zip)
-		possibilité de neoud file vide dans les fichier d'install xml
+		possibilité de neoud fils vide dans les fichier d'install xml
 		plugin de gestion multilingue
-		
-		
-		
+
+0.4j (by chrysa): 
+  modificaction du lien du changelog de la 0.4i pour qu'il pointe en permanence vers les correctifs a voir
+  modification de la fonction rmdir_r() dans nw/fonction/fonction.php => maintenant fonctionnelle et renvoi un booléen
+	ajout de la suppression de $path.'media/js/balsa_comp_js.php a l'install L.288
+	ajout de la gestion des plugin dans le controll_panel 
+		- affinage de la redirection après installation/désinstallation de plugins nw/admin/plugin/manager.php L.105 et L.113
+		- modification de libélé dans nw/admin/plugin/controll_panle/menu.php
+		- ajout de la page gestion_plugin.php
+			- reprise de l'upload
+				- ajout d'un lien d'installation direct depuis l'interface d'upload dans le message de confirmation
+			- ajout du téléchargement
+			- ajout d'une page dédiée a la gestion des plugins aditionnels
+			- clarification des plugins sur l'index
+			- modification de nw/admin/plugin/controll_panle/controll_panel.php
+				- suppression de list_plugin()
+				- ajout de list_plugin_install() => affichage des plugins installés
+				- ajout de list_plugin_add() => affichage des plugins aditionnels
+				- ajout de list_plugin_dl() => affichage des plguins téléchargables 
+				- ajout de list_plugin_delete() => affichage des plugins supprimables
+				
+0.4k :
+	mise ajour de jsinterface.js
+		ajout de classe :
+			IS : un testeur de type
+			Docel : selection d'elements de la page
+			Docmap : information et modification de la structure de la page
+			Timer : gestion de timer (intervalle ou compte de temps)
+			Animation : un module d'animation
+		/!\ Timer et animation ne sont PAS DU TOUT stable !! /!\
+	ajout de jsmin.php dans libpour compresser le js
+		compresse_text() modifier
+	
+			

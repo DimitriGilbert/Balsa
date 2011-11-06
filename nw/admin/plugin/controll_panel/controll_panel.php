@@ -1,4 +1,4 @@
- <?php
+<?php
 
 function list_ajax_controller()
 {
@@ -68,13 +68,13 @@ function list_page_controller()
 	return $display;
 }
 
-function list_plugin()
+function list_plugin_install()
 {
-	global $path, $base_url,$_HOOK;
+	global $path, $base_url;
 	$display=
 	'
 	<div class="file_list" id="plugin_list">
-	<h2>Liste des plugins</h2>
+	<h2>Liste des plugins installés</h2>
 	';
 	$dir=scandir($path.'admin/plugin/');
 	foreach($dir as $d)
@@ -83,17 +83,120 @@ function list_plugin()
 		{
 			continue;
 		}
-		elseif(!is_dir($path.'admin/plugin/'.$d))
+		elseif(!is_dir($path.'admin/plugin/'.$d) OR (!is_file($path.'admin/plugin/'.$d.'/installed') AND is_file($path.'admin/plugin/'.$d.'/install.xml')))
+		{
+			continue;
+		}
+		else
+		{
+			$display.=
+			'
+			<div class="plugin" id="plug_'.$d.'">
+				<a href="'.$base_url.'admin.php?page_admin=1&module='.$d.'">'.$d.'</a>
+			</div>
+			';
+		}
+	}
+	$display.='</div>';
+	return $display;
+}
+
+function list_plugin_add()
+{
+	global $path, $base_url,$_HOOK;
+	$display=
+	'
+	<div class="file_list" id="plugin_list">
+	<h2>Liste des plugins additionnels</h2>
+	';
+	$dir=scandir($path.'admin/plugin/');
+	foreach($dir as $d)
+	{
+		if($d=='.' or $d=='..')
+		{
+			continue;
+		}
+		elseif(!is_dir($path.'admin/plugin/'.$d) OR !is_file($path.'admin/plugin/'.$d.'/install.xml'))
 		{
 			continue;
 		}
 		else
 		{
 			hook('after_plugin_link',array("display","p_name"=>$d));
+			
+			if(is_file($path.'admin/plugin/'.$d.'/installed')){
+				$display.=
+				'
+				<div class="plugin" id="plug_'.$d.'">
+					<a href="'.$base_url.'admin.php?page_admin=1&module='.$d.'">'.$d.'</a>';
+			}else{
+				$display.='<div class="plugin" id="plug_'.$d.'">'.$d;			
+			}
+			$display.=$_HOOK['display'].'</div>';
+		}
+	}
+	$display.='</div>';
+	return $display;
+}
+
+function list_plugin_dl()
+{
+	global $path, $base_url;
+	$display=
+	'
+	<div class="file_list" id="plugin_list">
+	<h2>Liste des plugins téléchargeable</h2>
+	';
+	$dir=scandir($path.'admin/plugin/');
+	foreach($dir as $d)
+	{
+		if($d=='.' or $d=='..')
+		{
+			continue;
+		}
+		elseif(!is_dir($path.'admin/plugin/'.$d) OR is_file($path.'admin/plugin/'.$d.'/installed') OR !is_file($path.'admin/plugin/'.$d.'/install.xml'))
+		{
+			continue;
+		}
+		else
+		{
 			$display.=
 			'
 			<div class="plugin" id="plug_'.$d.'">
-				<a href="'.$base_url.'admin.php?page_admin=1&module='.$d.'">'.$d.'</a>'.$_HOOK['display'].'
+				'.$d.' <a href="'.$base_url.'admin.php?page_admin=1&module=controll_panel&action=plugin&gestion=download&name='.$d.'">télécharger</a>
+			</div>
+			';
+		}
+	}
+	$display.='</div>';
+	return $display;
+}
+
+function list_plugin_delete()
+{
+	global $path, $base_url;
+	$display=
+	'
+	<div class="file_list" id="plugin_list">
+	<h2>Liste des plugins téléchargeable</h2>
+	';
+	$dir=scandir($path.'admin/plugin/');
+	foreach($dir as $d)
+	{
+		if($d=='.' or $d=='..')
+		{
+			continue;
+		}
+		elseif(!is_dir($path.'admin/plugin/'.$d) OR is_file($path.'admin/plugin/'.$d.'/installed') OR !is_file($path.'admin/plugin/'.$d.'/install.xml'))
+		{
+			continue;
+		}
+		else
+		{
+			$display.=
+			'
+			<div class="plugin" id="plug_'.$d.'">
+				'.$d.' <a href="'.$base_url.'admin.php?page_admin=1&module=controll_panel&action=plugin&gestion=delete&name='.$d.'">supprimer</a>
 			</div>
 			';
 		}
@@ -223,6 +326,7 @@ function add_admin_menu($module)
 		$xml->save($path.'admin/plugin/controll_panel/data/menu.xml');
 	}
 }
+
 function del_admin_menu($module)
 {
 	global $path;
@@ -237,6 +341,27 @@ function del_admin_menu($module)
 			$xml->documentElement->removeChild($m);
 			$xml->save($path.'admin/plugin/controll_panel/data/menu.xml');		
 		}
+	}
+}
+
+function supp_recur_folder($dossier){
+	$ouverture=opendir($dossier);
+	while($fichier=readdir($ouverture)){
+		if($fichier=='.' or $fichier=='..'){
+			continue;
+		}else{
+			if(is_dir($dossier.'/'.$fichier)){
+				supp_recur_folder($dossier.'/'.$fichier);
+			}else{
+				unlink($dossier.'/'.$fichier);
+			}
+		}
+	}
+	closedir($ouverture);
+	if(rmdir($dossier)){
+		return true;
+	}else{
+		return false;
 	}
 }
 ?>

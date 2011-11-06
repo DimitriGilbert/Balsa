@@ -84,14 +84,26 @@ class plugin_manager
 		  	if(!is_dir($path.'data/'.$f->getAttribute('name')))
 		  	{
 		  		mkdir($path.'data/'.$f->getAttribute('name'));
-		  	}		    
-		  }
+		  	}		
+				if(is_dir($path.'admin/plugin/'.$this->name.'/data/'.$f->getAttribute('name'))){				
+					$data=scandir($path.'admin/plugin/'.$this->name.'/data/'.$f->getAttribute('name'));
+					foreach($data as  $d){
+						copy_r($this->path.'data/'.$f->getAttribute('name').'/'.$d,$path.'data/'.$f->getAttribute('name').'/'.$d);
+					}
+				}
+			}
 		  else
 		  {
-		  	if(!is_dir($path.'data/ '.$f->getAttribute('parent').'/'.$f->getAttribute('name')))
+		  	if(!is_dir($path.'data/'.$f->getAttribute('parent').'/'.$f->getAttribute('name')))
 		  	{
-		  		mkdir($path.'data/ '.$f->getAttribute('parent').'/'.$f->getAttribute('name'));
+		  		mkdir($path.'data/'.$f->getAttribute('parent').'/'.$f->getAttribute('name'));
 		  	}		    
+				if(is_dir($path.'data/'.$f->getAttribute('parent').'/'.$f->getAttribute('name'))){				
+					$data=scandir($path.'data/'.$f->getAttribute('parent').'/'.$f->getAttribute('name'));
+					foreach($data as  $d){
+						copy_r($this->path.'data/'.$f->getAttribute('parent').'/'.$f->getAttribute('name').'/'.$d,$path.'data/'.$f->getAttribute('parent').'/'.$f->getAttribute('name').'/'.$d);
+					}
+				}
 		  }
 		}
 	}
@@ -102,7 +114,7 @@ class plugin_manager
 		$install_t=fopen($this->path.'installed','a');
 		fclose($install_t);
 		hook('after_plugin_install',array('plugin'=>$this->name));
-		echo 'l\'installation de '.$this->name.' c\'est bien deroule<br/><a href="'.$base_url.'admin.php">retour a l\'admin</a>';
+		echo 'l\'installation de '.$this->name.' c\'est bien deroule<br/><a href="'.$base_url.'admin.php?page_admin=a&module=controll_panel&action=plugin">retour à la gestion des plugins</a>';
 	}
 		
 	function uninstall_flag()
@@ -110,7 +122,7 @@ class plugin_manager
 		global $base_url;
 		unlink($this->path.'installed');
 		hook('after_plugin_uninstall',array('plugin'=>$this->name));
-		echo 'la desinstallation de '.$this->name.' c\'est bien deroule<br/><a href="'.$base_url.'admin.php">retour a l\'admin</a>';
+		echo 'la desinstallation de '.$this->name.' c\'est bien deroule<br/><a href="'.$base_url.'admin.php?page_admin=a&module=controll_panel&action=plugin">retour à la gestion des plugins</a>';
 	}
 	
 	function install_all()

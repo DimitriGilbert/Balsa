@@ -1,6 +1,5 @@
-www/index.php
 www/goulot.php
 www/admin.php
-nw/init.php
-mw/media/js/balsa_comp_js.php
-nw/media/log/*
+nw/fonction/bdd.class.php
+nw/fonction/mail.php
+nw/data/log/*

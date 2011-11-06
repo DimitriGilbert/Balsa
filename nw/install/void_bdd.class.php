@@ -1,5 +1,4 @@
-
-public function creat_db_Balsa($dn_name='Balsa',$crea_db=false)
+public function creat_db_Balsa($db_name='Balsa',$crea_db=true)
 	{
 		try
 		{
@@ -8,20 +7,18 @@ public function creat_db_Balsa($dn_name='Balsa',$crea_db=false)
 			else
 				$this->connexion=new PDO('mysql:host='.$this->bdServer,$this->bdUser,$this->bdPassWord);
 			$this->estConnecte = true;
-			if(crea_db)
+			if($crea_db)
 			{			
 				$req='CREATE DATABASE `'.$db_name.'` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;';
-				$res=$this->query2($req);
-			}
-			$this->chgParam($db_name);
-			
-			$req1=
-			'
-				CREATE TABLE `Balsa`.`admin` (`id` VARCHAR( 20 ) NOT NULL ,	`login` VARCHAR( 128 ) NOT NULL ,`mail` VARCHAR( 512 )NOT NULL ,`pass` TEXT NOT NULL) ENGINE = MYISAM ;
-			';
-			$res=$this->query2($req1);
-			
-			
+        $res=$this->query2($req);
+
+        $req1=
+        '
+        CREATE TABLE `'.$db_name.'`.`admin` (`id` VARCHAR( 20 ) NOT NULL , `login` VARCHAR( 128 ) NOT NULL ,`mail` VARCHAR( 512 )NOT NULL ,`pass` TEXT NOT NULL) ENGINE = MYISAM ;
+        ';
+        $res=$this->query2($req1);
+      }
+      $this->chgParam($db_name);
 			return true;
 		}
 		catch (PDOException $e)
@@ -144,3 +141,4 @@ public function creat_db_Balsa($dn_name='Balsa',$crea_db=false)
 	}
 }
 ?>
+
