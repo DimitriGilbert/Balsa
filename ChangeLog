@@ -123,5 +123,12 @@ ajout des liens de desintalation des plugins installer
 		/!\ Timer et animation ne sont PAS DU TOUT stable !! /!\
 	ajout de jsmin.php dans libpour compresser le js
 		compresse_text() modifier
+		
+0.5.0.0 : 
+	ajout de nombreuses fonctions de manipulation de temps
+	ajout de la class bdd_entity
+		manipulation facilité de table de bdd, 
+		exemple a venir dans le hellowworld ;)
+	avancé du activity_logger
 	
 			
