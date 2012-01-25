@@ -11,7 +11,7 @@ function print_pre($var,$r=false)
 	{
 		echo'<pre>';
 		print_r($var);
-		echo'</pre>';
+		echo'</pre><br />';
 	}	
 }
 
@@ -26,6 +26,23 @@ function is_logged()
 {
 	hook('before_is_logged',array());
 	if(isset($_SESSION['user_id']) and $_SESSION['user_id']!='')
+	{
+		return true;
+	}
+	else
+	{
+		return false;
+	}
+}
+
+function debug()
+{
+	return debug_mod;
+}
+
+function in_array_keys($key,$array)
+{
+	if(in_array($key,array_keys($array)))
 	{
 		return true;
 	}
@@ -137,38 +154,27 @@ function traite_fin_de_page()
 	$gen_time=microtime()-$_SESSION['in_time'];
 	$rapport=
 	'
-		<requete time="'.date('Y-m-d H:i:s').'" gen="'.$gen_time.'">
-			<client id="'.$_SESSION['user_id'].'">
-				<navigateur>
-	';
+	<requete time="'.date('Y-m-d H:i:s').'" gen="'.$gen_time.'">
+		<client id="'.$_SESSION['user_id'].'" ip="'.$_SERVER['REMOTE_ADDR'].'">
+			<navigateur>';
 	foreach($_SESSION['client']['navigateur'] as $info=>$val)
 	{
-		$rapport.=
-		'
-			<'.$info.'>'.$val.'</'.$info.'>
-		';
+		$rapport.='<'.$info.'>'.$val.'</'.$info.'>';
 	}
-	$rapport.=
-	'
-		</navigateur>
-		<url>
-			'.$_SERVER['REQUEST_URI'].'
-		</url>
-	';
+	$rapport.='
+			</navigateur>
+			<url>'.$_SERVER['REQUEST_URI'].'</url>
+			';
 	
 	if($_SESSION['count_erreurs']>0)
 	{
-		$rapport.=
-		'
-			<erreurs>
-		';
+		$rapport.='<erreurs>';
 		
 		foreach($_SESSION['erreurs'] as $erreur)
 		{
 			$rapport.=
 			'
-				<erreur>'.$erreur.'</erreur>
-			';
+					<erreur>'.$erreur.'</erreur>';
 		}
 		
 		$rapport.=
@@ -177,10 +183,21 @@ function traite_fin_de_page()
 		';
 	}
 	hook('traite_fin_de_page_compete_report',array("report"=>$rapport));
-	$rapport.=$_HOOK['report'];
+	$rapport.=$_HOOK['report'].
 	'
-			</client>
-		</requete>
+		</client>
+		<post>';
+	if(isset($_POST))
+	{
+		foreach($_POST as $k=>$v)
+		{
+			$rapport.='
+			<v>"'.$k.'" => "'.$v.'"';
+		}
+	}
+	$rapport.='
+		</post>
+	</requete>
 	';
 	
 	
@@ -300,7 +317,7 @@ function inclure_text_pages($pages,$sep='',$dir='')
 function inclure_js($min=false,$php=false)
 {
 	global $path,$base_url;
-	if(!is_file($path.'media/js/balsa_comp_js.php'))
+	if(!is_file($path.'media/js/balsa_comp_js.php') or debug_mod==true)
 	{
 		$pages=scandir($path.'media/js/');
 
@@ -324,7 +341,7 @@ function inclure_js($min=false,$php=false)
 function inclure_css($min=true,$php=false)
 {
 	global $path,$path_w,$base_url;
-	if(!is_file($path_w.'media/css/css.css'))
+	if(!is_file($path.'media/css/balsa_comp_css.php') or debug_mod==true)
 	{
 		$pages=scandir($path.'media/css/');
 
@@ -377,9 +394,23 @@ function hook($hook_name,$hook_var)
 	}
 }
 
+//
+function is_pair($i)
+{
+	if($i%2==0)
+	{
+		return true;
+	}
+	else
+	{
+		return false;
+	}
+}
 //dummy stuff, need to be coded and tsted :p
 class activity_logger
 {
+	public $log='';
+	
 	function load($fichier='')
 	{
 		global $inclure,$path;
@@ -387,18 +418,24 @@ class activity_logger
 		{
 			$fichier=date('Y_m_d');
 		}
-		$log=$inclure->text_pages(array($path.'data/log/'.$fichier));
-		$log=
+		$this->log=$inclure->text_pages(array($path.'data/log/'.$fichier));
+		$this->log=
 		'
 		<log>
-			'.$log.'
+			'.$this->log.'
 		</log>
 		';
-		return $log;
-		
+		return $this->log;		
 	}
+	
+	function compress()
+	{
+		$this->log=compresse_text($this->log);
+		return $this->log;
+	}
+	
 
-	function merge_log($debut='',$fin='')
+	function merge($debut='',$fin='')
 	{
 		global $inclure,$path;
 		if($fin=='')
@@ -433,14 +470,16 @@ class activity_logger
 		$log=fopen($path.'/data/log/'.$debut.'__'.$fin);
 		fput($logged,$log);
 		fclose($log);
-		
+		$this->log=$logged;
 		foreach($merged as $m)
 		{
 			unlink($m);
-		}		
+		}
+		return $this->log;
 	}
 }
 
+//file manipulation function
 function copy_r( $path, $dest )
 {
     if( is_dir($path) )
@@ -496,5 +535,239 @@ function rmdir_r($dir)
     }else{
         return false;
     }
+}
+
+//dummy stuff for time operation
+function get_times_month($month,$year='')
+{
+	if($year=='')
+	{
+		$year=date('Y');
+	}
+	$from=mktime(0,0,0,$month,1,$year);
+	$to=mktime(23,59,0,$month+1,0,$year);
+	return array($from,$to);
+}
+
+function get_next_month($month,$year='')
+{
+	if($year=='')
+	{
+		$year=time();
+	}
+	if(date('m',$month)=="12")
+	{
+		return '1&a='.(date('Y',$year)+1);
+	}
+	else
+	{
+		return (date('m',$month)+1).'&a='.(date('Y',$year));
+	}
+}
+
+function get_last_month($month,$year='')
+{
+	if($year=='')
+	{
+		$year=time();
+	}
+	if(date('m',$month)=="01")
+	{
+		return array(12,date('Y',$year)-1);
+	}
+	else
+	{
+		return array(date('m',$month)-1,date('Y',$year));
+	}
+}
+
+function get_jour_nom($i)
+{
+	switch($i)
+	{
+		case 1:
+			return 'lundi';
+			break;
+		case 2:
+			return 'mardi';
+			break;
+		case 3:
+			return 'mercredi';
+			break;
+		case 4:
+			return 'jeudi';
+			break;
+		case 5:
+			return 'vendredi';
+			break;
+		case 6:
+			return 'samedi';
+			break;
+		case 7:
+			return 'dimanche';
+			break;
+	}
+}
+
+function daystamp($t='')
+{
+	if($t=='')
+	{
+		$t=time();
+	}
+	return mktime(0,0,0,date('n',$t),date('j',$t),date('Y',$t));
+}
+
+function tomorowstamp($t='')
+{
+	if($t=='')
+	{
+		$t=time();
+	}
+	return mktime(0,0,0,date('n',$t),date('j',$t)+1,date('Y',$t));
+}
+
+function yesterdaystamp($t='')
+{
+	if($t=='')
+	{
+		$t=time();
+	}
+	return mktime(0,0,0,date('n',$t),date('j',$t)-1,date('Y',$t));
+}
+
+function monthstamp($t='')
+{
+	if($t=='')
+	{
+		$t=time();
+	}
+	return mktime(0,0,0,date('n',$t),1,date('Y',$t));
+}
+
+function to_heure($sec,$sep=':')
+{
+	$hours = floor($sec / 3600);
+	$minutes = floor(($sec / 60) % 60);
+	if($hours<10)
+	{
+		$hours='0'.$hours;
+	}
+	if($minutes<10)
+	{
+		$minutes='0'.$minutes;
+	}
+	return $hours.$sep.$minutes;
+}
+
+function to_second($h,$sep=':')
+{
+	if(strlen($h)<=2)
+	{
+		$h.=$sep.'00';
+	}
+	$h=explode($sep,$h);
+	$h=(((int)$h[0])*3600)+(((int)$h[1])*60);
+	return $h;
+}
+
+function day_selector($id='',$today=true)
+{
+	$display=
+	'
+	<select id="day_'.$id.'" name="day_'.$id.'">
+	';
+	$x=1;
+	while($x<=31)
+	{
+		$display.=
+		'
+		<option value="'.$x.'"
+		';
+		if($today==true)
+		{
+			if(date('d')==$x)
+			{
+				$display.='selected';
+			}
+		}
+		$display.='>'.$x.'</option>';
+		$x++;
+	}
+	$display.=
+	'
+	</select>
+	';
+	return $display;
+}
+
+function month_selector($id='',$today=true)
+{
+	$display=
+	'
+	<select id="month_'.$id.'" name="month_'.$id.'">
+	';
+	$x=1;
+	while($x<=12)
+	{
+		$display.=
+		'
+		<option value="'.$x.'"
+		';
+		if($today==true)
+		{
+			if(date('m')==$x)
+			{
+				$display.='selected';
+			}
+		}
+		$display.='>'.$x.'</option>';
+		$x++;
+	}
+	$display.=
+	'
+	</select>
+	';
+	return $display;
+}
+
+function year_selector($id='',$today=true,$start='',$end='')
+{
+	$display=
+	'
+	<select id="year_'.$id.'" name="year_'.$id.'">
+	';
+	
+	if($start=='')
+	{
+		$start=date('Y');
+	}
+	if($end=='')
+	{
+		$end=$start+25;
+	}
+	
+	$x=$start;
+	while($x<=$end)
+	{
+		$display.=
+		'
+		<option value="'.$x.'"
+		';
+		if($today==true)
+		{
+			if(date('Y')==$x)
+			{
+				$display.='selected';
+			}
+		}
+		$display.='>'.$x.'</option>';
+		$x++;
+	}
+	$display.=
+	'
+	</select>
+	';
+	return $display;
 }
 ?>

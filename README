@@ -5,7 +5,15 @@ to install balsa browse your www/ folder and execute install.php from your brows
 fill in the field
 you should be good to go ^^
 
-the controll panel is accessible via the admin.php page.
+NOW IN 0.5
+There's a new naming applied for the version
+0.5.0.0 
+the first is because it's still in dev,
+the second represent the major version,
+the third is incremented when new functionnalities are ready
+the fourth represent a commit in the nightlies
+
+the control panel is accessible via the admin.php page.
 
 about the structure :
 there are 2 main folders : www/ and nw/ , as there names should evoque the first one is whats accessible on the web and the second is the non-web folder :)

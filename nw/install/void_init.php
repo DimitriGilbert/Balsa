@@ -24,6 +24,16 @@ if($bdd->connect()!==true)
 //reassignation des variable GET
 $get=$_GET;
 
+//mode debug
+if(is_file($path.'debug'))
+{
+	define('debug_mod',true);
+}
+else
+{
+	define('debug_mod',false);
+}
+
 //recupération des parametre client
 if(!isset($_SESSION['param_client']))
 {
