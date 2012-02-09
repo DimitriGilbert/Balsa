@@ -2,7 +2,7 @@
 
 class explorer
 {	
-	function dir_xml($path)
+	function dir_xml($path,$md5=false)
 	{
 		
 		if( is_dir($path) )
@@ -19,11 +19,19 @@ class explorer
 		            preg_replace('#/#',"",$file);
 		            if( is_dir( $path.'/'.$file ) )
 		            {
-		                $xml.='<dir path="'.$path.'/'.$file.'" name="'.$file.'">'.$this->dir_xml( $path.'/'.$file).'</dir>';
+		                $xml.='<dir path="'.$path.'/'.$file.'" name="'.$file.'">'.$this->dir_xml( $path.'/'.$file,$md5).'</dir>';
 		            }
 		            else
 		            {
-		                $xml.='<file path="'.$path.'/'.$file.'" name="'.$file.'" perms="'.fileperms($path.'/'.$file).'" owner="'.fileowner($path.'/'.$file).'" time="'.filemtime($path.'/'.$file).'" type="'.filetype($path.'/'.$file).'" size="'.filesize($path.'/'.$file).'"></file>';
+		            	if($md5==true)
+		            	{
+		            		$fmd5='<md5>'.md5_file($path.'/'.$file).'</md5>';
+		            	}
+		            	else
+		            	{
+		            		$fmd5='';
+		            	}
+		                $xml.='<file path="'.$path.'/'.$file.'" name="'.$file.'" type="'.filetype($path.'/'.$file).'" size="'.filesize($path.'/'.$file).'">'.$fmd5.'</file>';
 		            }
 		        }
 		    }
@@ -41,10 +49,10 @@ class explorer
 		}
 	}
 	
-	function serv_xml($no_path=true)
+	function serv_xml($no_path=true,$file='dir')
 	{
 		global $path;
-		if(!is_file($path.'data/dir_xml/dir.xml'))
+		if(!is_file($path.'data/explorer/'.$file.'.xml'))
 		{
 			$p=substr($path,0,-1);
 			$xml='<root>'.$this->dir_xml($p).'</root>';
@@ -52,22 +60,22 @@ class explorer
 			{
 				$xml=str_replace($path,'',$xml);
 			}
-			if(!file_put_contents($path.'data/dir_xml/dir.xml',$xml))
+			if(!file_put_contents($path.'data/explorer/'.$file.'.xml',$xml))
 			{
 				return false;
 			}
 		}
 		header('Content-type: text/xml');
-		include_once($path.'data/dir_xml/dir.xml');
+		include_once($path.'data/explorer/'.$file.'.xml');
 		return true;
 	}
 	
-	function back_xml()
+	function back_xml($file='dir')
 	{
 		global $path;
-		if(is_file($path.'data/dir_xml/dir.xml'))
+		if(is_file($path.'data/explorer/'.$file.'.xml'))
 		{
-			if(!rename($path.'data/dir_xml/dir.xml',$path.'data/dir_xml/'.time().'_dir.xml'))
+			if(!rename($path.'data/explorer/'.$file.'.xml',$path.'data/explorer/'.$file.'_'.time().'.xml'))
 			{
 				return false;
 			}
@@ -75,12 +83,12 @@ class explorer
 		return $this->serv_xml();
 	}
 	
-	function rm_xml()
+	function rm_xml($file='dir')
 	{
 		global $path;
-		if(is_file($path.'data/dir_xml/dir.xml'))
+		if(is_file($path.'data/explorer/'.$file.'.xml'))
 		{
-			if(unlink($path.'data/dir_xml/dir.xml'))
+			if(unlink($path.'data/explorer/'.$file.'.xml'))
 			{
 				return true;
 			}

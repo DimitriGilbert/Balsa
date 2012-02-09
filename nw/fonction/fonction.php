@@ -37,7 +37,8 @@ function is_logged()
 
 function debug()
 {
-	return debug_mod;
+	global$debug_mod;
+	return $debug_mod;
 }
 
 function in_array_keys($key,$array)
@@ -236,37 +237,53 @@ function compress_dir($dir,$d_path,$dest_file='',$dest_path='')
 	{
 		$dest_file=str_replace('/','_',$dir);
 	}
-	if($dest_path=='')
+	if(substr($dest_path,-1)!='/' and $dest_path!='')
 	{
-		$dest_file=$path;
+		$dest_path.='/';
 	}
-	
+	if(substr($dir,-1)!='/')
+	{
+		$dir.='/';
+	}
+		
 	$c='cd '.$d_path.' && tar cvzf '.$dest_path.$dest_file.'.tar.gz '.$dir;
 #	echo $c;
-	echo exec($c);
+	return exec($c);
+}
+
+//unpack a tar.gz file xith a specified directory
+function uncompress_dir($tgz,$u_path)
+{		
+	$c='cd '.$u_path.' && tar xvzf '.$tgz.'';
+#	echo $c;
+	return exec($c);
 }
 
 //include a php or a file text and treat the error if needed
 //$page contain the full path of the page
 function inc($page,$php=true)
 {
-	if(is_file($page))
+	if(substr($page,-1)!='.')
 	{
-		if($php)
+		if(is_file($page))
 		{
-			include_once $page;
-			return true;
+			if($php)
+			{
+				include_once $page;
+				return true;
+			}
+			else
+			{
+				return file_get_contents($page);
+			}
 		}
 		else
 		{
-			return file_get_contents($page);
+			report_erreur('systeme','la page '.$page.' n\'existe pas.');
+			return false;
 		}
 	}
-	else
-	{
-		report_erreur('systeme','la page '.$page.' n\'existe pas.');
-		return false;
-	}
+	
 }
 
 //inculde the function page contained in nw/fonction/ with the name contained in $page
@@ -305,8 +322,9 @@ function inclure_text_pages($pages,$sep='',$dir='')
 	$str='';
 	foreach($pages as $p)
 	{
-		if($p!='.' or $p!='..')
+		if(substr($p,-1)!='.')
 		{
+			plop($p);
 			$str.=$sep.inc($dir.$p,false);		
 		}
 	}
@@ -317,7 +335,7 @@ function inclure_text_pages($pages,$sep='',$dir='')
 function inclure_js($min=false,$php=false)
 {
 	global $path,$base_url;
-	if(!is_file($path.'media/js/balsa_comp_js.php') or debug_mod==true)
+	if(!is_file($path.'media/js/balsa_comp_js.php'))
 	{
 		$pages=scandir($path.'media/js/');
 
@@ -341,7 +359,7 @@ function inclure_js($min=false,$php=false)
 function inclure_css($min=true,$php=false)
 {
 	global $path,$path_w,$base_url;
-	if(!is_file($path.'media/css/balsa_comp_css.php') or debug_mod==true)
+	if(!is_file($path.'media/css/balsa_comp_css.php'))
 	{
 		$pages=scandir($path.'media/css/');
 
@@ -535,6 +553,39 @@ function rmdir_r($dir)
     }else{
         return false;
     }
+}
+
+function copies($paths)
+{
+	if(is_array($paths))
+	{
+		$from=$paths["from"];
+		$to=$paths["to"];
+		if(is_array($from) and is_array($to) and count($from)==count($to))
+		{
+			$x=0;
+			foreach($from as $f)
+			{
+				if(is_dir($f))
+				{
+					copy_r($f,$to[$x]);
+				}
+				else
+				{
+					copy($f,$to[$x]);
+				}
+				$x++;
+			}
+		}
+		else
+		{
+			return false;
+		}
+	}
+	else
+	{
+		return false;
+	}
 }
 
 //dummy stuff for time operation
