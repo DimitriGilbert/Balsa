@@ -40,6 +40,20 @@ function debug()
 	global$debug_mod;
 	return $debug_mod;
 }
+function trace_mod()
+{
+	global$trace_mod;
+	return $trace_mod;
+}
+
+function add_trace($str)
+{
+	if(trace_mod()==true)
+	{
+		global $tracer_var;
+		array_push($tracer_var,$str);
+	}
+}
 
 function in_array_keys($key,$array)
 {
@@ -49,6 +63,44 @@ function in_array_keys($key,$array)
 	}
 	else
 	{
+		return false;
+	}
+}
+
+function in_in_array($v,$array,$depth=1,$key='')
+{
+	if($key!='' and $array[$key]==$v)
+	{
+		return $array;
+	}	
+	elseif(in_array($v,$array) and $key=='')
+	{
+		return $array;
+	}
+	else
+	{	
+		foreach($array as $a)
+		{
+			if(is_array($a))
+			{
+				if($key!='' and $a[$key]==$v)
+				{
+					return $a;
+				}	
+				elseif(in_array($v,$a) and $key=='')
+				{
+					return $a;
+				}
+				elseif($depth>1)
+				{
+					$res=in_in_array($v,$a,($depth-1),$key);
+					if($res!=false)
+					{
+						return $res;
+					}
+				}
+			}
+		}
 		return false;
 	}
 }
@@ -68,6 +120,7 @@ function valid_input($input,$checker=array('default'))
 				if(preg_match($c2,$input))
 				{
 					hook('valid_input_false',array('input'=>$input,'checker'=>$c2));
+					report_erreur2('2000',__FILE__,__LINE__,'valid_input invalid input '.$input.' with regex '.$c2);
 					return false;
 				}
 			}
@@ -77,6 +130,7 @@ function valid_input($input,$checker=array('default'))
 			if(preg_match($c,$input))
 			{
 				hook('valid_input_false',array('input'=>$input,'checker'=>$c));
+				report_erreur2('2000_b',__FILE__,__LINE__,'valid_input invalid input '.$input.' with regex '.$c);
 				return false;
 			}
 		}
@@ -107,107 +161,6 @@ function pre_reg($type)
 	}
 }
 
-//add error to the session error variable
-function report_erreur($type,$erreur,$return=false)
-{
-	//les erreurs sont stockée dans un tableau, chaque entrée se rentre de la maniere suivante
-	//<le_type_de_l'erreur>_<le_descriptif_de_l'erreur>
-	hook('before_report_erreur',array('type'=>$type,'erreur'=>$erreur));
-	$_SESSION['erreurs'][$_SESSION['count_erreurs']]=$type.'_'.$erreur;
-	$_SESSION['count_erreurs']++;
-	if($return!==false)
-	{
-		return _($type.'_'.$erreur);
-	}
-}
-
-//return the different errors reported with report_erreur(), formated in html 
-function traite_erreur($erreurs)
-{
-	$display=
-	'
-		<div class="error_wrapper">
-			<div>'._('Les erreurs suivantes ont été rencontrées').'</div>
-	';
-	foreach($erreurs as $err)
-	{
-		$t=explode($err,'_');
-		$display.=
-		'
-			<div class="error">
-				<div class="error_type">'._($t[0]).'</div>
-				<div class="error_desc">'._($t[1]).'</div>
-			</div>
-		';
-	}
-	$display.=
-	'
-		</div>
-	';
-	return $display;
-}
-
-//add logs and finish the page process :)
-function traite_fin_de_page()
-{
-	global $get, $path;
-	hook('before_traite_fin_page',array());
-	$gen_time=microtime()-$_SESSION['in_time'];
-	$rapport=
-	'
-	<requete time="'.date('Y-m-d H:i:s').'" gen="'.$gen_time.'">
-		<client id="'.$_SESSION['user_id'].'" ip="'.$_SERVER['REMOTE_ADDR'].'">
-			<navigateur>';
-	foreach($_SESSION['client']['navigateur'] as $info=>$val)
-	{
-		$rapport.='<'.$info.'>'.$val.'</'.$info.'>';
-	}
-	$rapport.='
-			</navigateur>
-			<url>'.$_SERVER['REQUEST_URI'].'</url>
-			';
-	
-	if($_SESSION['count_erreurs']>0)
-	{
-		$rapport.='<erreurs>';
-		
-		foreach($_SESSION['erreurs'] as $erreur)
-		{
-			$rapport.=
-			'
-					<erreur>'.$erreur.'</erreur>';
-		}
-		
-		$rapport.=
-		'
-			</erreurs>
-		';
-	}
-	hook('traite_fin_de_page_compete_report',array("report"=>$rapport));
-	$rapport.=$_HOOK['report'].
-	'
-		</client>
-		<post>';
-	if(isset($_POST))
-	{
-		foreach($_POST as $k=>$v)
-		{
-			$rapport.='
-			<v>"'.$k.'" => "'.$v.'"';
-		}
-	}
-	$rapport.='
-		</post>
-	</requete>
-	';
-	
-	
-	$log_file=date('Y_m_d');
-	$log=fopen($path.'data/log/'.$log_file,'a+');
-	fputs($log,$rapport);
-	fclose($log);
-	return true;
-}
 
 //compress js and css script
 function compresse_text($str,$js=false)//will remove blank, \t, \n ,... to compress js and css file
@@ -261,7 +214,7 @@ function uncompress_dir($tgz,$u_path)
 
 //include a php or a file text and treat the error if needed
 //$page contain the full path of the page
-function inc($page,$php=true)
+function inc($page,$php=true,$once=true)
 {
 	if(substr($page,-1)!='.')
 	{
@@ -269,7 +222,15 @@ function inc($page,$php=true)
 		{
 			if($php)
 			{
-				include_once $page;
+				if($once==true)
+				{
+					include_once $page;
+				}
+				else
+				{
+					include $page;
+				}
+				
 				return true;
 			}
 			else
@@ -279,7 +240,7 @@ function inc($page,$php=true)
 		}
 		else
 		{
-			report_erreur('systeme','la page '.$page.' n\'existe pas.');
+			report_erreur2('0000',__FILE__,__LINE__,'inc '.$page.' does not exists');
 			return false;
 		}
 	}
@@ -294,16 +255,35 @@ function inclure_fonction($page)
 }
 
 //inculde the 'page' page contained in nw/page/ with the name contained in $page
-function inclure_page($page)
+function inclure_page($page,$once=false)
 {
-	global $path;
-	return inc($path.'/page/'.$page.'.php');
+	inclure_conf('registered_pages');
+	global $path,$pages_files;
+	if(in_array($page,$pages_files))
+	{
+	
+	}
+	else
+	{
+		report_erreur2('0003',__FILE__,__LINE__,'inclure_page '.$page.' is not registered');
+	}
+	return inc($path.'/page/'.$page.'.php',true,$once);
 }
 
 //inculde the ajx page contained in nw/ajax/ with the name contained in $page
 function inclure_ajax($page,$ext='php')
 {
-	global $path;
+	inclure_conf('registered_ajax');
+	global $path,$ajax_files;
+	if(in_array($page,$ajax_files))
+	{
+	
+	}
+	else
+	{
+		report_erreur2('0003_b',__FILE__,__LINE__,'inclure_ajax '.$page.' is not registered');
+	}
+	
 	if($ext!='php')
 	{
 		$b=false;
@@ -312,7 +292,16 @@ function inclure_ajax($page,$ext='php')
 	{
 		$b=true;
 	}
+	
 	$ajax=inc($path.'/ajax/'.$page.'.'.$ext,$b);
+	return $ajax;
+}
+
+//inculde the ajx page contained in nw/ajax/ with the name contained in $page
+function inclure_conf($page)
+{
+	global $path;
+	$ajax=inc($path.'/data/conf/'.$page.'.conf.php');
 	return $ajax;
 }
 
@@ -324,7 +313,6 @@ function inclure_text_pages($pages,$sep='',$dir='')
 	{
 		if(substr($p,-1)!='.')
 		{
-			plop($p);
 			$str.=$sep.inc($dir.$p,false);		
 		}
 	}
@@ -335,18 +323,21 @@ function inclure_text_pages($pages,$sep='',$dir='')
 function inclure_js($min=false,$php=false)
 {
 	global $path,$base_url;
-	if(!is_file($path.'media/js/balsa_comp_js.php'))
+	if(!is_file($path.'media/js/balsa_comp_js.php') or is_file($path.'debug'))
 	{
-		$pages=scandir($path.'media/js/');
+		inclure_conf('js');
+		global $js_base_url,$js_files,$minify_js;
+		$pages=$js_files;
 
-		$js_str=inclure_text_pages($pages,'', $path.'media/js/');
+		$js_str=$js_base_url.inclure_text_pages($pages,'');
 
-		if($min)
+		if($minify_js==true)
 		{
 			$js_str=compresse_text($js_str,true);
 		}
 		if(!file_put_contents($path.'media/js/balsa_comp_js.php',$js_str))
 		{
+			report_erreur2('0001',__FILE__,__LINE__,'inclure_js cant create the compressed javascript file');
 			return false;//$js_str;
 		}
 	}
@@ -359,18 +350,21 @@ function inclure_js($min=false,$php=false)
 function inclure_css($min=true,$php=false)
 {
 	global $path,$path_w,$base_url;
-	if(!is_file($path.'media/css/balsa_comp_css.php'))
+	if(!is_file($path.'media/css/balsa_comp_css.php') or is_file($path.'debug'))
 	{
-		$pages=scandir($path.'media/css/');
+		inclure_conf('css');
+		global $css_files,$minify_css;
+		$pages=$css_files;
 
-		$css_str=inclure_text_pages($pages,'', $path.'media/css/');
+		$css_str=inclure_text_pages($pages,'');
 
-		if($min)
+		if($minify_css)
 		{
 			$css_str=compresse_text($css_str);
 		}
 		if(!file_put_contents($path.'media/css/balsa_comp_css.php',$css_str))
 		{
+			report_erreur2('0001_b',__FILE__,__LINE__,'inclure_js cant create the compressed css file');
 			return false;//$js_str;
 		}
 	}
@@ -424,6 +418,183 @@ function is_pair($i)
 		return false;
 	}
 }
+
+function get_client_param()
+{
+	$u_agent = $_SERVER['HTTP_USER_AGENT']; 
+    $nav_name = 'unknown';
+    $OS_name = 'unknown';
+    $version= 'unknown';
+    
+    if (preg_match('/linux/i', $u_agent)) {
+        $OS_name = 'linux';
+    }elseif (preg_match('/macintosh|mac os x/i', $u_agent)) {
+        $OS_name = 'mac';
+    }elseif (preg_match('/windows|win32/i', $u_agent)) {
+        $OS_name = 'windows';
+    }
+    
+    if(preg_match('/MSIE/i',$u_agent)) { 
+        $nav_name = 'Internet Explorer'; 
+        $nav_utilisateur = "MSIE"; 
+    }elseif(preg_match('/Firefox/i',$u_agent)){ 
+        $nav_name = 'Firefox'; 
+        $nav_utilisateur = "Firefox"; 
+    }elseif(preg_match('/Chrome/i',$u_agent)){ 
+        $nav_name = 'Google Chrome'; 
+        $nav_utilisateur = "Chrome"; 
+    }elseif(preg_match('/Safari/i',$u_agent)){ 
+        $nav_name = 'Apple Safari'; 
+        $nav_utilisateur = "Safari"; 
+    }elseif(preg_match('/Opera/i',$u_agent)){ 
+        $nav_name = 'Opera'; 
+        $nav_utilisateur = "Opera"; 
+    }elseif(preg_match('/Netscape/i',$u_agent)){ 
+        $nav_name = 'Netscape'; 
+        $nav_utilisateur = "Netscape"; 
+    } 
+    
+    $known = array('Version', $nav_utilisateur, 'other');
+    $pattern = '#(?<browser>' . join('|', $known) .')[/ ]+(?<version>[0-9.|a-zA-Z.]*)#';
+    if (preg_match_all($pattern, $u_agent, $matches)) {
+        $i = count($matches['browser']);
+        if ($i != 1){
+            if (strripos($u_agent,"Version") < strripos($u_agent,$nav_utilisateur)){
+                $version= $matches['version'][0];
+            }else{
+                $version= $matches['version'][1];
+            }
+        }else{
+            $version= $matches['version'][0];
+        }        
+    }
+    
+	$navigateur['nom']=$nav_name;
+	$navigateur['version']=$version;
+	$navigateur['type']='desktop';
+	$navigateur['os']= $OS_name;
+	$navigateur['complete_user_agent']=$u_agent;
+	$_SESSION['client']=array();
+	$_SESSION['client']['navigateur']=$navigateur;
+	$_SESSION['client']['from']=false;
+} 
+
+
+//add error to the session error variable
+function report_erreur($type,$erreur,$return=false)
+{
+	//les erreurs sont stockée dans un tableau, chaque entrée se rentre de la maniere suivante
+	//<le_type_de_l'erreur>_<le_descriptif_de_l'erreur>
+	hook('before_report_erreur',array('type'=>$type,'erreur'=>$erreur));
+	$_SESSION['erreurs'][$_SESSION['count_erreurs']]=$type.'_'.$erreur;
+	$_SESSION['count_erreurs']++;
+	if($return!==false)
+	{
+		return _($type.'_'.$erreur);
+	}
+}
+
+//add error to the session error variable
+//0->9000 balsa team
+//	0->999 : file system issue
+//	1000->1999 : sql issue
+//	2000->2999 : problems in fonction.php
+//	3000->3999	: bdd_entity
+function report_erreur2($code,$file,$line,$erreur,$return=false)
+{
+	//les erreurs sont stockée dans un tableau, chaque entrée se rentre de la maniere suivante
+	//<le_type_de_l'erreur>_<le_descriptif_de_l'erreur>
+	hook('before_report_erreur',array('type'=>$type,'erreur'=>$erreur));
+	$_SESSION['erreurs'][$_SESSION['count_erreurs']]='<error file="'.$file.'" line="'.$line.'" code="'.$code.'">'.$erreur.'</error>';
+	$_SESSION['count_erreurs']++;
+	if($return!==false)
+	{
+		return _($type.'_'.$erreur);
+	}
+}
+
+//return the different errors reported with report_erreur(), formated in html 
+function traite_erreur($erreurs)
+{
+	$display=
+	'
+		<div class="error_wrapper">
+			<div>'._('Les erreurs suivantes ont été rencontrées').'</div>
+	';
+	foreach($erreurs as $err)
+	{
+		$t=explode($err,'_');
+		$display.=
+		'
+			<div class="error">
+				<div class="error_type">'._($t[0]).'</div>
+				<div class="error_desc">'._($t[1]).'</div>
+			</div>
+		';
+	}
+	$display.=
+	'
+		</div>
+	';
+	return $display;
+}
+
+//add logs and finish the page process :)
+function traite_fin_de_page()
+{
+	global $get, $path, $bdd;
+	hook('before_traite_fin_page',array());
+	$gen_time=microtime(true)-$_SESSION['in_time'];
+	$final_mem=memory_get_usage();
+	$rapport='<request time="'.date('Y-m-d H:i:s').'" gen="'.$gen_time.'" start_mem="'.$_SESSION['mem_use'].'" final_mem="'.$final_mem.'" peak_mem="'.memory_get_peak_usage().'"><client id="'.$_SESSION['user_id'].'" ip="'.$_SERVER['REMOTE_ADDR'].'"><navigateur>';
+	
+	foreach($_SESSION['client']['navigateur'] as $info=>$val)
+	{
+		$rapport.='<'.$info.'>'.$val.'</'.$info.'>';
+	}
+	
+	$rapport.='</navigateur><url>'.$_SERVER['REQUEST_URI'].'</url><sql nb_req="'.$bdd->nbreq.'" req_time="'.$bdd->reqtime.'" />';
+	
+	if($_SESSION['count_erreurs']>0)
+	{
+		$rapport.='<errors>';
+		
+		foreach($_SESSION['erreurs'] as $erreur)
+		{
+			$rapport.=$erreur;
+		}
+		
+		$rapport.='</errors>';
+		$_SESSION['erreurs']=array();
+		$_SESSION['count_erreurs']=0;
+	}
+	
+	hook('traite_fin_de_page_compete_report',array("report"=>$rapport));
+	
+	$rapport.=$_HOOK['report'].'</client>';
+	
+	if(isset($_POST))
+	{
+		$rapport.='<post>';
+		foreach($_POST as $k=>$v)
+		{
+			$rapport.='<v>"'.$k.'" => "'.$v.'"';
+		}		
+		$rapport.='</post>';
+	}
+	$rapport.='</request>
+
+';
+	
+	
+	$log_file=date('Y_m_d');
+	$log=fopen($path.'data/log/'.$log_file,'a+');
+	fputs($log,$rapport);
+	fclose($log);
+	return true;
+}
+
+
 //dummy stuff, need to be coded and tsted :p
 class activity_logger
 {
@@ -497,6 +668,216 @@ class activity_logger
 	}
 }
 
+function truncate_str($str,$length=55,$from=0)
+{
+	$str=strip_tags($str);
+	$str2=substr($str,$from,$length);
+	if(strlen($str)!=strlen($str2))
+	{
+		$str2.=' ...';
+	}
+	return $str2;
+}
+
+//http://www.catswhocode.com/blog/10-php-code-snippets-for-working-with-strings
+function seo_friendly_str($str)
+{
+	$str = strtolower(trim($str));
+	$str = preg_replace('/[^a-z0-9-]/', '-', $str);
+	$str = preg_replace('/-+/', "-", $str);
+	return $str;
+}
+
+//
+function get_request_location($ip='')
+{
+	if($ip=='')
+	{
+		$ip=$_SERVER['REMOTE_ADDR'];
+	}
+	 $default = 'UNKNOWN';
+
+        if (!is_string($ip) || strlen($ip) < 1 || $ip == '127.0.0.1' || $ip == 'localhost')
+            $ip = '8.8.8.8';
+
+        $curlopt_useragent = 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.9.2) Gecko/20100115 Firefox/3.6 (.NET CLR 3.5.30729)';
+
+        $url = 'http://ipinfodb.com/ip_locator.php?ip=' . urlencode($ip);
+        $ch = curl_init();
+
+        $curl_opt = array(
+            CURLOPT_FOLLOWLOCATION  => 1,
+            CURLOPT_HEADER      => 0,
+            CURLOPT_RETURNTRANSFER  => 1,
+            CURLOPT_USERAGENT   => $curlopt_useragent,
+            CURLOPT_URL       => $url,
+            CURLOPT_TIMEOUT         => 1,
+            CURLOPT_REFERER         => 'http://' . $_SERVER['HTTP_HOST'],
+        );
+
+        curl_setopt_array($ch, $curl_opt);
+
+        $content = curl_exec($ch);
+
+        if (!is_null($curl_info)) {
+            $curl_info = curl_getinfo($ch);
+        }
+
+        curl_close($ch);
+
+        if ( preg_match('{<li>City : ([^<]*)</li>}i', $content, $regs) )  {
+            $city = $regs[1];
+        }
+        if ( preg_match('{<li>State/Province : ([^<]*)</li>}i', $content, $regs) )  {
+            $state = $regs[1];
+        }
+
+        if( $city!='' && $state!='' ){
+          $location = $city . ', ' . $state;
+          return $location;
+        }else{
+          return $default;
+        }
+}
+
+function gen_password($length=9, $strength=4) {
+	$vowels = 'aeiouy';
+	$consonants = 'bcdfghjklmnpqrstvwz';
+	if ($strength >= 1) {
+		$consonants .= 'BDGHJLMNPQRSTVWXZ';
+	}
+	if ($strength >= 2) {
+		$vowels .= "AEIOUY";
+	}
+	if ($strength >= 4) {
+		$consonants .= '23456789';
+	}
+	if ($strength >= 8 ) {
+		$vowels .= '@_-*';
+	}
+
+	$password = '';
+	$alt = time() % 2;
+	for ($i = 0; $i < $length; $i++) {
+		if ($alt == 1) {
+			$password .= $consonants[(rand() % strlen($consonants))];
+			$alt = 0;
+		} else {
+			$password .= $vowels[(rand() % strlen($vowels))];
+			$alt = 1;
+		}
+	}
+	return $password;
+}
+
+function currency($from_Currency,$to_Currency,$amount) {
+    $amount = urlencode($amount);
+    $from_Currency = urlencode($from_Currency);
+    $to_Currency = urlencode($to_Currency);
+    $url = "http://www.google.com/ig/calculator?hl=en&q=$amount$from_Currency=?$to_Currency";
+    $ch = curl_init();
+    $timeout = 0;
+    curl_setopt ($ch, CURLOPT_URL, $url);
+    curl_setopt ($ch, CURLOPT_RETURNTRANSFER, 1);
+    curl_setopt($ch,  CURLOPT_USERAGENT , "Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1)");
+    curl_setopt ($ch, CURLOPT_CONNECTTIMEOUT, $timeout);
+    $rawdata = curl_exec($ch);
+    curl_close($ch);
+    $data = explode('"', $rawdata);
+    $data = explode(' ', $data['3']);
+    $var = $data['0'];
+    return round($var,2);
+}
+
+function get_real_ip(){
+    if (!empty($_SERVER['HTTP_CLIENT_IP']))   //check ip from share internet
+    {
+      $ip=$_SERVER['HTTP_CLIENT_IP'];
+    }
+    elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR']))   //to check ip is pass from proxy
+    {
+      $ip=$_SERVER['HTTP_X_FORWARDED_FOR'];
+    }
+    else
+    {
+      $ip=$_SERVER['REMOTE_ADDR'];
+    }
+    return $ip;
+}
+
+function captcha($img_id='captcha',$input='captcha_code')
+{
+	global $base_url,$path_w;
+	$display=
+	'
+	<img id="'.$img_id.'" src="'.$base_url.'media/lib/securimage/securimage_show.php" alt="CAPTCHA Image" />
+	<input type="text" name="'.$input.'" size="10" maxlength="6" />
+2	<a href="#" onclick="document.getElementById(\''.$img_id.'\').src = \''.$base_url.'media/lib/securimage/securimage_show.php?\' + Math.random(); return false"></a>
+	';
+	include_once $path_w.'media/lib/securimage/securimage.php';
+	$securimage=new Securimage();
+	return $display;
+}
+
+function check_captcha($input='captcha_code',$met='post')
+{
+	global $path_w;
+	if($met=='post')
+	{
+		$met=$_POST;
+	}
+	else
+	{
+		$met=$_GET;
+	}
+	include_once $path_w.'media/lib/securimage/securimage.php';
+	$securimage=new Securimage();
+	return $securimage->check($_POST[$input])==false;
+}
+
+function upload_field($input='file_upload',$label='Choose the file to uplaod',$max_size='',$classes=array('label'=>'form_label','input'=>''))
+{
+	$display=
+	'
+	<label for="'.$input.'" class="'.$classes['label'].'" >'.$label.' : </label><input type="file" id="'.$input.'" name="'.$input.'" class="'.$classes['input'].'" />
+	';
+	
+	if($max_size!='')
+	{
+		$display.='<input type="hidden" name="MAX_FILE_SIZE" value="'.($max_size*1024).'" />';
+	}
+	
+	return $display;
+}
+
+function handle_upload_field($target,$input='file_upload',$name='')
+{
+	if(is_dir($target))
+	{
+		if(isset($_FILES[$input]))
+		{
+			if($name!='')
+			{
+				$target.=$name.'.'.end(explode('.', $_FILES[$input]['name']));
+			}
+			else
+			{
+				$target.=$_FILES[$input]['name'];
+			}
+			return copy($_FILES[$input]['tmp'],$target);
+		}
+		else
+		{
+			return false;
+		}
+	}
+	else
+	{
+		report_erreur2('0005',__FILE__,__LINE__,'handle_upload directory does not exists : '.$target);
+		return false;
+	}
+}
+
 //file manipulation function
 function copy_r( $path, $dest )
 {
@@ -529,6 +910,7 @@ function copy_r( $path, $dest )
     }
     else
     {
+    	report_erreur2('0002',__FILE__,__LINE__,'copy_r cant copy '.$path.' to '.$dest);
         return false;
     }
 }
@@ -551,6 +933,7 @@ function rmdir_r($dir)
     if(rmdir($dir)){
         return true;
     }else{
+    	report_erreur2('0003',__FILE__,__LINE__,'rmdir_r cant remove '.$dir);
         return false;
     }
 }
@@ -579,12 +962,66 @@ function copies($paths)
 		}
 		else
 		{
+			report_erreur2('2003',__FILE__,__LINE__,'copies unmatching parameter for froms and tos');
 			return false;
 		}
 	}
 	else
 	{
+		report_erreur2('2004',__FILE__,__LINE__,'copies unmatching parameter for paths, must be an array');
 		return false;
+	}
+}
+
+function mkdir_r($dir,$mode=0755)
+{
+	$dir=explode($dir,'/');
+	if($dir[0]=='')
+	{
+		$dir2='/'.$dir[1];
+		$x=2;
+	}
+	else
+	{
+		$dir2=$dir[0];
+		$x=1;
+	}
+	if(!is_dir($dir2))
+	{
+		if(!mkdir($dir2,$mode))
+		{
+			return false;
+		}
+	}
+	$y=count($dir);
+	while($x<$y)
+	{
+		if($dir[$x]!='')
+		{
+			$dir2.='/'.$dir[$x];
+			
+			if(!is_dir($dir2))
+			{
+				if(!mkdir($dir2,$mode))
+				{
+					return false;
+				}
+			}
+		}
+		$x++;
+	}
+	return true;
+}
+
+function is_dir_mk($dir,$mode=0755)
+{
+	if(!is_dir($dir))
+	{
+		return mkdir_r($dir,$mode);
+	}
+	else
+	{
+		return true;
 	}
 }
 

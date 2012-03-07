@@ -5,6 +5,12 @@ to install balsa browse your www/ folder and execute install.php from your brows
 fill in the field
 you should be good to go ^^
 
+/!\/!\/!\
+0.5.0.2 is probably broken for install...i have to rebuilt it from scratch cause looooaaaaads of things have changed in the files....
+sorry about that, i'll do my best for it to be short :)
+you can still ask me for a dev version (and configure it manually ^^)
+/!\/!\/!\
+
 NOW IN 0.5
 There's a new naming applied for the version
 0.5.0.0 
